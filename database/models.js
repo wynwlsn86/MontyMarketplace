@@ -42,16 +42,19 @@ const Apparal = db.define('apparal', {
 		type: Sequelize.STRING
 	},
 	quantity: {
-		type: Sequelize.INTEGER
+		type: Sequelize.INTEGER,
+		default: 0
 	},
 	color: {
 		type: Sequelize.STRING
 	},
 	amntSold: {
-		type: Sequelize.INTEGER
+		type: Sequelize.INTEGER,
+		defaultValue: 0
 	},
 	currency: {
-		type: Sequelize.STRING
+		type: Sequelize.STRING,
+		defaultValue: 'USD'
 	},
 	price: {
 		type: Sequelize.DECIMAL(6, 2, 'string')
@@ -60,7 +63,55 @@ const Apparal = db.define('apparal', {
 		type: Sequelize.DECIMAL(6, 2, 'string')
 	},
 	profit: {
+		defaultValue: '0',
+		type: Sequelize.DECIMAL(16, 2, 'string')
+	}
+})
+
+const Phone = db.define('phone', {
+	brand: {
+		type: Sequelize.STRING
+	},
+	imageURL: {
+		type: Sequelize.STRING
+	},
+	modelNumber: {
+		type: Sequelize.STRING
+	},
+	condition: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	storage: {
+		defaultValue: 0,
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	quantity: {
+		type: Sequelize.INTEGER,
+		default: 0
+	},
+	color: {
+		type: Sequelize.STRING
+	},
+	condition: {
+		type: Sequelize.STRING
+	},
+	amntSold: {
+		type: Sequelize.INTEGER,
+		defaultValue: 0
+	},
+	currency: {
+		type: Sequelize.STRING,
+		defaultValue: 'USD'
+	},
+	price: {
 		type: Sequelize.DECIMAL(6, 2, 'string')
+	},
+	buyerCost: {
+		type: Sequelize.DECIMAL(6, 2, 'string')
+	},
+	profit: {
+		defaultValue: '0',
+		type: Sequelize.DECIMAL(16, 2, 'string')
 	}
 })
 
@@ -70,11 +121,13 @@ User.beforeCreate(async (user, options) => {
 })
 
 User.hasMany(Apparal)
-
 Apparal.belongsTo(User)
+User.hasMany(Phone)
+Phone.belongsTo(User)
 
 module.exports = {
 	User,
 	Apparal,
+	Phone,
 	db
 }

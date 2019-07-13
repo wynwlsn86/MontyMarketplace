@@ -1,6 +1,6 @@
 const express = require('express')
 const apparalRouter = express.Router()
-const { Apparal } = require('../database/models')
+const { User, Apparal } = require('../database/models')
 
 apparalRouter.get('/', async (req, res) => {
 	try {
@@ -48,6 +48,26 @@ apparalRouter.put('/:id/category/:category_code/sold', async (req, res) => {
 
 			res.send(sold)
 		}
+	} catch (error) {
+		throw error
+	}
+})
+
+apparalRouter.post('/user/:id/inventory/add', async (req, res) => {
+	try {
+		const admin = await User.findByPk(req.params.id)
+
+		const data = {
+			name: req.body.name,
+			categoryCode: req.body.categoryCode.toLowerCase(),
+			price: req.body.price,
+			buyerCost: req.body.buyerCost,
+			quantity: req.body.quantity,
+			color: req.body.color.toLowerCase()
+		}
+		const newProduct = await Apparal.create(data)
+		await newProduct.setUser(admin)
+		res.send(newProduct)
 	} catch (error) {
 		throw error
 	}

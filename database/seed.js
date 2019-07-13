@@ -1,8 +1,10 @@
-const { User, Apparal } = require('./models')
+const { User, Apparal, Phone } = require('./models')
+const { PhoneData } = require('./PhoneData')
 
 const main = async () => {
 	await User.destroy({ where: {} })
-
+	// await Phone.destroy({ where: {} })
+	await Apparal.destroy({ where: {} })
 	// Seed Data
 
 	const user = await User.create({
@@ -14,13 +16,14 @@ const main = async () => {
 
 	const tShirt = await Apparal.create({
 		name: 'Awesome T-shirt',
-		categoryCode: 'shirt',
+		categoryCode: 'shirts',
 		color: 'red',
 		currency: 'USD',
 		quantity: 100,
 		amntSold: 0,
 		price: 60.59,
-		buyerCost: 20.59
+		buyerCost: 20.59,
+		profit: 0
 	})
 
 	const jean = await Apparal.create({
@@ -35,10 +38,33 @@ const main = async () => {
 		profit: 1866.51
 	})
 
-	const jacket = await Apparal.create
-
+	const jacket = await Apparal.create({
+		name: 'Dope Bomber Jacket',
+		categoryCode: 'Jackets',
+		price: '300.84',
+		buyerCost: '120.00',
+		quantity: 300,
+		color: 'black'
+	})
+	seedPhoneData = async () => {
+		for (let i = 0; i < PhoneData.length; i++) {
+			await Phone.create({
+				imageURL: PhoneData[i].imageURL,
+				maker: PhoneData[i].maker,
+				modelNumber: PhoneData[i].modelNumber,
+				storage: PhoneData[i].storage,
+				condition: PhoneData[i].condition,
+				type: PhoneData[i].type,
+				carrier: PhoneData[i].carrier,
+				userId: 1
+			})
+			// await phones.setUser(user)
+		}
+	}
+	await seedPhoneData()
 	await tShirt.setUser(user)
 	await jean.setUser(user)
+	await jacket.setUser(user)
 }
 async function run() {
 	try {
