@@ -15,7 +15,7 @@ const main = async () => {
 	const tShirt = await Apparal.create({
 		name: 'Awesome T-shirt',
 		categoryCode: 'shirt',
-		color: 'Red',
+		color: 'red',
 		currency: 'USD',
 		quantity: 100,
 		amntSold: 0,
@@ -26,7 +26,7 @@ const main = async () => {
 	const jean = await Apparal.create({
 		name: 'Very Blue Jeans',
 		categoryCode: 'pants',
-		color: 'Blue',
+		color: 'blue',
 		currency: 'USD',
 		quantity: 56,
 		amntSold: 31,
