@@ -48,17 +48,17 @@ const main = async () => {
 	})
 	seedPhoneData = async () => {
 		for (let i = 0; i < PhoneData.length; i++) {
-			await Phone.create({
+			const phones = await Phone.create({
 				imageURL: PhoneData[i].imageURL,
 				maker: PhoneData[i].maker,
 				modelNumber: PhoneData[i].modelNumber,
 				storage: PhoneData[i].storage,
-				condition: PhoneData[i].condition,
+				physicalCondition: PhoneData[i].condition,
 				type: PhoneData[i].type,
 				carrier: PhoneData[i].carrier,
 				userId: 1
 			})
-			// await phones.setUser(user)
+			await phones.setUser(user)
 		}
 	}
 	await seedPhoneData()

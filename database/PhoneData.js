@@ -6,7 +6,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '1799.jpg',
@@ -15,7 +15,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '1801.jpg',
@@ -24,7 +24,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2073.jpg',
@@ -33,7 +33,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2082.jpg',
@@ -42,7 +42,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2089.jpg',
@@ -51,7 +51,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2267.jpg',
@@ -60,7 +60,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2270.jpg',
@@ -69,7 +69,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2295.jpg',
@@ -78,7 +78,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2307.jpg',
@@ -87,7 +87,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2310.jpg',
@@ -96,7 +96,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2325.jpg',
@@ -105,7 +105,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2383.jpg',
@@ -114,7 +114,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2384.jpg',
@@ -123,7 +123,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2888.jpg',
@@ -132,7 +132,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2937.jpg',
@@ -141,7 +141,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2946.jpg',
@@ -150,7 +150,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '2999.jpg',
@@ -159,7 +159,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3000.jpg',
@@ -168,7 +168,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3029.jpg',
@@ -177,7 +177,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3146.jpg',
@@ -186,7 +186,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3304.jpg',
@@ -195,7 +195,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3305.jpg',
@@ -204,7 +204,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3306.jpg',
@@ -213,7 +213,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3337.jpg',
@@ -222,7 +222,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3341.jpg',
@@ -231,7 +231,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3350.jpg',
@@ -240,7 +240,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3375.jpg',
@@ -249,7 +249,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3380.jpg',
@@ -258,7 +258,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3382.jpg',
@@ -267,7 +267,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3403.jpg',
@@ -276,7 +276,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3404.jpg',
@@ -285,7 +285,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3405.jpg',
@@ -294,7 +294,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3407.jpg',
@@ -303,7 +303,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3409.jpg',
@@ -312,7 +312,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3415.jpg',
@@ -321,7 +321,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3427.jpg',
@@ -330,7 +330,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3435.jpg',
@@ -339,7 +339,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3436.jpg',
@@ -348,7 +348,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3439.jpg',
@@ -357,7 +357,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3443.jpg',
@@ -366,7 +366,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3447.jpg',
@@ -375,7 +375,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3448.jpg',
@@ -384,7 +384,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3449.jpg',
@@ -393,7 +393,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3450.jpg',
@@ -402,7 +402,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3451.jpg',
@@ -411,7 +411,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3458.jpg',
@@ -420,7 +420,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3462.jpg',
@@ -429,7 +429,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3464.jpg',
@@ -438,7 +438,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3465.jpg',
@@ -447,7 +447,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3473.jpg',
@@ -456,7 +456,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3477.jpg',
@@ -465,7 +465,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3478.jpg',
@@ -474,7 +474,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3479.jpg',
@@ -483,7 +483,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3481.jpg',
@@ -492,7 +492,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3484.jpg',
@@ -501,7 +501,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3489.jpg',
@@ -510,7 +510,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3496.jpg',
@@ -519,7 +519,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3497.jpg',
@@ -528,7 +528,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3498.jpg',
@@ -537,7 +537,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3510.jpg',
@@ -546,7 +546,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3511.jpg',
@@ -555,7 +555,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3513.jpg',
@@ -564,7 +564,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3515.jpg',
@@ -573,7 +573,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3520.jpg',
@@ -582,7 +582,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3523.jpg',
@@ -591,7 +591,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3526.jpg',
@@ -600,7 +600,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3527.jpg',
@@ -609,7 +609,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3528.jpg',
@@ -618,7 +618,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3529.jpg',
@@ -627,7 +627,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3532.jpg',
@@ -636,7 +636,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3536.jpg',
@@ -645,7 +645,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3537.jpg',
@@ -654,7 +654,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3538.jpg',
@@ -663,7 +663,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3541.jpg',
@@ -672,7 +672,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3542.jpg',
@@ -681,7 +681,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3544.jpg',
@@ -690,7 +690,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3545.jpg',
@@ -699,7 +699,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3546.jpg',
@@ -708,7 +708,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3547.jpg',
@@ -717,7 +717,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3550.jpg',
@@ -726,7 +726,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3551.jpg',
@@ -735,7 +735,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3553.jpg',
@@ -744,7 +744,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3555.jpg',
@@ -753,7 +753,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3557.jpg',
@@ -762,7 +762,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3558.jpg',
@@ -771,7 +771,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3561.jpg',
@@ -780,7 +780,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3563.jpg',
@@ -789,7 +789,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3564.jpg',
@@ -798,7 +798,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3565.jpg',
@@ -807,7 +807,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3568.jpg',
@@ -816,7 +816,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3569.jpg',
@@ -825,7 +825,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3570.jpg',
@@ -834,7 +834,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3571.jpg',
@@ -843,7 +843,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3574.jpg',
@@ -852,7 +852,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3575.jpg',
@@ -861,7 +861,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3576.jpg',
@@ -870,7 +870,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3577.jpg',
@@ -879,7 +879,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3578.jpg',
@@ -888,7 +888,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3579.jpg',
@@ -897,7 +897,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3580.jpg',
@@ -906,7 +906,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3581.jpg',
@@ -915,7 +915,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3582.jpg',
@@ -924,7 +924,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3583.jpg',
@@ -933,7 +933,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3584.jpg',
@@ -942,7 +942,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3585.jpg',
@@ -951,7 +951,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3588.jpg',
@@ -960,7 +960,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3589.jpg',
@@ -969,7 +969,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3590.jpg',
@@ -978,7 +978,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3591.jpg',
@@ -987,7 +987,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3598.jpg',
@@ -996,7 +996,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3606.jpg',
@@ -1005,7 +1005,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3607.jpg',
@@ -1014,7 +1014,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3608.jpg',
@@ -1023,7 +1023,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3609.jpg',
@@ -1032,7 +1032,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3610.jpg',
@@ -1041,7 +1041,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3613.jpg',
@@ -1050,7 +1050,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3614.jpg',
@@ -1059,7 +1059,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3616.jpg',
@@ -1068,7 +1068,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3620.jpg',
@@ -1077,7 +1077,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3624.jpg',
@@ -1086,7 +1086,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3625.jpg',
@@ -1095,7 +1095,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3629.jpg',
@@ -1104,7 +1104,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3630.jpg',
@@ -1113,7 +1113,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3633.jpg',
@@ -1122,7 +1122,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3650.jpg',
@@ -1131,7 +1131,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3652.jpg',
@@ -1140,7 +1140,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3653.jpg',
@@ -1149,7 +1149,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3654.jpg',
@@ -1158,7 +1158,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3658.jpg',
@@ -1167,7 +1167,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3663.jpg',
@@ -1176,7 +1176,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3664.jpg',
@@ -1185,7 +1185,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3665.jpg',
@@ -1194,7 +1194,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3668.jpg',
@@ -1203,7 +1203,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3670.jpg',
@@ -1212,7 +1212,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3671.jpg',
@@ -1221,7 +1221,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3672.jpg',
@@ -1230,7 +1230,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3673.jpg',
@@ -1239,7 +1239,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3674.jpg',
@@ -1248,7 +1248,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3675.jpg',
@@ -1257,7 +1257,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3676.jpg',
@@ -1266,7 +1266,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3677.jpg',
@@ -1275,7 +1275,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3678.jpg',
@@ -1284,7 +1284,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3680.jpg',
@@ -1293,7 +1293,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3681.jpg',
@@ -1302,7 +1302,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3682.jpg',
@@ -1311,7 +1311,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3683.jpg',
@@ -1320,7 +1320,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '3684.jpg',
@@ -1329,7 +1329,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4148.jpg',
@@ -1338,7 +1338,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4149.jpg',
@@ -1347,7 +1347,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4154.jpg',
@@ -1356,7 +1356,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4155.jpg',
@@ -1365,7 +1365,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4156.jpg',
@@ -1374,7 +1374,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4157.jpg',
@@ -1383,7 +1383,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4158.jpg',
@@ -1392,7 +1392,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4159.jpg',
@@ -1401,7 +1401,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4160.jpg',
@@ -1410,7 +1410,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4161.jpg',
@@ -1419,7 +1419,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4162.jpg',
@@ -1428,7 +1428,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4163.jpg',
@@ -1437,7 +1437,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4164.jpg',
@@ -1446,7 +1446,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4165.jpg',
@@ -1455,7 +1455,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4167.jpg',
@@ -1464,7 +1464,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4169.jpg',
@@ -1473,7 +1473,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4170.jpg',
@@ -1482,7 +1482,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4171.jpg',
@@ -1491,7 +1491,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4173.jpg',
@@ -1500,7 +1500,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4174.jpg',
@@ -1509,7 +1509,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4175.jpg',
@@ -1518,7 +1518,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4176.jpg',
@@ -1527,7 +1527,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4185.jpg',
@@ -1536,7 +1536,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4186.jpg',
@@ -1545,7 +1545,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4187.jpg',
@@ -1554,7 +1554,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4215.jpg',
@@ -1563,7 +1563,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4216.jpg',
@@ -1572,7 +1572,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4217.jpg',
@@ -1581,7 +1581,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4218.jpg',
@@ -1590,7 +1590,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4219.jpg',
@@ -1599,7 +1599,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4221.jpg',
@@ -1608,7 +1608,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4222.jpg',
@@ -1617,7 +1617,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4223.jpg',
@@ -1626,7 +1626,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4224.jpg',
@@ -1635,7 +1635,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4225.jpg',
@@ -1644,7 +1644,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4226.jpg',
@@ -1653,7 +1653,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4227.jpg',
@@ -1662,7 +1662,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4228.jpg',
@@ -1671,7 +1671,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4229.jpg',
@@ -1680,7 +1680,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4230.jpg',
@@ -1689,7 +1689,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4233.jpg',
@@ -1698,7 +1698,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4234.jpg',
@@ -1707,7 +1707,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4235.jpg',
@@ -1716,7 +1716,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4236.jpg',
@@ -1725,7 +1725,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4237.jpg',
@@ -1734,7 +1734,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4238.jpg',
@@ -1743,7 +1743,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4241.jpg',
@@ -1752,7 +1752,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4242.jpg',
@@ -1761,7 +1761,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4243.jpg',
@@ -1770,7 +1770,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4244.jpg',
@@ -1779,7 +1779,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4245.jpg',
@@ -1788,7 +1788,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4246.jpg',
@@ -1797,7 +1797,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4247.jpg',
@@ -1806,7 +1806,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4249.jpg',
@@ -1815,7 +1815,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4250.jpg',
@@ -1824,7 +1824,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4272.jpg',
@@ -1833,7 +1833,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4283.jpg',
@@ -1842,7 +1842,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4337.jpg',
@@ -1851,7 +1851,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4338.jpg',
@@ -1860,7 +1860,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4339.jpg',
@@ -1869,7 +1869,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4340.jpg',
@@ -1878,7 +1878,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4341.jpg',
@@ -1887,7 +1887,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4342.jpg',
@@ -1896,7 +1896,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4343.jpg',
@@ -1905,7 +1905,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4344.jpg',
@@ -1914,7 +1914,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4345.jpg',
@@ -1923,7 +1923,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4346.jpg',
@@ -1932,7 +1932,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4347.jpg',
@@ -1941,7 +1941,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4348.jpg',
@@ -1950,7 +1950,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4351.jpg',
@@ -1959,7 +1959,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4352.jpg',
@@ -1968,7 +1968,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4354.jpg',
@@ -1977,7 +1977,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4355.jpg',
@@ -1986,7 +1986,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4358.jpg',
@@ -1995,7 +1995,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4359.jpg',
@@ -2004,7 +2004,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4360.jpg',
@@ -2013,7 +2013,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4361.jpg',
@@ -2022,7 +2022,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4362.jpg',
@@ -2031,7 +2031,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4363.jpg',
@@ -2040,7 +2040,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4369.jpg',
@@ -2049,7 +2049,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4370.jpg',
@@ -2058,7 +2058,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4371.jpg',
@@ -2067,7 +2067,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4374.jpg',
@@ -2076,7 +2076,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4375.jpg',
@@ -2085,7 +2085,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4376.jpg',
@@ -2094,7 +2094,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4377.jpg',
@@ -2103,7 +2103,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4378.jpg',
@@ -2112,7 +2112,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4379.jpg',
@@ -2121,7 +2121,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4380.jpg',
@@ -2130,7 +2130,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4388.jpg',
@@ -2139,7 +2139,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4389.jpg',
@@ -2148,7 +2148,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4390.jpg',
@@ -2157,7 +2157,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4392.jpg',
@@ -2166,7 +2166,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4393.jpg',
@@ -2175,7 +2175,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4395.jpg',
@@ -2184,7 +2184,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4397.jpg',
@@ -2193,7 +2193,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4398.jpg',
@@ -2202,7 +2202,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4399.jpg',
@@ -2211,7 +2211,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4400.jpg',
@@ -2220,7 +2220,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4401.jpg',
@@ -2229,7 +2229,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4402.jpg',
@@ -2238,7 +2238,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4403.jpg',
@@ -2247,7 +2247,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4405.jpg',
@@ -2256,7 +2256,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4407.jpg',
@@ -2265,7 +2265,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4410.jpg',
@@ -2274,7 +2274,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4411.jpg',
@@ -2283,7 +2283,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4413.jpg',
@@ -2292,7 +2292,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4414.jpg',
@@ -2301,7 +2301,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4415.jpg',
@@ -2310,7 +2310,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4416.jpg',
@@ -2319,7 +2319,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4417.jpg',
@@ -2328,7 +2328,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4418.jpg',
@@ -2337,7 +2337,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4419.jpg',
@@ -2346,7 +2346,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4420.jpg',
@@ -2355,7 +2355,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4421.jpg',
@@ -2364,7 +2364,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4422.jpg',
@@ -2373,7 +2373,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4423.jpg',
@@ -2382,7 +2382,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4424.jpg',
@@ -2391,7 +2391,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4425.jpg',
@@ -2400,7 +2400,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4426.jpg',
@@ -2409,7 +2409,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4427.jpg',
@@ -2418,7 +2418,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4428.jpg',
@@ -2427,7 +2427,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4429.jpg',
@@ -2436,7 +2436,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4430.jpg',
@@ -2445,7 +2445,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4431.jpg',
@@ -2454,7 +2454,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4432.jpg',
@@ -2463,7 +2463,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4433.jpg',
@@ -2472,7 +2472,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4435.jpg',
@@ -2481,7 +2481,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4436.jpg',
@@ -2490,7 +2490,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4437.jpg',
@@ -2499,7 +2499,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4439.jpg',
@@ -2508,7 +2508,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4440.jpg',
@@ -2517,7 +2517,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4442.jpg',
@@ -2526,7 +2526,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4443.jpg',
@@ -2535,7 +2535,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4444.jpg',
@@ -2544,7 +2544,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4445.jpg',
@@ -2553,7 +2553,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4446.jpg',
@@ -2562,7 +2562,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4447.jpg',
@@ -2571,7 +2571,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4448.jpg',
@@ -2580,7 +2580,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4449.jpg',
@@ -2589,7 +2589,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4450.jpg',
@@ -2598,7 +2598,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4451.jpg',
@@ -2607,7 +2607,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4455.jpg',
@@ -2616,7 +2616,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4456.jpg',
@@ -2625,7 +2625,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4457.jpg',
@@ -2634,7 +2634,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4458.jpg',
@@ -2643,7 +2643,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4460.jpg',
@@ -2652,7 +2652,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4463.jpg',
@@ -2661,7 +2661,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4464.jpg',
@@ -2670,7 +2670,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4465.jpg',
@@ -2679,7 +2679,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4470.jpg',
@@ -2688,7 +2688,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4479.jpg',
@@ -2697,7 +2697,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4485.jpg',
@@ -2706,7 +2706,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4486.jpg',
@@ -2715,7 +2715,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4487.jpg',
@@ -2724,7 +2724,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4489.jpg',
@@ -2733,7 +2733,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4490.jpg',
@@ -2742,7 +2742,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4491.jpg',
@@ -2751,7 +2751,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4492.jpg',
@@ -2760,7 +2760,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4493.jpg',
@@ -2769,7 +2769,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4494.jpg',
@@ -2778,7 +2778,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4495.jpg',
@@ -2787,7 +2787,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4496.jpg',
@@ -2796,7 +2796,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4497.jpg',
@@ -2805,7 +2805,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4498.jpg',
@@ -2814,7 +2814,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4499.jpg',
@@ -2823,7 +2823,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4503.jpg',
@@ -2832,7 +2832,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4506.jpg',
@@ -2841,7 +2841,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4508.jpg',
@@ -2850,7 +2850,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4509.jpg',
@@ -2859,7 +2859,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4510.jpg',
@@ -2868,7 +2868,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4511.jpg',
@@ -2877,7 +2877,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4514.jpg',
@@ -2886,7 +2886,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4515.jpg',
@@ -2895,7 +2895,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4516.jpg',
@@ -2904,7 +2904,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4517.jpg',
@@ -2913,7 +2913,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4519.jpg',
@@ -2922,7 +2922,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4522.jpg',
@@ -2931,7 +2931,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4523.jpg',
@@ -2940,7 +2940,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4524.jpg',
@@ -2949,7 +2949,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4525.jpg',
@@ -2958,7 +2958,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4528.jpg',
@@ -2967,7 +2967,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4529.jpg',
@@ -2976,7 +2976,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4531.jpg',
@@ -2985,7 +2985,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4532.jpg',
@@ -2994,7 +2994,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4534.jpg',
@@ -3003,7 +3003,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4535.jpg',
@@ -3012,7 +3012,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4538.jpg',
@@ -3021,7 +3021,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4539.jpg',
@@ -3030,7 +3030,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4542.jpg',
@@ -3039,7 +3039,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4543.jpg',
@@ -3048,7 +3048,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4544.jpg',
@@ -3057,7 +3057,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4545.jpg',
@@ -3066,7 +3066,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4546.jpg',
@@ -3075,7 +3075,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4550.jpg',
@@ -3084,7 +3084,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4551.jpg',
@@ -3093,7 +3093,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4552.jpg',
@@ -3102,7 +3102,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4553.jpg',
@@ -3111,7 +3111,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4554.jpg',
@@ -3120,7 +3120,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4555.jpg',
@@ -3129,7 +3129,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4556.jpg',
@@ -3138,7 +3138,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4557.jpg',
@@ -3147,7 +3147,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4559.jpg',
@@ -3156,7 +3156,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4560.jpg',
@@ -3165,7 +3165,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4561.jpg',
@@ -3174,7 +3174,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4563.jpg',
@@ -3183,7 +3183,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4564.jpg',
@@ -3192,7 +3192,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4565.jpg',
@@ -3201,7 +3201,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4568.jpg',
@@ -3210,7 +3210,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4569.jpg',
@@ -3219,7 +3219,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4570.jpg',
@@ -3228,7 +3228,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4575.jpg',
@@ -3237,7 +3237,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4576.jpg',
@@ -3246,7 +3246,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4583.jpg',
@@ -3255,7 +3255,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4584.jpg',
@@ -3264,7 +3264,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4585.jpg',
@@ -3273,7 +3273,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4586.jpg',
@@ -3282,7 +3282,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4587.jpg',
@@ -3291,7 +3291,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4591.jpg',
@@ -3300,7 +3300,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4592.jpg',
@@ -3309,7 +3309,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4593.jpg',
@@ -3318,7 +3318,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4594.jpg',
@@ -3327,7 +3327,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4595.jpg',
@@ -3336,7 +3336,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4596.jpg',
@@ -3345,7 +3345,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4597.jpg',
@@ -3354,7 +3354,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4598.jpg',
@@ -3363,7 +3363,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4599.jpg',
@@ -3372,7 +3372,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4600.jpg',
@@ -3381,7 +3381,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4605.jpg',
@@ -3390,7 +3390,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4606.jpg',
@@ -3399,7 +3399,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4607.jpg',
@@ -3408,7 +3408,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4608.jpg',
@@ -3417,7 +3417,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4613.jpg',
@@ -3426,7 +3426,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4614.jpg',
@@ -3435,7 +3435,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4615.jpg',
@@ -3444,7 +3444,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4620.jpg',
@@ -3453,7 +3453,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4621.jpg',
@@ -3462,7 +3462,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4622.jpg',
@@ -3471,7 +3471,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4623.jpg',
@@ -3480,7 +3480,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4626.jpg',
@@ -3489,7 +3489,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4627.jpg',
@@ -3498,7 +3498,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4628.jpg',
@@ -3507,7 +3507,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4629.jpg',
@@ -3516,7 +3516,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4630.jpg',
@@ -3525,7 +3525,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4631.jpg',
@@ -3534,7 +3534,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4632.jpg',
@@ -3543,7 +3543,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4635.jpg',
@@ -3552,7 +3552,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4639.jpg',
@@ -3561,7 +3561,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4640.jpg',
@@ -3570,7 +3570,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4643.jpg',
@@ -3579,7 +3579,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4644.jpg',
@@ -3588,7 +3588,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4646.jpg',
@@ -3597,7 +3597,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4647.jpg',
@@ -3606,7 +3606,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4648.jpg',
@@ -3615,7 +3615,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4649.jpg',
@@ -3624,7 +3624,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4650.jpg',
@@ -3633,7 +3633,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4651.jpg',
@@ -3642,7 +3642,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4652.jpg',
@@ -3651,7 +3651,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4653.jpg',
@@ -3660,7 +3660,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4654.jpg',
@@ -3669,7 +3669,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4657.jpg',
@@ -3678,7 +3678,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4658.jpg',
@@ -3687,7 +3687,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4659.jpg',
@@ -3696,7 +3696,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4660.jpg',
@@ -3705,7 +3705,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4661.jpg',
@@ -3714,7 +3714,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4662.jpg',
@@ -3723,7 +3723,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4663.jpg',
@@ -3732,7 +3732,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4665.jpg',
@@ -3741,7 +3741,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4666.jpg',
@@ -3750,7 +3750,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4667.jpg',
@@ -3759,7 +3759,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4668.jpg',
@@ -3768,7 +3768,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4669.jpg',
@@ -3777,7 +3777,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4670.jpg',
@@ -3786,7 +3786,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4672.jpg',
@@ -3795,7 +3795,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4673.jpg',
@@ -3804,7 +3804,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4674.jpg',
@@ -3813,7 +3813,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4675.jpg',
@@ -3822,7 +3822,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4678.jpg',
@@ -3831,7 +3831,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4679.jpg',
@@ -3840,7 +3840,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4682.jpg',
@@ -3849,7 +3849,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4684.jpg',
@@ -3858,7 +3858,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4688.jpg',
@@ -3867,7 +3867,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4689.jpg',
@@ -3876,7 +3876,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4690.jpg',
@@ -3885,7 +3885,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4692.jpg',
@@ -3894,7 +3894,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4699.jpg',
@@ -3903,7 +3903,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4700.jpg',
@@ -3912,7 +3912,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4701.jpg',
@@ -3921,7 +3921,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4711.jpg',
@@ -3930,7 +3930,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4732.jpg',
@@ -3939,7 +3939,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4733.jpg',
@@ -3948,7 +3948,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4747.jpg',
@@ -3957,7 +3957,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4748.jpg',
@@ -3966,7 +3966,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4759.jpg',
@@ -3975,7 +3975,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4772.jpg',
@@ -3984,7 +3984,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4773.jpg',
@@ -3993,7 +3993,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4774.jpg',
@@ -4002,7 +4002,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4779.jpg',
@@ -4011,7 +4011,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4782.jpg',
@@ -4020,7 +4020,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4783.jpg',
@@ -4029,7 +4029,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4784.jpg',
@@ -4038,7 +4038,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4798.jpg',
@@ -4047,7 +4047,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4799.jpg',
@@ -4056,7 +4056,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4800.jpg',
@@ -4065,7 +4065,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4802.jpg',
@@ -4074,7 +4074,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4803.jpg',
@@ -4083,7 +4083,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4804.jpg',
@@ -4092,7 +4092,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4809.jpg',
@@ -4101,7 +4101,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4810.jpg',
@@ -4110,7 +4110,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4811.jpg',
@@ -4119,7 +4119,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4812.jpg',
@@ -4128,7 +4128,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4814.jpg',
@@ -4137,7 +4137,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4816.jpg',
@@ -4146,7 +4146,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4817.jpg',
@@ -4155,7 +4155,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4818.jpg',
@@ -4164,7 +4164,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4821.jpg',
@@ -4173,7 +4173,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4822.jpg',
@@ -4182,7 +4182,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4823.jpg',
@@ -4191,7 +4191,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4824.jpg',
@@ -4200,7 +4200,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4825.jpg',
@@ -4209,7 +4209,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4826.jpg',
@@ -4218,7 +4218,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4827.jpg',
@@ -4227,7 +4227,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4841.jpg',
@@ -4236,7 +4236,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4842.jpg',
@@ -4245,7 +4245,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4843.jpg',
@@ -4254,7 +4254,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4844.jpg',
@@ -4263,7 +4263,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4845.jpg',
@@ -4272,7 +4272,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4899.jpg',
@@ -4281,7 +4281,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4925.jpg',
@@ -4290,7 +4290,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4939.jpg',
@@ -4299,7 +4299,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4940.jpg',
@@ -4308,7 +4308,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4941.jpg',
@@ -4317,7 +4317,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4946.jpg',
@@ -4326,7 +4326,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4947.jpg',
@@ -4335,7 +4335,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4948.jpg',
@@ -4344,7 +4344,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4949.jpg',
@@ -4353,7 +4353,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4952.jpg',
@@ -4362,7 +4362,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4953.jpg',
@@ -4371,7 +4371,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4957.jpg',
@@ -4380,7 +4380,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4958.jpg',
@@ -4389,7 +4389,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4959.jpg',
@@ -4398,7 +4398,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4961.jpg',
@@ -4407,7 +4407,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4964.jpg',
@@ -4416,7 +4416,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4967.jpg',
@@ -4425,7 +4425,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4968.jpg',
@@ -4434,7 +4434,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4969.jpg',
@@ -4443,7 +4443,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4970.jpg',
@@ -4452,7 +4452,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4972.jpg',
@@ -4461,7 +4461,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4974.jpg',
@@ -4470,7 +4470,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4979.jpg',
@@ -4479,7 +4479,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4980.jpg',
@@ -4488,7 +4488,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4981.jpg',
@@ -4497,7 +4497,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4987.jpg',
@@ -4506,7 +4506,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4989.jpg',
@@ -4515,7 +4515,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4990.jpg',
@@ -4524,7 +4524,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4991.jpg',
@@ -4533,7 +4533,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4993.jpg',
@@ -4542,7 +4542,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4994.jpg',
@@ -4551,7 +4551,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4995.jpg',
@@ -4560,7 +4560,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4996.jpg',
@@ -4569,7 +4569,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4997.jpg',
@@ -4578,7 +4578,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4998.jpg',
@@ -4587,7 +4587,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '4999.jpg',
@@ -4596,7 +4596,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5000.jpg',
@@ -4605,7 +4605,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5003.jpg',
@@ -4614,7 +4614,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5004.jpg',
@@ -4623,7 +4623,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5005.jpg',
@@ -4632,7 +4632,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5006.jpg',
@@ -4641,7 +4641,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5007.jpg',
@@ -4650,7 +4650,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5008.jpg',
@@ -4659,7 +4659,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5011.jpg',
@@ -4668,7 +4668,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5013.jpg',
@@ -4677,7 +4677,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5016.jpg',
@@ -4686,7 +4686,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	},
 	{
 		imageURL: '5022.jpg',
@@ -4695,7 +4695,7 @@ const PhoneData = [
 		storage: ['8gb', '16gb', '32gb', '64gb', '128gb'],
 		condition: ['Excellent', 'Good', 'Fair', 'Poor', 'Broken'],
 		type: 'mobile',
-		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint'],
+		carrier: ['Verizon', 'AT&T', 'T-Mobile', 'Unlocked', 'Sprint']
 	}
 ]
 

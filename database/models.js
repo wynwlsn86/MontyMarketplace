@@ -82,7 +82,9 @@ const Phone = db.define('phone', {
 		type: Sequelize.ARRAY(Sequelize.STRING)
 	},
 	storage: {
-		defaultValue: 0,
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	carrier: {
 		type: Sequelize.ARRAY(Sequelize.STRING)
 	},
 	quantity: {

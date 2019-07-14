@@ -9,6 +9,7 @@ const dotenv = require('dotenv')
 const AuthRouter = require('./routes/AuthRouter')
 const { userAuthorized } = require('./Auth/Auth')
 const ApparalRouter = require('./routes/ApparalRouter')
+const phoneRouter = require('./routes/PhoneRouter')
 
 dotenv.config()
 const PORT = process.env.PORT || 3001
@@ -25,6 +26,7 @@ app.use(bodyParser.json())
 app.use('/auth', AuthRouter)
 app.use('/app', userAuthorized)
 app.use('/apparal', ApparalRouter)
+app.use('/phones', phoneRouter)
 app.use(passport.initialize())
 
 // Test Message
