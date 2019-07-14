@@ -35,6 +35,7 @@ apparalRouter.put('/:item_id/sold', async (req, res) => {
 
 			const data = {
 				name: req.body.name,
+				imageURl: req.body.imageURl,
 				categoryCode: req.body.categoryCode.toLowerCase(),
 				price: req.body.price,
 				buyerCost: req.body.buyerCost,
@@ -64,6 +65,7 @@ apparalRouter.post('/user/:id/inventory/add', async (req, res) => {
 
 		const data = {
 			name: req.body.name,
+			imageURl: req.body.imageURl,
 			categoryCode: req.body.categoryCode.toLowerCase(),
 			price: req.body.price,
 			buyerCost: req.body.buyerCost,

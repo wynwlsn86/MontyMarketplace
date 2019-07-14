@@ -38,6 +38,9 @@ const Apparal = db.define('apparal', {
 	name: {
 		type: Sequelize.STRING
 	},
+	imageURL: {
+		type: Sequelize.STRING
+	},
 	categoryCode: {
 		type: Sequelize.STRING
 	},
