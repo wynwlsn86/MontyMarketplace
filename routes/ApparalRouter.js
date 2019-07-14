@@ -1,10 +1,16 @@
 const express = require('express')
 const apparalRouter = express.Router()
-const { User, Apparal } = require('../database/models')
+const { User, Apparal, Size } = require('../database/models')
 
 apparalRouter.get('/', async (req, res) => {
 	try {
-		const apparal = await Apparal.findAll()
+		const apparal = await Apparal.findAll({
+			include: [
+				{
+					model: Size
+				}
+			]
+		})
 		res.send(apparal)
 	} catch (error) {
 		throw error
@@ -26,7 +32,7 @@ apparalRouter.get('/:category_code', async (req, res) => {
 
 apparalRouter.put('/:item_id/sold', async (req, res) => {
 	try {
-		const sold = await Apparal.findByPk(req.params.id)
+		const sold = await Apparal.findByPk(req.params.id, { include: [Size] })
 		const { dataValues } = sold
 		if (sold) {
 			let newQuantity = dataValues.quantity - parseInt(req.body.quantity)

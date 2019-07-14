@@ -1,4 +1,4 @@
-const { User, Apparal, Phone } = require('./models')
+const { User, Apparal, Phone, Size } = require('./models')
 const { PhoneData } = require('./PhoneData')
 
 const main = async () => {
@@ -38,6 +38,10 @@ const main = async () => {
 		profit: 1866.51
 	})
 
+	const size = await Size.create({
+		apparalSize: 'medium'
+	})
+
 	const jacket = await Apparal.create({
 		name: 'Dope Bomber Jacket',
 		categoryCode: 'Jackets',
@@ -46,6 +50,7 @@ const main = async () => {
 		quantity: 300,
 		color: 'black'
 	})
+
 	seedPhoneData = async () => {
 		for (let i = 0; i < PhoneData.length; i++) {
 			const phones = await Phone.create({
@@ -61,6 +66,8 @@ const main = async () => {
 			await phones.setUser(user)
 		}
 	}
+
+	await size.setApparal(jacket)
 	await seedPhoneData()
 	await tShirt.setUser(user)
 	await jean.setUser(user)

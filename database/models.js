@@ -44,6 +44,9 @@ const Apparal = db.define('apparal', {
 	categoryCode: {
 		type: Sequelize.STRING
 	},
+	apparelSize: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
 	quantity: {
 		type: Sequelize.INTEGER,
 		default: 0
@@ -68,6 +71,9 @@ const Apparal = db.define('apparal', {
 	profit: {
 		defaultValue: '0',
 		type: Sequelize.DECIMAL(16, 2, 'string')
+	},
+	clearance: {
+		type: Sequelize.BOOLEAN
 	}
 })
 
@@ -119,6 +125,15 @@ const Phone = db.define('phone', {
 	profit: {
 		defaultValue: '0',
 		type: Sequelize.DECIMAL(16, 2, 'string')
+	},
+	clearance: {
+		type: Sequelize.BOOLEAN
+	}
+})
+
+const Size = db.define('size', {
+	apparalSize: {
+		type: Sequelize.STRING
 	}
 })
 
@@ -129,6 +144,8 @@ User.beforeCreate(async (user, options) => {
 
 User.hasMany(Apparal)
 Apparal.belongsTo(User)
+Apparal.hasMany(Size)
+Size.belongsTo(Apparal)
 User.hasMany(Phone)
 Phone.belongsTo(User)
 
@@ -136,5 +153,6 @@ module.exports = {
 	User,
 	Apparal,
 	Phone,
+	Size,
 	db
 }
