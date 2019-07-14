@@ -44,9 +44,6 @@ const Apparal = db.define('apparal', {
 	categoryCode: {
 		type: Sequelize.STRING
 	},
-	apparelSize: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
 	quantity: {
 		type: Sequelize.INTEGER,
 		default: 0

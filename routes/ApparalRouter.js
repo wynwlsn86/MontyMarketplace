@@ -1,16 +1,44 @@
 const express = require('express')
 const apparalRouter = express.Router()
 const { User, Apparal, Size } = require('../database/models')
+const { Sequelize } = require('sequelize')
 
 apparalRouter.get('/', async (req, res) => {
 	try {
 		const apparal = await Apparal.findAll({
+			attributes: {
+				include: [
+					[Sequelize.fn('COUNT', Sequelize.col('apparal_id')), 'quantity']
+				]
+			},
 			include: [
 				{
-					model: Size
+					model: Size,
+					attributes: []
 				}
-			]
+			],
+			group: ['Apparal.id']
 		})
+		const data = []
+		// for (let i = 0; i < apparal.length; i++) {
+		// 	const { dataValues } = apparal[i]
+		// 	const sizes = await Size.findAndCountAll({
+		// 		where: { apparalId: dataValues.id }
+		// 	})
+		// 	let newData = {
+		// 		name: dataValues.name,
+		// 		categoryCode: dataValues.categoryCode,
+		// 		color: dataValues.color,
+		// 		currency: dataValues.currency,
+		// 		amntSold: dataValues.amntSold,
+		// 		price: dataValues.price,
+		// 		buyerCost: dataValues.buyerCost,
+		// 		profit: dataValues.profit,
+		// 		quantity: sizes.count
+		// 	}
+		// 	data.push(newData)
+		// }
+		// res.send(data)
 		res.send(apparal)
 	} catch (error) {
 		throw error

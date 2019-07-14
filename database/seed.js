@@ -19,7 +19,6 @@ const main = async () => {
 		categoryCode: 'shirts',
 		color: 'red',
 		currency: 'USD',
-		quantity: 100,
 		amntSold: 0,
 		price: 60.59,
 		buyerCost: 20.59,
@@ -31,7 +30,6 @@ const main = async () => {
 		categoryCode: 'pants',
 		color: 'blue',
 		currency: 'USD',
-		quantity: 56,
 		amntSold: 31,
 		price: 100.2,
 		buyerCost: 40.0,
@@ -47,7 +45,6 @@ const main = async () => {
 		categoryCode: 'Jackets',
 		price: '300.84',
 		buyerCost: '120.00',
-		quantity: 300,
 		color: 'black'
 	})
 
