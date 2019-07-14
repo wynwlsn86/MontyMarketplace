@@ -78,24 +78,24 @@ const Phone = db.define('phone', {
 	modelNumber: {
 		type: Sequelize.STRING
 	},
-	condition: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
 	storage: {
 		type: Sequelize.ARRAY(Sequelize.STRING)
 	},
 	carrier: {
 		type: Sequelize.ARRAY(Sequelize.STRING)
 	},
+	deviceType: {
+		type: Sequelize.STRING
+	},
 	quantity: {
 		type: Sequelize.INTEGER,
-		default: 0
+		defaultValue: 0
 	},
 	color: {
 		type: Sequelize.STRING
 	},
-	condition: {
-		type: Sequelize.STRING
+	physicalCondition: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
 	},
 	amntSold: {
 		type: Sequelize.INTEGER,
@@ -106,10 +106,12 @@ const Phone = db.define('phone', {
 		defaultValue: 'USD'
 	},
 	price: {
-		type: Sequelize.DECIMAL(6, 2, 'string')
+		type: Sequelize.DECIMAL(6, 2, 'string'),
+		defaultValue: 0
 	},
 	buyerCost: {
-		type: Sequelize.DECIMAL(6, 2, 'string')
+		type: Sequelize.DECIMAL(6, 2, 'string'),
+		defaultValue: '0'
 	},
 	profit: {
 		defaultValue: '0',

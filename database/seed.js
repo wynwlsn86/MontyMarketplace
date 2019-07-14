@@ -3,7 +3,7 @@ const { PhoneData } = require('./PhoneData')
 
 const main = async () => {
 	await User.destroy({ where: {} })
-	// await Phone.destroy({ where: {} })
+	await Phone.destroy({ where: {} })
 	await Apparal.destroy({ where: {} })
 	// Seed Data
 
@@ -50,11 +50,11 @@ const main = async () => {
 		for (let i = 0; i < PhoneData.length; i++) {
 			const phones = await Phone.create({
 				imageURL: PhoneData[i].imageURL,
-				maker: PhoneData[i].maker,
+				brand: PhoneData[i].brand,
 				modelNumber: PhoneData[i].modelNumber,
 				storage: PhoneData[i].storage,
-				physicalCondition: PhoneData[i].condition,
-				type: PhoneData[i].type,
+				physicalCondition: PhoneData[i].physicalCondition,
+				deviceType: PhoneData[i].deviceType,
 				carrier: PhoneData[i].carrier,
 				userId: 1
 			})

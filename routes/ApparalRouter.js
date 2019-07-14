@@ -11,11 +11,11 @@ apparalRouter.get('/', async (req, res) => {
 	}
 })
 
-apparalRouter.get('/pants', async (req, res) => {
+apparalRouter.get('/:category_code', async (req, res) => {
 	try {
 		const pants = await Apparal.findAll({
 			where: {
-				category_code: 'pants'
+				category_code: req.params.category_code.toLowerCase()
 			}
 		})
 		res.send(pants)
@@ -24,7 +24,7 @@ apparalRouter.get('/pants', async (req, res) => {
 	}
 })
 
-apparalRouter.put('/:id/category/:category_code/sold', async (req, res) => {
+apparalRouter.put('/:item_id/sold', async (req, res) => {
 	try {
 		const sold = await Apparal.findByPk(req.params.id)
 		const { dataValues } = sold
@@ -34,6 +34,11 @@ apparalRouter.put('/:id/category/:category_code/sold', async (req, res) => {
 			let profitCalc = dataValues.price - dataValues.buyerCost
 
 			const data = {
+				name: req.body.name,
+				categoryCode: req.body.categoryCode.toLowerCase(),
+				price: req.body.price,
+				buyerCost: req.body.buyerCost,
+				color: req.body.color.toLowerCase(),
 				category_code: req.params.category_code,
 				quantity: newQuantity,
 				amntSold: amntSold,
@@ -62,12 +67,25 @@ apparalRouter.post('/user/:id/inventory/add', async (req, res) => {
 			categoryCode: req.body.categoryCode.toLowerCase(),
 			price: req.body.price,
 			buyerCost: req.body.buyerCost,
-			quantity: req.body.quantity,
-			color: req.body.color.toLowerCase()
+			color: req.body.color.toLowerCase(),
+			category_code: req.params.category_code,
+			quantity: req.body.quantity
 		}
 		const newProduct = await Apparal.create(data)
 		await newProduct.setUser(admin)
 		res.send(newProduct)
+	} catch (error) {
+		throw error
+	}
+})
+
+apparalRouter.delete('/:item_id', async (req, res) => {
+	try {
+		const removeItem = await Apparal.findByPk(req.params.device_id)
+		if (removeItem) {
+			await Apparal.destroy({ where: { id: req.params.item_id } })
+			res.send(`Item ${req.params.device_id} was removed!`)
+		}
 	} catch (error) {
 		throw error
 	}
