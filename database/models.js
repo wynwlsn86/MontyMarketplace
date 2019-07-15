@@ -131,6 +131,31 @@ const Phone = db.define('phone', {
 	}
 })
 
+const Sold = db.define('sold', {
+	name: {
+		allowNull: false,
+		type: Sequelize.STRING
+	},
+	product: {
+		allowNull: false,
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	email: {
+		allowNull: false,
+		type: Sequelize.STRING,
+		validate: {
+			isEmail: true
+		}
+	},
+	phoneNumber: {
+		type: Sequelize.STRING,
+		allowNull: false
+	},
+	item_id: {
+		type: Sequelize.INTEGER
+	}
+})
+
 // const Size = db.define('size', {
 // 	apparalSize: {
 // 		type: Sequelize.ARRAY(Sequelize.STRING)
@@ -142,10 +167,13 @@ User.beforeCreate(async (user, options) => {
 	user.password = hashedPassword
 })
 
+User.hasMany(Sold)
+
 User.hasMany(Apparal)
 Apparal.belongsTo(User)
 // Apparal.hasMany(Size)
 // Size.belongsTo(Apparal)
+Sold.belongsTo(User)
 User.hasMany(Phone)
 Phone.belongsTo(User)
 
