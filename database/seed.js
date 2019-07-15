@@ -1,4 +1,4 @@
-const { User, Apparal, Phone, Size } = require('./models')
+const { User, Apparal, Phone } = require('./models')
 const { PhoneData } = require('./PhoneData')
 
 const main = async () => {
@@ -22,7 +22,46 @@ const main = async () => {
 		amntSold: 0,
 		price: 60.59,
 		buyerCost: 20.59,
-		profit: 0
+		profit: 0,
+		size: [
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small'
+		],
+		clearance: true
 	})
 
 	const jean = await Apparal.create({
@@ -33,11 +72,19 @@ const main = async () => {
 		amntSold: 31,
 		price: 100.2,
 		buyerCost: 40.0,
-		profit: 1866.51
-	})
-
-	const size = await Size.create({
-		apparalSize: 'medium'
+		profit: 1866.51,
+		size: [
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small',
+			'medium',
+			'medium',
+			'small'
+		],
+		clearance: false
 	})
 
 	const jacket = await Apparal.create({
@@ -45,7 +92,9 @@ const main = async () => {
 		categoryCode: 'Jackets',
 		price: '300.84',
 		buyerCost: '120.00',
-		color: 'black'
+		color: 'black',
+		size: ['medium', 'medium', 'small', 'medium'],
+		clearance: false
 	})
 
 	seedPhoneData = async () => {
@@ -64,7 +113,6 @@ const main = async () => {
 		}
 	}
 
-	await size.setApparal(jacket)
 	await seedPhoneData()
 	await tShirt.setUser(user)
 	await jean.setUser(user)

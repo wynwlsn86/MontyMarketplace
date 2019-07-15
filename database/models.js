@@ -48,6 +48,9 @@ const Apparal = db.define('apparal', {
 		type: Sequelize.INTEGER,
 		default: 0
 	},
+	size: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
 	color: {
 		type: Sequelize.STRING
 	},
@@ -128,11 +131,11 @@ const Phone = db.define('phone', {
 	}
 })
 
-const Size = db.define('size', {
-	apparalSize: {
-		type: Sequelize.STRING
-	}
-})
+// const Size = db.define('size', {
+// 	apparalSize: {
+// 		type: Sequelize.ARRAY(Sequelize.STRING)
+// 	}
+// })
 
 User.beforeCreate(async (user, options) => {
 	const hashedPassword = await bcrypt.hash(user.password, 12)
@@ -141,8 +144,8 @@ User.beforeCreate(async (user, options) => {
 
 User.hasMany(Apparal)
 Apparal.belongsTo(User)
-Apparal.hasMany(Size)
-Size.belongsTo(Apparal)
+// Apparal.hasMany(Size)
+// Size.belongsTo(Apparal)
 User.hasMany(Phone)
 Phone.belongsTo(User)
 
@@ -150,6 +153,6 @@ module.exports = {
 	User,
 	Apparal,
 	Phone,
-	Size,
+	// Size,
 	db
 }
