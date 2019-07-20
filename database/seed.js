@@ -23,44 +23,6 @@ const main = async () => {
 		price: 60.59,
 		buyerCost: 20.59,
 		profit: 0,
-		size: [
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small'
-		],
 		clearance: true
 	})
 
@@ -73,17 +35,6 @@ const main = async () => {
 		price: 100.2,
 		buyerCost: 40.0,
 		profit: 1866.51,
-		size: [
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small',
-			'medium',
-			'medium',
-			'small'
-		],
 		clearance: false
 	})
 
@@ -93,7 +44,6 @@ const main = async () => {
 		price: '300.84',
 		buyerCost: '120.00',
 		color: 'black',
-		size: ['medium', 'medium', 'small', 'medium'],
 		clearance: false
 	})
 
@@ -122,7 +72,7 @@ async function run() {
 	try {
 		await main()
 	} catch (e) {
-		console.error(e)
+		throw error
 	} finally {
 		await process.exit()
 	}
