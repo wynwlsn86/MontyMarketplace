@@ -40,7 +40,7 @@ const main = async () => {
 
 	const jacket = await Apparal.create({
 		name: 'Dope Bomber Jacket',
-		categoryCode: 'Jackets',
+		categoryCode: 'jackets',
 		price: '300.84',
 		buyerCost: '120.00',
 		color: 'black',

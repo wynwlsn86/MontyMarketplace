@@ -11,6 +11,7 @@ const { userAuthorized } = require('./Auth/Auth')
 const ApparalRouter = require('./routes/ApparalRouter')
 const phoneRouter = require('./routes/PhoneRouter')
 const emailRouter = require('./routes/emailRouter')
+const soldItems = require('./routes/SoldItems')
 
 dotenv.config()
 const PORT = process.env.PORT || 3001
@@ -29,6 +30,7 @@ app.use('/app', userAuthorized)
 app.use('/apparal', ApparalRouter)
 app.use('/phones', phoneRouter)
 app.use('/contact', emailRouter)
+app.use('/sold', soldItems)
 app.use(passport.initialize())
 
 // Test Message

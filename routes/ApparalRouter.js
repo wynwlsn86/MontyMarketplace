@@ -1,29 +1,13 @@
 const express = require('express')
 const apparalRouter = express.Router()
-const { User, Apparal } = require('../database/models')
+const { User, Apparal, Size } = require('../database/models')
 
 apparalRouter.get('/', async (req, res) => {
 	try {
-		const apparal = await Apparal.findAll()
-		const data = []
-		for (let i = 0; i < apparal.length; i++) {
-			const { dataValues } = apparal[i]
-			let newData = {
-				name: dataValues.name,
-				categoryCode: dataValues.categoryCode,
-				color: dataValues.color,
-				currency: dataValues.currency,
-				amntSold: dataValues.amntSold,
-				price: dataValues.price,
-				buyerCost: dataValues.buyerCost,
-				profit: dataValues.profit,
-				clearance: dataValues.clearance,
-				quantity: dataValues.size.length,
-				size: dataValues.size
-			}
-			data.push(newData)
-		}
-		res.send(data)
+		const apparal = await Apparal.findAll({
+			include: [Size]
+		})
+		res.send(apparal)
 	} catch (error) {
 		throw error
 	}
@@ -32,27 +16,10 @@ apparalRouter.get('/', async (req, res) => {
 apparalRouter.get('/clearance=:clearance_items', async (req, res) => {
 	try {
 		const apparal = await Apparal.findAll({
-			where: { clearance: req.params.clearance_items }
+			where: { clearance: req.params.clearance_items },
+			include: [Size]
 		})
-		const data = []
-		for (let i = 0; i < apparal.length; i++) {
-			const { dataValues } = apparal[i]
-			let newData = {
-				name: dataValues.name,
-				categoryCode: dataValues.categoryCode,
-				color: dataValues.color,
-				currency: dataValues.currency,
-				amntSold: dataValues.amntSold,
-				price: dataValues.price,
-				buyerCost: dataValues.buyerCost,
-				profit: dataValues.profit,
-				clearance: dataValues.clearance,
-				quantity: dataValues.size.length,
-				size: dataValues.size
-			}
-			data.push(newData)
-		}
-		res.send(data)
+		res.send(apparal)
 	} catch (error) {
 		throw error
 	}
@@ -65,26 +32,7 @@ apparalRouter.get('/:category_code', async (req, res) => {
 				category_code: req.params.category_code.toLowerCase()
 			}
 		})
-		const data = []
-		for (let i = 0; i < category.length; i++) {
-			const { dataValues } = category[i]
-			let newData = {
-				name: dataValues.name,
-				categoryCode: dataValues.categoryCode,
-				color: dataValues.color,
-				currency: dataValues.currency,
-				amntSold: dataValues.amntSold,
-				price: dataValues.price,
-				buyerCost: dataValues.buyerCost,
-				profit: dataValues.profit,
-				clearance: dataValues.clearance,
-				quantity: dataValues.size.length,
-				size: dataValues.size
-			}
-			data.push(newData)
-		}
-		res.send(data)
-		res.send(pants)
+		res.send(category)
 	} catch (error) {
 		throw error
 	}

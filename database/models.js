@@ -38,25 +38,14 @@ const Apparal = db.define('apparal', {
 	name: {
 		type: Sequelize.STRING
 	},
-	imageURL: {
+	imageUrl: {
 		type: Sequelize.STRING
 	},
 	categoryCode: {
 		type: Sequelize.STRING
 	},
-	quantity: {
-		type: Sequelize.INTEGER,
-		default: 0
-	},
-	size: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
 	color: {
 		type: Sequelize.STRING
-	},
-	amntSold: {
-		type: Sequelize.INTEGER,
-		defaultValue: 0
 	},
 	currency: {
 		type: Sequelize.STRING,
@@ -65,15 +54,11 @@ const Apparal = db.define('apparal', {
 	price: {
 		type: Sequelize.DECIMAL(6, 2, 'string')
 	},
-	buyerCost: {
-		type: Sequelize.DECIMAL(6, 2, 'string')
-	},
-	profit: {
-		defaultValue: '0',
-		type: Sequelize.DECIMAL(16, 2, 'string')
-	},
 	clearance: {
 		type: Sequelize.BOOLEAN
+	},
+	buyerCost: {
+		type: Sequelize.DECIMAL(6, 2, 'string')
 	}
 })
 
@@ -106,10 +91,6 @@ const Phone = db.define('phone', {
 	physicalCondition: {
 		type: Sequelize.ARRAY(Sequelize.STRING)
 	},
-	amntSold: {
-		type: Sequelize.INTEGER,
-		defaultValue: 0
-	},
 	currency: {
 		type: Sequelize.STRING,
 		defaultValue: 'USD'
@@ -117,14 +98,6 @@ const Phone = db.define('phone', {
 	price: {
 		type: Sequelize.DECIMAL(6, 2, 'string'),
 		defaultValue: 0
-	},
-	buyerCost: {
-		type: Sequelize.DECIMAL(6, 2, 'string'),
-		defaultValue: '0'
-	},
-	profit: {
-		defaultValue: '0',
-		type: Sequelize.DECIMAL(16, 2, 'string')
 	},
 	clearance: {
 		type: Sequelize.BOOLEAN
@@ -153,6 +126,14 @@ const SoldItem = db.define('soldItem', {
 	},
 	item_id: {
 		type: Sequelize.INTEGER
+	},
+	profit: {
+		defaultValue: '0',
+		type: Sequelize.DECIMAL(16, 2, 'string')
+	},
+	amntSold: {
+		type: Sequelize.INTEGER,
+		defaultValue: 0
 	}
 })
 
@@ -168,7 +149,6 @@ User.beforeCreate(async (user, options) => {
 })
 
 User.hasMany(SoldItem)
-
 User.hasMany(Apparal)
 Apparal.belongsTo(User)
 Apparal.hasMany(Size)
