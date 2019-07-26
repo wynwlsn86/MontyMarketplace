@@ -32,6 +32,8 @@ soldItems.put('/:item_id/', async (req, res) => {
 			let amntSold = parseInt(prevSold.count) + parseInt(req.body.quantity)
 			let profitCalc = price - buyerCost
 			const customer = req.body
+			// config object to replace req.body
+			// passing it in to create new record in sold table with this info
 			const data = {
 				name: req.body.name,
 				product: name,
