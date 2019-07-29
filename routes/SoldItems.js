@@ -11,7 +11,7 @@ soldItems.get('/', async (req, res) => {
 	}
 })
 
-soldItems.put('/:item_id/', async (req, res) => {
+soldItems.post('/:item_id', async (req, res) => {
 	try {
 		const itemQuantity = await Size.findAndCountAll({
 			where: { apparal_id: req.params.item_id }
@@ -23,6 +23,7 @@ soldItems.put('/:item_id/', async (req, res) => {
 		const prevSold = await SoldItem.findAndCountAll({
 			where: { item_id: req.params.item_id }
 		})
+
 		const user = await User.findByPk(1)
 		if (item) {
 			const {
@@ -34,19 +35,24 @@ soldItems.put('/:item_id/', async (req, res) => {
 			const customer = req.body
 			// config object to replace req.body
 			// passing it in to create new record in sold table with this info
+
 			const data = {
-				name: req.body.name,
+				name: customer.name,
 				product: name,
-				email: req.body.email,
-				phoneNumber: req.body.phoneNumber,
-				itemId: id,
+				email: customer.email,
+				phoneNumber: customer.phoneNumber,
+				item_id: id,
 				profit: profitCalc,
 				amntSold: amntSold
 			}
-			console.log(data)
-			await SoldItem.update(data, {
-				where: { userId: user.id }
+
+			await SoldItem.create(req.body, {
+				where: {
+					itemId: req.params.item_id
+				}
 			})
+			// await SoldItem.setUser(user)
+			res.send(data)
 		}
 	} catch (error) {
 		throw error

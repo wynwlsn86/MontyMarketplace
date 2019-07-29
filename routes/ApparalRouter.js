@@ -40,7 +40,7 @@ apparalRouter.get('/:category_code', async (req, res) => {
 
 apparalRouter.put('/:item_id/sold', async (req, res) => {
 	try {
-		const sold = await Apparal.findByPk(req.params.id)
+		const sold = await Apparal.findByPk(req.params.item_id)
 		const { dataValues } = sold
 		if (sold) {
 			let newQuantity = dataValues.quantity - parseInt(req.body.quantity)
@@ -61,7 +61,7 @@ apparalRouter.put('/:item_id/sold', async (req, res) => {
 
 			await Apparal.update(data, {
 				where: {
-					id: req.params.id
+					id: req.params.item_id
 				}
 			})
 

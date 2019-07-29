@@ -124,7 +124,7 @@ const SoldItem = db.define('soldItem', {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
-	item_id: {
+	itemId: {
 		type: Sequelize.INTEGER
 	},
 	profit: {
