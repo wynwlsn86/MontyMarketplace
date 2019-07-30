@@ -1,11 +1,19 @@
-const { User, Apparal, Phone } = require('./models')
+const { User, Apparal, Phone, Sold } = require('./models')
 const { PhoneData } = require('./PhoneData')
 
 const main = async () => {
 	await User.destroy({ where: {} })
 	await Phone.destroy({ where: {} })
 	await Apparal.destroy({ where: {} })
+	await Sold.destroy({ where: {} })
 	// Seed Data
+
+	const soldItem = await Sold.create({
+		customerName: 'Joe',
+		productName: 'T-shirt',
+		email: 'mail@mail.com',
+		phoneNumber: '123-123-1234'
+	})
 
 	const user = await User.create({
 		name: 'John Smith',
@@ -47,7 +55,7 @@ const main = async () => {
 		clearance: false
 	})
 
-	seedPhoneData = async () => {
+	const seedPhoneData = async () => {
 		for (let i = 0; i < PhoneData.length; i++) {
 			const phones = await Phone.create({
 				imageURL: PhoneData[i].imageURL,

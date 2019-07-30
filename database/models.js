@@ -104,14 +104,14 @@ const Phone = db.define('phone', {
 	}
 })
 
-const SoldItem = db.define('soldItem', {
-	name: {
+const Sold = db.define('sold', {
+	customerName: {
 		allowNull: false,
 		type: Sequelize.STRING
 	},
-	product: {
+	productName: {
 		allowNull: false,
-		type: Sequelize.ARRAY(Sequelize.STRING)
+		type: Sequelize.STRING
 	},
 	email: {
 		allowNull: false,
@@ -124,7 +124,7 @@ const SoldItem = db.define('soldItem', {
 		type: Sequelize.STRING,
 		allowNull: false
 	},
-	itemId: {
+	item_id: {
 		type: Sequelize.INTEGER
 	},
 	profit: {
@@ -148,12 +148,12 @@ User.beforeCreate(async (user, options) => {
 	user.password = hashedPassword
 })
 
-User.hasMany(SoldItem)
+User.hasMany(Sold)
 User.hasMany(Apparal)
 Apparal.belongsTo(User)
 Apparal.hasMany(Size)
 Size.belongsTo(Apparal)
-SoldItem.belongsTo(User)
+Sold.belongsTo(User)
 User.hasMany(Phone)
 Phone.belongsTo(User)
 
@@ -161,7 +161,7 @@ module.exports = {
 	User,
 	Apparal,
 	Phone,
-	SoldItem,
+	Sold,
 	Size,
 	db
 }

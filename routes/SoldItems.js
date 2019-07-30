@@ -1,6 +1,6 @@
 const express = require('express')
 const soldItems = express.Router()
-const { SoldItem, Apparal, User, Size } = require('../database/models')
+const { Sold, Apparal, User, Size } = require('../database/models')
 
 soldItems.get('/', async (req, res) => {
 	try {
@@ -20,7 +20,7 @@ soldItems.post('/:item_id', async (req, res) => {
 			include: [Size]
 		})
 
-		const prevSold = await SoldItem.findAndCountAll({
+		const prevSold = await Sold.findAndCountAll({
 			where: { item_id: req.params.item_id }
 		})
 
@@ -37,22 +37,22 @@ soldItems.post('/:item_id', async (req, res) => {
 			// passing it in to create new record in sold table with this info
 
 			const data = {
-				name: customer.name,
-				product: name,
+				customerName: customer.customerName,
+				productName: name,
 				email: customer.email,
 				phoneNumber: customer.phoneNumber,
-				item_id: id,
+				itemId: id,
 				profit: profitCalc,
 				amntSold: amntSold
 			}
-
-			await SoldItem.create(req.body, {
+			console.log(data)
+			const newSold = await Sold.create(data, {
 				where: {
 					itemId: req.params.item_id
 				}
 			})
-			// await SoldItem.setUser(user)
-			res.send(data)
+			// await Sold.setUser(user)
+			res.send(newSold)
 		}
 	} catch (error) {
 		throw error
