@@ -45,7 +45,7 @@ soldItems.post('/:item_id', async (req, res) => {
 				profit: profitCalc,
 				amntSold: amntSold
 			}
-			console.log(data)
+
 			const newSold = await Sold.create(data, {
 				where: {
 					itemId: req.params.item_id

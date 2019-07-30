@@ -10,6 +10,7 @@ const db = new Sequelize(
 		}
 	}
 )
+
 const User = db.define('user', {
 	name: {
 		type: Sequelize.STRING,
