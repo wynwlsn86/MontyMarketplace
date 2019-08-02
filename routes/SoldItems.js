@@ -1,6 +1,6 @@
 const express = require('express')
 const soldItems = express.Router()
-const { Sold, Apparal, User, Size } = require('../database/models')
+const { Purchase, Apparal, User, Size } = require('../database/models')
 
 soldItems.get('/', async (req, res) => {
 	try {
@@ -16,15 +16,17 @@ soldItems.post('/:item_id', async (req, res) => {
 		const itemQuantity = await Size.findAndCountAll({
 			where: { apparal_id: req.params.item_id }
 		})
+
 		const item = await Apparal.findByPk(req.params.item_id, {
 			include: [Size]
 		})
 
-		const prevSold = await Sold.findAndCountAll({
+		const prevSold = await Purchase.findAndCountAll({
 			where: { item_id: req.params.item_id }
 		})
 
 		const user = await User.findByPk(1)
+
 		if (item) {
 			const {
 				dataValues: { id, price, name, buyerCost }
@@ -33,25 +35,23 @@ soldItems.post('/:item_id', async (req, res) => {
 			let amntSold = parseInt(prevSold.count) + parseInt(req.body.quantity)
 			let profitCalc = price - buyerCost
 			const customer = req.body
-			// config object to replace req.body
-			// passing it in to create new record in sold table with this info
 
 			const data = {
 				customerName: customer.customerName,
 				productName: name,
 				email: customer.email,
 				phoneNumber: customer.phoneNumber,
-				itemId: id,
+				item_id: id,
 				profit: profitCalc,
-				amntSold: amntSold
+				quantity: amntSold
 			}
 
-			const newSold = await Sold.create(data, {
+			const newSold = await Purchase.create(data, {
 				where: {
 					itemId: req.params.item_id
 				}
 			})
-			// await Sold.setUser(user)
+			await newSold.setUser(user)
 			res.send(newSold)
 		}
 	} catch (error) {

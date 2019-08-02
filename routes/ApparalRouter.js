@@ -75,6 +75,10 @@ apparalRouter.put('/:item_id/sold', async (req, res) => {
 apparalRouter.post('/user/:id/inventory/add', async (req, res) => {
 	try {
 		const admin = await User.findByPk(req.params.id)
+		const sizes = []
+		for (let i = 0; i < req.body.sizeQuantity; i++) {
+			sizes.push(req.body.size)
+		}
 
 		const data = {
 			name: req.body.name,
@@ -83,11 +87,14 @@ apparalRouter.post('/user/:id/inventory/add', async (req, res) => {
 			price: req.body.price,
 			buyerCost: req.body.buyerCost,
 			color: req.body.color.toLowerCase(),
-			quantity: req.body.quantity
+			quantity: sizes.length
 		}
+
 		const newProduct = await Apparal.create(data)
+		const newSize = await Size.create({ apparalSize: sizes })
+		await newSize.setApparal(newProduct)
 		await newProduct.setUser(admin)
-		res.send(newProduct)
+		res.send(newProduct, newSize)
 	} catch (error) {
 		throw error
 	}

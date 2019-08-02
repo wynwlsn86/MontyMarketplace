@@ -48,10 +48,6 @@ const Apparal = db.define('apparal', {
 	color: {
 		type: Sequelize.STRING
 	},
-	currency: {
-		type: Sequelize.STRING,
-		defaultValue: 'USD'
-	},
 	price: {
 		type: Sequelize.DECIMAL(6, 2, 'string')
 	},
@@ -105,7 +101,7 @@ const Phone = db.define('phone', {
 	}
 })
 
-const Sold = db.define('sold', {
+const Purchase = db.define('purchase', {
 	customerName: {
 		allowNull: false,
 		type: Sequelize.STRING
@@ -132,7 +128,7 @@ const Sold = db.define('sold', {
 		defaultValue: '0',
 		type: Sequelize.DECIMAL(16, 2, 'string')
 	},
-	amntSold: {
+	quantity: {
 		type: Sequelize.INTEGER,
 		defaultValue: 0
 	}
@@ -149,20 +145,16 @@ User.beforeCreate(async (user, options) => {
 	user.password = hashedPassword
 })
 
-User.hasMany(Sold)
 User.hasMany(Apparal)
 Apparal.belongsTo(User)
 Apparal.hasMany(Size)
 Size.belongsTo(Apparal)
-Sold.belongsTo(User)
-User.hasMany(Phone)
-Phone.belongsTo(User)
 
 module.exports = {
 	User,
 	Apparal,
 	Phone,
-	Sold,
+	Purchase,
 	Size,
 	db
 }
