@@ -34,22 +34,54 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 
 ApparelRouter.post('/', async (req, res) => {
 	try {
-		const item = await Apparel.create(req.body.item)
-		const attributeData = {
-			color: req.body.attributes.color.toLowerCase(),
-			size: req.body.attributes.size.toLowerCase()
-		}
-		const categoryData = {
-			category: req.body.category.category.toLowerCase()
-		}
-		const attributes = await Attribute.create(attributeData)
-		const categories = await Category.create(categoryData)
+		const items = await Apparel.findOrCreate({
+			where: { name: req.body.item.name }
+		})
+		if (items) {
+			await items.forEach(async (item) => {
+				const {
+					dataValues: { id }
+				} = item
+				const categories = await Category.findOrCreate({
+					where: {
+						apparel_id: id,
+						category: req.body.category.category
+					}
+				})
 
-		if (categories && attributes) {
-			attributes.setApparel(item)
-			categories.setApparel(item)
+				const attributes = await Attribute.findOrCreate({
+					where: {
+						apparel_id: id,
+						color: req.body.attributes.color,
+						size: req.body.attributes.size
+					}
+				})
+				attributes.forEach(
+					async (attribute) => await attribute.setApparel(item)
+				)
+				categories.forEach(async (category) => await category.setApparel(item))
+			})
 		}
-		res.send(item)
+		res.send(items)
+	} catch (error) {
+		throw error
+	}
+})
+
+ApparelRouter.delete('/:item_id', async (req, res) => {
+	try {
+		await Apparel.destroy({ where: { id: req.params.item_id } })
+		await Attribute.destroy({
+			where: {
+				apparel_id: req.params.item_id
+			}
+		})
+		await Category.destroy({
+			where: {
+				apparel_id: req.params.item_id
+			}
+		})
+		res.send({ msg: 'Item Removed' })
 	} catch (error) {
 		throw error
 	}

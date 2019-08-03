@@ -60,7 +60,7 @@ const main = async () => {
 		size: 'lg'
 	})
 	await data.setApparel(tshirt)
-	await tshirt.setCategory(shirts)
+	await shirts.setApparel(tshirt)
 	// await tshirt.setCategory(shirts)
 	// const seedPhoneData = async () => {
 	// 	for (let i = 0; i < PhoneData.length; i++) {

@@ -44,6 +44,10 @@ const Apparel = db.define('apparel', {
 })
 
 const Attribute = db.define('attribute', {
+	apparelId: {
+		type: Sequelize.INTEGER,
+		unique: false
+	},
 	size: {
 		type: Sequelize.STRING
 	},
@@ -64,6 +68,10 @@ const Purchase = db.define('purchase', {
 })
 
 const Category = db.define('category', {
+	apparelId: {
+		type: Sequelize.INTEGER,
+		unique: false
+	},
 	category: {
 		type: Sequelize.STRING
 	}
@@ -79,8 +87,8 @@ User.beforeCreate(async (user, options) => {
 Apparel.hasMany(Attribute)
 Apparel.hasMany(Category)
 
-Attribute.belongsTo(Apparel)
-Category.belongsTo(Apparel)
+Attribute.belongsTo(Apparel, { through: 'apparel_id' })
+Category.belongsTo(Apparel, { through: 'apparel_id' })
 
 Purchase.hasMany(Apparel)
 Purchase.belongsTo(Customer)
