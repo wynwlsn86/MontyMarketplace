@@ -1,10 +1,4 @@
-const {
-	User,
-	Apparel,
-	ApparelSize,
-	Purchase,
-	ApparelCategory
-} = require('./models')
+const { User, Apparel, Attribute, Purchase, Category } = require('./models')
 
 const { PhoneData } = require('./PhoneData')
 
@@ -32,8 +26,7 @@ const main = async () => {
 		name: 'Awesome T-shirt',
 		price: '60.59',
 		cost: '20.59',
-		clearance: true,
-		colors: ['red', 'blue', 'black']
+		clearance: true
 	})
 
 	const jeans = await Apparel.create({
@@ -43,15 +36,15 @@ const main = async () => {
 		clearance: false
 	})
 
-	const pants = await ApparelCategory.create({
+	const pants = await Category.create({
 		category: 'pants'
 	})
 
-	const shirts = await ApparelCategory.create({
+	const shirts = await Category.create({
 		category: 'shirts'
 	})
 
-	const tops = await ApparelCategory.create({
+	const tops = await Category.create({
 		category: 'tops'
 	})
 
@@ -62,7 +55,13 @@ const main = async () => {
 		clearance: false
 	})
 
-	await pants.setApparel(jeans)
+	const data = await Attribute.create({
+		color: 'red',
+		size: 'lg'
+	})
+	await data.setApparel(tshirt)
+	await tshirt.setCategory(shirts)
+	// await tshirt.setCategory(shirts)
 	// const seedPhoneData = async () => {
 	// 	for (let i = 0; i < PhoneData.length; i++) {
 	// 		const phones = await Phone.create({

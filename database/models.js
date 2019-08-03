@@ -40,18 +40,16 @@ const Apparel = db.define('apparel', {
 	description: Sequelize.TEXT,
 	cost: Sequelize.DECIMAL(6, 2, 'string'),
 	imageUrl: Sequelize.STRING,
-	clearance: Sequelize.BOOLEAN,
-	colors: Sequelize.ARRAY(Sequelize.STRING)
+	clearance: Sequelize.BOOLEAN
 })
 
-const Product = db.define('product')
-
-const Color = db.define('color', {
-	name: Sequelize.STRING
-})
-
-const ApparelSize = db.define('apparelSize', {
-	size: Sequelize.STRING
+const Attribute = db.define('attribute', {
+	size: {
+		type: Sequelize.STRING
+	},
+	color: {
+		type: Sequelize.STRING
+	}
 })
 
 const Customer = db.define('customer', {
@@ -65,23 +63,26 @@ const Purchase = db.define('purchase', {
 	customerId: Sequelize.INTEGER
 })
 
-const ApparelCategory = db.define('apparelCategory', {
-	category: Sequelize.STRING
+const Category = db.define('category', {
+	category: {
+		type: Sequelize.STRING
+	}
 })
+
+const Product = db.define('product')
 
 User.beforeCreate(async (user, options) => {
 	const hashedPassword = await bcrypt.hash(user.password, 12)
 	user.password = hashedPassword
 })
 
-Apparel.hasMany(ApparelSize)
-Apparel.hasMany(ApparelCategory)
+Apparel.hasMany(Attribute)
+Apparel.hasMany(Category)
 
-ApparelCategory.belongsToMany(Apparel, { through: Product })
+Attribute.belongsTo(Apparel)
+Category.belongsTo(Apparel)
 
-// Apparel.belongsTo(Purchase)
 Purchase.hasMany(Apparel)
-Purchase.hasMany(ApparelSize, { as: 'size_id' })
 Purchase.belongsTo(Customer)
 
 Customer.hasMany(Purchase, { as: 'customer_id' })
@@ -91,8 +92,8 @@ module.exports = {
 	Customer,
 	Purchase,
 	Apparel,
-	ApparelSize,
-	ApparelCategory,
+	Attribute,
+	Category,
 	Product,
 	db
 }

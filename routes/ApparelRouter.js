@@ -3,8 +3,8 @@ const ApparelRouter = express.Router()
 const {
 	User,
 	Apparel,
-	ApparelSize,
-	ApparelCategory,
+	Attribute,
+	Category,
 	Purchase
 } = require('../database/models')
 
@@ -35,18 +35,23 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 ApparelRouter.post('/', async (req, res) => {
 	try {
 		const item = await Apparel.create(req.body.item)
-
-		const newCategory = await ApparelCategory.findOrCreate({
-			where: { category: req.body.category.category }
-		})
-		console.log(newCategory[0])
-		if (item) {
-			await newCategory[0].apparelCategory.dataValues.setApparel(item)
-			// await item.addColor(color)
+		const attributeData = {
+			color: req.body.attributes.color.toLowerCase(),
+			size: req.body.attributes.size.toLowerCase()
 		}
+		const categoryData = {
+			category: req.body.category.category.toLowerCase()
+		}
+		const attributes = await Attribute.create(attributeData)
+		const categories = await Category.create(categoryData)
+
+		if (categories && attributes) {
+			attributes.setApparel(item)
+			categories.setApparel(item)
+		}
+		res.send(item)
 	} catch (error) {
-		console.log('error', error)
-		// throw error
+		throw error
 	}
 })
 
