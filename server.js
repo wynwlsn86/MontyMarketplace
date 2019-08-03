@@ -8,10 +8,10 @@ const dotenv = require('dotenv')
 // Routers
 const AuthRouter = require('./routes/AuthRouter')
 const { userAuthorized } = require('./Auth/Auth')
-const ApparalRouter = require('./routes/ApparalRouter')
+const ApparelRouter = require('./routes/ApparelRouter')
 const phoneRouter = require('./routes/PhoneRouter')
 const emailRouter = require('./routes/emailRouter')
-const soldItems = require('./routes/SoldItems')
+const PurchaseRouter = require('./routes/PurchaseRouter')
 
 dotenv.config()
 const PORT = process.env.PORT || 3001
@@ -27,10 +27,10 @@ app.use(bodyParser.json())
 // App Routes
 app.use('/auth', AuthRouter)
 app.use('/app', userAuthorized)
-app.use('/apparal', ApparalRouter)
+app.use('/apparel', ApparelRouter)
 app.use('/phones', phoneRouter)
 app.use('/contact', emailRouter)
-app.use('/sold', soldItems)
+app.use('/purchases', PurchaseRouter)
 app.use(passport.initialize())
 
 // Test Message
