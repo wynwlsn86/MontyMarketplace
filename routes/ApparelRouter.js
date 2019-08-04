@@ -28,22 +28,31 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 
 ApparelRouter.post('/', async (req, res) => {
 	try {
+		const {
+			name,
+			brand,
+			price,
+			cost,
+			description,
+			clearance,
+			imageUrl
+		} = req.body.item
 		const items = await Apparel.findOrCreate({
 			raw: true,
 			where: {
-				name: req.body.item.name,
-				price: req.body.item.price,
-				cost: req.body.item.cost,
-				description: req.body.item.description,
-				clearance: req.body.item.clearance,
-				imageUrl: req.body.item.imageUrl
+				name: name,
+				brand: brand,
+				price: price,
+				cost: cost,
+				description: description,
+				clearance: clearance,
+				imageUrl: imageUrl
 			}
 		})
 
 		if (items) {
 			const { id } = items[0]
 			const item = await Apparel.findByPk(id)
-
 			const categories = await Category.findOrCreate({
 				where: {
 					category: req.body.category.category

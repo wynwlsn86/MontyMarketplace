@@ -36,6 +36,7 @@ const User = db.define('user', {
 
 const Apparel = db.define('apparel', {
 	name: Sequelize.STRING,
+	brand: Sequelize.STRING,
 	price: Sequelize.DECIMAL(6, 2, 'string'),
 	description: Sequelize.TEXT,
 	cost: Sequelize.DECIMAL(6, 2, 'string'),
