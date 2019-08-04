@@ -61,6 +61,25 @@ const main = async () => {
 	})
 	await data.setApparel(tshirt)
 	await shirts.setApparel(tshirt)
+
+	const purchase = await Purchase.create({
+		itemId: 1
+	})
+	const purchase1 = await Purchase.create({
+		itemId: 2
+	})
+	const purchase2 = await Purchase.create({
+		itemId: 1
+	})
+	const purchase3 = await Purchase.create({
+		itemId: 2
+	})
+	const purchase4 = await Purchase.create({
+		itemId: 2
+	})
+	const purchase5 = await Purchase.create({
+		itemId: 3
+	})
 	// await tshirt.setCategory(shirts)
 	// const seedPhoneData = async () => {
 	// 	for (let i = 0; i < PhoneData.length; i++) {
