@@ -26,6 +26,27 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 	}
 })
 
+/*
+Format Post Like this:
+{
+	"item": {
+		"name": "Sick Shirt",
+		"price": "32.98",
+		"cost": "12.00",
+		"description": "Awesome shirt",
+		"brand":"Nike",
+		"clearance": false,
+		"imageUrl": "imagee"
+	},
+	"category": {
+		"category": "shirts"
+	},
+	"attributes": {
+		"color": "black",
+		"size": "sm"
+	}
+}
+*/
 ApparelRouter.post('/', async (req, res) => {
 	try {
 		const {
