@@ -78,8 +78,6 @@ const Category = db.define('category', {
 	}
 })
 
-const Product = db.define('product')
-
 User.beforeCreate(async (user, options) => {
 	const hashedPassword = await bcrypt.hash(user.password, 12)
 	user.password = hashedPassword
@@ -103,6 +101,5 @@ module.exports = {
 	Apparel,
 	Attribute,
 	Category,
-	Product,
 	db
 }
