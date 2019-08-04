@@ -19,4 +19,19 @@ InventoryRouter.get('/', async (req, res) => {
 	}
 })
 
+// query route, format endpoint as such /categories?=query
+InventoryRouter.get('/categories', async (req, res) => {
+	try {
+		const categories = await Category.findAll({
+			where: {
+				category: req.query.category
+			},
+			include: [Apparel]
+		})
+		res.send(categories)
+	} catch (error) {
+		throw error
+	}
+})
+
 module.exports = InventoryRouter
