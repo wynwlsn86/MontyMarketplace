@@ -1,12 +1,6 @@
 const express = require('express')
 const ApparelRouter = express.Router()
-const {
-	User,
-	Apparel,
-	Attribute,
-	Category,
-	Purchase
-} = require('../database/models')
+const { Apparel, Attribute, Category } = require('../database/models')
 
 ApparelRouter.get('/', async (req, res) => {
 	try {
@@ -35,32 +29,36 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 ApparelRouter.post('/', async (req, res) => {
 	try {
 		const items = await Apparel.findOrCreate({
-			where: { name: req.body.item.name }
+			raw: true,
+			where: {
+				name: req.body.item.name,
+				price: req.body.item.price,
+				cost: req.body.item.cost,
+				description: req.body.item.description,
+				clearance: req.body.item.clearance,
+				imageUrl: req.body.item.imageUrl
+			}
 		})
-		if (items) {
-			await items.forEach(async (item) => {
-				const {
-					dataValues: { id }
-				} = item
-				const categories = await Category.findOrCreate({
-					where: {
-						apparel_id: id,
-						category: req.body.category.category
-					}
-				})
 
-				const attributes = await Attribute.findOrCreate({
-					where: {
-						apparel_id: id,
-						color: req.body.attributes.color,
-						size: req.body.attributes.size
-					}
-				})
-				attributes.forEach(
-					async (attribute) => await attribute.setApparel(item)
-				)
-				categories.forEach(async (category) => await category.setApparel(item))
+		if (items) {
+			const { id } = items[0]
+			const item = await Apparel.findByPk(id)
+
+			const categories = await Category.findOrCreate({
+				where: {
+					category: req.body.category.category
+				}
 			})
+
+			const attributes = await Attribute.findOrCreate({
+				where: {
+					apparel_id: id,
+					color: req.body.attributes.color,
+					size: req.body.attributes.size
+				}
+			})
+			await item.addCategory(categories[0])
+			await item.addAttribute(attributes[0])
 		}
 		res.send(items)
 	} catch (error) {
