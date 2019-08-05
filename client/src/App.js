@@ -22,6 +22,7 @@ function App() {
 					<Route exact path="/" render={(props) => <Home {...props} />} />
 					<Route path="/about" render={(props) => <About {...props} />} />
 					<Route
+						exact
 						path="/marketplace"
 						render={(props) => <Products {...props} />}
 					/>
