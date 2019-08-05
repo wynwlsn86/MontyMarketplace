@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import { Route, Switch, Link } from 'react-router-dom'
-import { Header } from './components/common'
+import { Header, Footer } from './components/common'
 import Home from './components/Home'
 import About from './components/About'
 import Products from './components/Products'
@@ -11,12 +11,7 @@ import Contact from './components/Contact'
 function App() {
 	return (
 		<div className="App">
-			<Header>
-				<Link to="/">Home</Link>
-				<Link to="/about">About</Link>
-				<Link to="/marketplace">Products</Link>
-				<Link to="/contact">Contact</Link>
-			</Header>
+			<Header />
 			<main>
 				<Switch>
 					<Route exact path="/" render={(props) => <Home {...props} />} />
@@ -33,6 +28,7 @@ function App() {
 					<Route path="/contact" render={(props) => <Contact {...props} />} />
 				</Switch>
 			</main>
+			<Footer />
 		</div>
 	)
 }
