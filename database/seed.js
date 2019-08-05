@@ -1,4 +1,11 @@
-const { User, Apparel, Attribute, Purchase, Category } = require('./models')
+const {
+	User,
+	Apparel,
+	Attribute,
+	Purchase,
+	Category,
+	Phone
+} = require('./models')
 
 const { PhoneData } = require('./PhoneData')
 
@@ -67,27 +74,23 @@ const main = async () => {
 	const purchase5 = await Purchase.create({
 		itemId: 3
 	})
-	// await tshirt.setCategory(shirts)
-	// const seedPhoneData = async () => {
-	// 	for (let i = 0; i < PhoneData.length; i++) {
-	// 		const phones = await Phone.create({
-	// 			imageURL: PhoneData[i].imageURL,
-	// 			brand: PhoneData[i].brand,
-	// 			modelNumber: PhoneData[i].modelNumber,
-	// 			storage: PhoneData[i].storage,
-	// 			physicalCondition: PhoneData[i].physicalCondition,
-	// 			deviceType: PhoneData[i].deviceType,
-	// 			carrier: PhoneData[i].carrier,
-	// 			userId: 1
-	// 		})
-	// 		await phones.setUser(user)
-	// 	}
-	// }
 
-	// await seedPhoneData()
-	// await tShirt.setUser(user)
-	// await jean.setUser(user)
-	// await jacket.setUser(user)
+	const seedPhoneData = async () => {
+		for (let i = 0; i < PhoneData.length; i++) {
+			await Phone.create({
+				imageURL: PhoneData[i].imageURL,
+				brand: PhoneData[i].brand,
+				modelNumber: PhoneData[i].modelNumber,
+				storage: PhoneData[i].storage,
+				physicalCondition: PhoneData[i].physicalCondition,
+				deviceType: PhoneData[i].deviceType,
+				carrier: PhoneData[i].carrier,
+				userId: 1
+			})
+		}
+	}
+
+	await seedPhoneData()
 }
 async function run() {
 	try {
