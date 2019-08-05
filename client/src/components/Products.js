@@ -33,7 +33,7 @@ export default class Products extends Component {
 						key={product.id}
 						onClick={() =>
 							this.props.history.push({
-								pathname: `/marketplace/${product.id}`,
+								pathname: `/marketplace/apparel/${product.id}`,
 								state: { productId: product.id }
 							})
 						}>

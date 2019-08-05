@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import { Route, Switch, Link } from 'react-router-dom'
-// import axios from "axios";
+import React from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 import headerLogo from '../../assets/Monty-logo2.png'
@@ -17,10 +16,10 @@ export const Header = () => {
 					<Link to="/">Home</Link>
 				</li>
 				<li className="nav-one">
-					<Link to="/marketplace">Apparel</Link>
+					<Link to="/marketplace/apparel">Apparel</Link>
 				</li>
 				<li className="nav-one">
-					<Link to="/marketplace">Phones</Link>
+					<Link to="/marketplace/phones">Phones</Link>
 				</li>
 			</div>
 			<div className="nav-column-two">

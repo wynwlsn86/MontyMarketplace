@@ -25,3 +25,21 @@ export const getProduct = async (id) => {
 		throw error
 	}
 }
+
+export const getPhones = async () => {
+	try {
+		const resp = await api.get('/phones')
+		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
+
+export const getPhone = async (id) => {
+	try {
+		const resp = await api.get(`/phones/${id}`)
+		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
