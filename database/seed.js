@@ -6,21 +6,6 @@ const main = async () => {
 	await User.destroy({ where: {} })
 	await Apparel.destroy({ where: {} })
 	await Purchase.destroy({ where: {} })
-	// Seed Data
-
-	// const soldItem = await Sold.create({
-	// 	customerName: 'Joe',
-	// 	productName: 'T-shirt',
-	// 	email: 'mail@mail.com',
-	// 	phoneNumber: '123-123-1234'
-	// })
-
-	// const user = await User.create({
-	// 	name: 'John Smith',
-	// 	username: 'tester',
-	// 	email: 'tester@mail.com',
-	// 	password: '1234'
-	// })
 
 	const tshirt = await Apparel.create({
 		name: 'Awesome T-shirt',
