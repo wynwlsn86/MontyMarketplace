@@ -40,7 +40,7 @@ emailRouter.post('/', async (req, res) => {
         rel="stylesheet"
       />
       </head>
-        <body style="	font-family: 'Montserrat', sans-serif;background: #085078; background: -webkit-linear-gradient(to right,#85d8ce,#085078); background: linear-gradient(to right,#85d8ce,#085078); color:#f8f8f8; text-align:center">
+        <body style="	font-family: 'Montserrat', sans-serif; background: #085078; background: -webkit-linear-gradient(to right,#85d8ce,#085078); background: linear-gradient(to right,#85d8ce,#085078); color:#f8f8f8; text-align:center">
           <div class="heading" style="display: flex;flex-direction: row;margin-left:30% margin-bottom: 20px;">
             <img src="https://montymarketplace.s3.amazonaws.com/montyIGlogo.png" style="height: 80px;margin-top: -20px;margin-right: 2em;"/>
             <h1>Thank You ${req.body.name} For Your Order!</h1>

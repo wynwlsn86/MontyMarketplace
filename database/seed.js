@@ -63,7 +63,6 @@ const main = async () => {
 	await jeans.addCategory(pants)
 	await jacket.addCategory(tops)
 	await tshirt.addCategory(shirts)
-	console.log('ok')
 
 	const purchase = await Purchase.create({
 		itemId: 1
