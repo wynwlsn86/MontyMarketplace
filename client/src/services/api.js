@@ -19,7 +19,7 @@ export const getProducts = async () => {
 
 export const getProduct = async (id) => {
 	try {
-		const resp = await api.get(`/apprel/${id}`)
+		const resp = await api.get(`/apparel/${id}`)
 		return resp.data
 	} catch (error) {
 		throw error
