@@ -34,91 +34,47 @@ const User = db.define('user', {
 	}
 })
 
-const Apparal = db.define('apparal', {
-	name: {
-		type: Sequelize.STRING
-	},
-	imageURL: {
-		type: Sequelize.STRING
-	},
-	categoryCode: {
-		type: Sequelize.STRING
-	},
-	quantity: {
+const Apparel = db.define('apparel', {
+	name: Sequelize.STRING,
+	brand: Sequelize.STRING,
+	price: Sequelize.DECIMAL(6, 2, 'string'),
+	description: Sequelize.TEXT,
+	cost: Sequelize.DECIMAL(6, 2, 'string'),
+	imageUrl: Sequelize.STRING,
+	clearance: Sequelize.BOOLEAN
+})
+
+const Attribute = db.define('attribute', {
+	apparelId: {
 		type: Sequelize.INTEGER,
-		default: 0
+		unique: false
+	},
+	size: {
+		type: Sequelize.STRING
 	},
 	color: {
 		type: Sequelize.STRING
-	},
-	amntSold: {
-		type: Sequelize.INTEGER,
-		defaultValue: 0
-	},
-	currency: {
-		type: Sequelize.STRING,
-		defaultValue: 'USD'
-	},
-	price: {
-		type: Sequelize.DECIMAL(6, 2, 'string')
-	},
-	buyerCost: {
-		type: Sequelize.DECIMAL(6, 2, 'string')
-	},
-	profit: {
-		defaultValue: '0',
-		type: Sequelize.DECIMAL(16, 2, 'string')
 	}
 })
 
-const Phone = db.define('phone', {
-	brand: {
-		type: Sequelize.STRING
-	},
-	imageURL: {
-		type: Sequelize.STRING
-	},
-	modelNumber: {
-		type: Sequelize.STRING
-	},
-	storage: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
-	carrier: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
-	deviceType: {
-		type: Sequelize.STRING
-	},
-	quantity: {
+const Customer = db.define('customer', {
+	name: Sequelize.STRING,
+	email: Sequelize.STRING
+})
+
+const Purchase = db.define('purchase', {
+	itemId: Sequelize.INTEGER,
+	sizeId: Sequelize.INTEGER,
+	customerId: Sequelize.INTEGER
+})
+
+const Category = db.define('category', {
+	apparelId: {
 		type: Sequelize.INTEGER,
-		defaultValue: 0
+		unique: false
 	},
-	color: {
+	category: {
 		type: Sequelize.STRING
-	},
-	physicalCondition: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
-	amntSold: {
-		type: Sequelize.INTEGER,
-		defaultValue: 0
-	},
-	currency: {
-		type: Sequelize.STRING,
-		defaultValue: 'USD'
-	},
-	price: {
-		type: Sequelize.DECIMAL(6, 2, 'string'),
-		defaultValue: 0
-	},
-	buyerCost: {
-		type: Sequelize.DECIMAL(6, 2, 'string'),
-		defaultValue: '0'
-	},
-	profit: {
-		defaultValue: '0',
-		type: Sequelize.DECIMAL(16, 2, 'string')
 	}
 })
 
@@ -127,14 +83,23 @@ User.beforeCreate(async (user, options) => {
 	user.password = hashedPassword
 })
 
-User.hasMany(Apparal)
-Apparal.belongsTo(User)
-User.hasMany(Phone)
-Phone.belongsTo(User)
+Apparel.hasMany(Attribute)
+Apparel.hasMany(Category)
+
+Attribute.belongsTo(Apparel, { through: 'apparel_id' })
+Category.belongsTo(Apparel, { through: 'apparel_id' })
+
+Purchase.hasMany(Apparel)
+Purchase.belongsTo(Customer)
+
+Customer.hasMany(Purchase, { as: 'customer_id' })
 
 module.exports = {
 	User,
-	Apparal,
-	Phone,
+	Customer,
+	Purchase,
+	Apparel,
+	Attribute,
+	Category,
 	db
 }
