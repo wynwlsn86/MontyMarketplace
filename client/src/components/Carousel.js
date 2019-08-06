@@ -10,7 +10,9 @@ import phonePhoto from "../assets/phone-photo.png";
 export default class DemoCarousel extends Component {
   render() {
     return (
-      <Carousel>
+        <div className="carousel-center">
+        <div className="carousel-container">
+      <Carousel showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000}>
         <div>
           <img src={shopPhoto} alt="shop" />
           <p className="legend">Legend 1</p>
@@ -24,6 +26,8 @@ export default class DemoCarousel extends Component {
           <p className="legend">Legend 3</p>
         </div>
       </Carousel>
+      </div>
+      </div>
     );
   }
 }
