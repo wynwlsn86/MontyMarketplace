@@ -34,7 +34,7 @@ export default class Products extends Component {
 	onChangePageSize = async (e) => {
 		const { value } = e.target
 		this.setState({ pageSize: parseInt(value) })
-		await this.fetchPhones()
+		await this.fetchProducts()
 	}
 
 	renderPagination = () => {
