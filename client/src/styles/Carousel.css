@@ -1,0 +1,13 @@
+.carousel-container {
+    width: 75%;
+    padding-top: 1em;
+}
+
+.carousel-center {
+    display: flex;
+    justify-content: center;
+}
+
+.legend {
+
+}
