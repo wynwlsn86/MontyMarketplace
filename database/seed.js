@@ -6,7 +6,6 @@ const {
 	Category,
 	Phone
 } = require('./models')
-const faker = require('faker')
 const { PhoneData } = require('./PhoneData')
 const sneakerData = require('./productSeed.json')
 
