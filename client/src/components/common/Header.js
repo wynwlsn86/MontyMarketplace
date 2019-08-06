@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './Header.css'
+import '../../styles/Header.css'
 
 import headerLogo from '../../assets/Monty-logo2.png'
 
