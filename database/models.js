@@ -34,6 +34,48 @@ const User = db.define('user', {
 	}
 })
 
+const Phone = db.define('phone', {
+	brand: {
+		type: Sequelize.STRING
+	},
+	imageURL: {
+		type: Sequelize.STRING
+	},
+	modelNumber: {
+		type: Sequelize.STRING
+	},
+	storage: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	carrier: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	deviceType: {
+		type: Sequelize.STRING
+	},
+	quantity: {
+		type: Sequelize.INTEGER,
+		defaultValue: 0
+	},
+	color: {
+		type: Sequelize.STRING
+	},
+	physicalCondition: {
+		type: Sequelize.ARRAY(Sequelize.STRING)
+	},
+	currency: {
+		type: Sequelize.STRING,
+		defaultValue: 'USD'
+	},
+	price: {
+		type: Sequelize.DECIMAL(6, 2, 'string'),
+		defaultValue: 0
+	},
+	clearance: {
+		type: Sequelize.BOOLEAN
+	}
+})
+
 const Apparel = db.define('apparel', {
 	name: Sequelize.STRING,
 	brand: Sequelize.STRING,
@@ -101,5 +143,6 @@ module.exports = {
 	Apparel,
 	Attribute,
 	Category,
+	Phone,
 	db
 }

@@ -13,6 +13,17 @@ ApparelRouter.get('/', async (req, res) => {
 	}
 })
 
+ApparelRouter.get('/:item_id', async (req, res) => {
+	try {
+		const items = await Apparel.findByPk(req.params.item_id, {
+			include: [{ all: true }]
+		})
+		res.send(items)
+	} catch (error) {
+		throw error
+	}
+})
+
 ApparelRouter.put('/:item_id', async (req, res) => {
 	try {
 		const updateItem = await Apparel.update({
