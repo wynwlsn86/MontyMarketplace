@@ -58,7 +58,7 @@ export default class Product extends Component {
 				Product
 				<Container classname="filter-container">Filter</Container>
 				{this.state.productType === 'apparel'
-					? this.renderProduct()
+					? this.renderApparel()
 					: this.renderPhone()}
 			</Container>
 		)

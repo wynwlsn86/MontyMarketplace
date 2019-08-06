@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import Axios from 'axios';
+import { Container, Image } from './common'
+import Stock from '../assets/apparel-photo.png'
+
 
 export default class Contact extends Component {
 	constructor(props){
@@ -7,9 +10,9 @@ export default class Contact extends Component {
 		this.state = {
 			name: null,
 			email: null,
-			body: null,
 			sent: false,
-			item: false
+			item: null,
+			phoneNumber: null
 		}
 	}
 
@@ -25,7 +28,8 @@ export default class Contact extends Component {
 			let data = {
 				name: this.state.name,
 				email: this.state.email,
-				body: this.state.body
+				item: this.state.item,
+				phoneNumber: this.state.phoneNumber
 			}
 			Axios
 				// ***************************** not sure about the route
@@ -41,33 +45,35 @@ export default class Contact extends Component {
 
 	render() {
 		return(
-			//main container
-			<div>
+			//main container. Outlines??????
+			<Container>
 				{/* //left container */}
-				<div> 
+				<Container> 
 					<div>
 						<h2>Get In Touch</h2>
 					</div>
-					<div>
+					<Container>
 						<form>
 							<label>Name:</label>
 								<input type='text' name='name' onChange={this.inputChange} />
 							<label>Email:</label>
 								<input type='text' name='email' onChange={this.inputChange}/>
+							<label>Phone Number:</label>
+								<input type='text' name='phoneNumber' onChange={this.inputChange}/>
 							<lable>Loooking for something special? Let us know!</lable>
-								<textarea name='body' onChange={this.inputChange}/>
+								<textarea name='item' onChange={this.inputChange}/>
 						</form>
-					</div>
-				</div>
+					</Container>
+				</Container>
 				{/* right container */}
-				<div>
-					<img src='' alt='Stock'/>
-					<h1>Questions? Ready to but?</h1>
+				<Container>
+					<Image source={Stock} alt='Stock' />
+					<h1>Questions? Ready to buy?</h1>
 					<p>Drops us a line.</p>
 					<p>We will get back to you as soon as possible with an answer offering the best price</p>
 					<p>(242)816-83683</p>
-				</div>
-			</div>
+				</Container>
+			</Container>
 		) 
 	}
 }
