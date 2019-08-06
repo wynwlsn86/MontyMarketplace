@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import "./Carousel.css";
+import "../styles/Carousel.css";
 
 import shopPhoto from "../assets/shop-photo.png";
 import apparelPhoto from "../assets/apparel-photo.png";
