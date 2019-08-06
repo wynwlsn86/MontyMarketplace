@@ -6,8 +6,9 @@ const {
 	Category,
 	Phone
 } = require('./models')
-
+const faker = require('faker')
 const { PhoneData } = require('./PhoneData')
+const sneakerData = require('./productSeed.json')
 
 const main = async () => {
 	await User.destroy({ where: {} })
@@ -56,6 +57,9 @@ const main = async () => {
 	await jacket.addCategory(tops)
 	await tshirt.addCategory(shirts)
 
+	const sneaker = await Category.create({
+		category: 'Sneakers'
+	})
 	const purchase = await Purchase.create({
 		itemId: 1
 	})
@@ -90,6 +94,23 @@ const main = async () => {
 		}
 	}
 
+	const seedSneakers = async () => {
+		for (let i = 0; i < sneakerData.length; i++) {
+			const dollarAmnt = Math.random() * (300 - 30) + 30
+			const percentage = dollarAmnt / 100
+			const cost = (dollarAmnt / 100) * 1000
+			const sneakers = await Apparel.create({
+				name: sneakerData[i].name,
+				description: sneakerData[i].description,
+				imageUrl: sneakerData[i].imageUrl,
+				cost: (percentage * cost) / 100,
+				brand: sneakerData[i].brand,
+				price: dollarAmnt.toPrecision(5)
+			})
+			await sneaker.setApparel(sneakers)
+		}
+	}
+	await seedSneakers()
 	await seedPhoneData()
 }
 async function run() {
