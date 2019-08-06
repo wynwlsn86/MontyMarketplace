@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Axios from "axios";
 
 import "../styles/Contact.css";
+import contactPhoto from "../assets/contact-photo.png";
 
 export default class Contact extends Component {
   constructor(props) {
@@ -43,36 +44,57 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div className="contact-container">
-        <div className="contact-row">
-          <div className="contact-column-one">
-			  <div className="contact-form-container">
-            <h2 className="contact-form-header">Get In Touch</h2>
-          
-          
-            <form>
-              <label>Name:</label>
-              <input type="text" name="name" onChange={this.inputChange} />
-              <label>Email:</label>
-              <input type="text" name="email" onChange={this.inputChange} />
-              <label>Looking for something special? Let us know!</label>
-              <textarea name="body" onChange={this.inputChange} />
-            </form>
+      <div className="contact-center">
+        <div className="contact-container">
+          <div className="contact-row">
+            <div className="contact-column-one">
+              <div className="contact-form-container">
+                <h2 className="contact-form-header">Get In Touch</h2>
+
+                <form>
+                  <label>Name</label>
+                  <div className="contact-form-name-container">
+                    <input
+                      type="text"
+                      name="name"
+                      onChange={this.inputChange}
+                    />
+                  </div>
+
+                  <label>Email</label>
+                  <div className="contact-form-email-container">
+                    <input
+                      type="text"
+                      name="email"
+                      onChange={this.inputChange}
+                    />
+                  </div>
+                  <label>Looking for something special? Let us know!</label>
+                  <textarea name="body" onChange={this.inputChange} />
+                  <div className="contact-button-container">
+                    <button className="contact-button">SEND</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div className="contact-column-two">
+              <img src={contactPhoto} className="contact-photo" alt="Stock" />
+              <h1 className="contact-column-two-header">
+                Questions? Ready to buy?
+              </h1>
+			  <div className="contact-para-container">
+              <p className="contact-para">Drops us a line.</p>
+              <p className="contact-para">
+                We will get back to you as soon as possible with an answer
+                offering the best price.
+              </p>
+              <p className="contact-para">(242)816-83683</p>
+            </div>
+			</div>
           </div>
         </div>
-
-        <div className="contact-column-two">
-          <img src="" alt="Stock" />
-          <h1 className="contact-column-two-header">Questions? Ready to buy?</h1>
-          <p className="contact-para">Drops us a line.</p>
-          <p className="contact-para">
-            We will get back to you as soon as possible with an answer offering
-            the best price
-          </p>
-          <p className="contact-para">(242)816-83683</p>
-        </div>
       </div>
-	  </div>
     );
   }
 }
