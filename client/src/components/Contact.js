@@ -69,8 +69,14 @@ export default class Contact extends Component {
                       onChange={this.inputChange}
                     />
                   </div>
-                  <label className="label-three">Looking for something special? Let us know!</label>
-                  <textarea name="body" style={{zIndex:1}} onChange={this.inputChange} />
+                  <label className="label-three">
+                    Looking for something special? Let us know!
+                  </label>
+                  <textarea
+                    name="body"
+                    style={{ zIndex: 1 }}
+                    onChange={this.inputChange}
+                  />
                   <div className="contact-button-container">
                     <button className="contact-button">SEND</button>
                   </div>
@@ -83,15 +89,15 @@ export default class Contact extends Component {
               <h1 className="contact-column-two-header">
                 Questions? Ready to buy?
               </h1>
-			  <div className="contact-para-container">
-              <p className="contact-para">Drops us a line.</p>
-              <p className="contact-para">
-                We will get back to you as soon as possible with an answer
-                offering the best price.
-              </p>
-              <p className="contact-para">(242)816-83683</p>
+              <div className="contact-para-container">
+                <p className="contact-para">Drops us a line.</p>
+                <p className="contact-para">
+                  We will get back to you as soon as possible with an answer
+                  offering the best price.
+                </p>
+                <p className="contact-para">(242)816-83683</p>
+              </div>
             </div>
-			</div>
           </div>
         </div>
       </div>
