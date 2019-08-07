@@ -69,8 +69,8 @@ export default class Contact extends Component {
                       onChange={this.inputChange}
                     />
                   </div>
-                  <label>Looking for something special? Let us know!</label>
-                  <textarea name="body" onChange={this.inputChange} />
+                  <label className="label-three">Looking for something special? Let us know!</label>
+                  <textarea name="body" style={{zIndex:1}} onChange={this.inputChange} />
                   <div className="contact-button-container">
                     <button className="contact-button">SEND</button>
                   </div>

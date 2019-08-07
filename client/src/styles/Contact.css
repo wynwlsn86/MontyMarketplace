@@ -1,14 +1,39 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
 .contact-container {
     background-color: #939393;
     box-shadow: 0px 2px 4px rgba(56, 56, 56, 0.5);
     width: 70%;
     padding: 1.8em;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+}
+
+.contact-container:after {
+    content: '';
+    position: absolute;
+    top: -60px;
+    left: -60px;
+    right: -60px;
+    bottom: -60px;
+    border: 2px solid #fbcc06;
+}
+
+.contact-row:after {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    right: -30px;
+    bottom: -30px;
+    border: 2px solid #32bfc3;
 }
 
 .contact-center {
     display: flex;
     justify-content: center;
     padding-top: 5em;
+
 }
 
 .contact-row {
@@ -23,6 +48,7 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
+    margin-left: 10px;
 }
 
 .contact-column-two {
@@ -50,7 +76,7 @@
 }
 
 .contact-column-two-header {
-    font-size: 2.5em;
+    font-size: 2.3em;
     color: white;
     display: flex;
     justify-content: flex-start;
@@ -77,18 +103,21 @@
     outline: none;
     border: none;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .5);
+    z-index: 1;
+
 }
 
 .contact-button:hover {
     background-color: #32bfc3;
     color: white;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, .8);
+
 }
 
 .contact-button-container {
     display: flex;
     justify-content: center;
-    padding: 10px 180px 0px 0px;
+    padding: 130px 150px 0px 0px;
 }
 
 .contact-form-name-container {
@@ -114,10 +143,12 @@ justify-content: flex-start;
     flex-wrap: wrap;
 }
 
+
 label {
     display: flex;
     justify-content: flex-start;
     color: white;
+    font-size: 1.2em;
 }
 
 input {
@@ -130,16 +161,17 @@ border: none;
 border-bottom: 2px solid white;
 font-size: 1em;
 color: white;
+z-index: 1;
 }
 
 input:focus {
-    border-bottom-color: #32bfc3;
+    border-bottom-color: #fbcc06;
 }
 
 textarea {
     display: flex;
     justify-content: center;
-    width: 310px;
+    width: 335px;
     height: 100px;
     outline: none;
     resize: none;
@@ -148,5 +180,14 @@ textarea {
     color: white;
     padding: 5px;
     font-size: 1em;
+    position: absolute;
 }
 
+textarea:focus {
+    border-color: #fbcc06;
+}
+
+
+.label-three {
+    font-size: 1.1em;
+}
