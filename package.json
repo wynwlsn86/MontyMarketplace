@@ -36,5 +36,6 @@
   "bugs": {
     "url": "https://github.com/wynwlsn86/MontyMarketplace/issues"
   },
-  "homepage": "https://github.com/wynwlsn86/MontyMarketplace#readme"
+  "homepage": "https://github.com/wynwlsn86/MontyMarketplace#readme",
+  "devDependencies": {}
 }

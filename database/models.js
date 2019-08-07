@@ -82,7 +82,7 @@ const Apparel = db.define('apparel', {
 	price: Sequelize.DECIMAL(6, 2, 'string'),
 	description: Sequelize.TEXT,
 	cost: Sequelize.DECIMAL(6, 2, 'string'),
-	imageUrl: Sequelize.STRING,
+	imageUrl: Sequelize.TEXT,
 	clearance: Sequelize.BOOLEAN
 })
 
