@@ -19,12 +19,6 @@ const PORT = process.env.PORT || 3001
 
 const app = express()
 
-const uri = process.env.ATLAS_URI
-mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
-mongoose.connection.once('open', () => {
-	console.log(`connected to ${uri}`)
-})
-
 // intializing Middleware
 app.use(logger('dev'))
 app.use(cors())
@@ -41,6 +35,11 @@ app.use('/contact', emailRouter)
 app.use('/purchases', PurchaseRouter)
 app.use(passport.initialize())
 
+const uri = process.env.ATLAS_URI
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connection.once('open', () => {
+	console.log(`connected to ${uri}`)
+})
 // Test Message
 app.get('/', (req, res) => {
 	try {
