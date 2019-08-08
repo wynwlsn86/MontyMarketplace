@@ -11,6 +11,17 @@ ApparelRouter.get('/', async (req, res) => {
 	}
 })
 
+ApparelRouter.get('/brands/:brand', async (req, res) => {
+	try {
+		const apparel = await Apparel.find().where({
+			brand: req.params.brand
+		})
+		res.send(apparel)
+	} catch (error) {
+		throw error
+	}
+})
+
 ApparelRouter.get('/:item_id', async (req, res) => {
 	try {
 		const apparel = await Apparel.findById(req.params.item_id)
