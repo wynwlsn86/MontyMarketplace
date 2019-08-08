@@ -61,6 +61,9 @@ const apparelSchema = new Schema(
 			type: String,
 			required: true
 		},
+		brand: {
+			type: String
+		},
 		imageUrl: {
 			type: [{ type: String }]
 		},
