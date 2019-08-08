@@ -74,6 +74,9 @@ const apparelSchema = new Schema(
 			colors: [{ type: String }],
 			sizes: [{ type: String }]
 		},
+		clearance: {
+			type: Boolean
+		},
 		price: {
 			type: Number
 		},
