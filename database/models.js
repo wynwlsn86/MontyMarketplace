@@ -35,19 +35,14 @@ const userSchema = new Schema(
 
 const categorySchema = new Schema(
 	{
-		clothing: {
-			men: {
-				type: [{ type: String }]
-			},
-			women: {
-				type: [{ type: String }]
-			}
+		category: {
+			type: String
 		},
-		shoes: {
-			type: [{ type: String }]
+		attire: {
+			type: String
 		},
-		accessories: {
-			type: [{ type: String }]
+		gender: {
+			type: String
 		}
 	},
 	{
@@ -160,11 +155,13 @@ const Apparel = mongoose.model('Apparel', apparelSchema)
 const Phone = mongoose.model('Phones', phoneSchema)
 const Customer = mongoose.model('Customers', customerSchema)
 const Order = mongoose.model('Orders', orderSchema)
+const Category = mongoose.model('Category', categorySchema)
 
 module.exports = {
 	User,
 	Apparel,
 	Phone,
 	Customer,
+	Category,
 	Order
 }
