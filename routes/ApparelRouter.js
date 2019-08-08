@@ -51,6 +51,7 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 				new: true
 			}
 		)
+		await apparel.save()
 		res.send(apparel)
 	} catch (error) {
 		throw error
