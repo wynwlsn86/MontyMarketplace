@@ -83,19 +83,15 @@ export default class Products extends Component {
   render() {
     return (
       <div>
-        <div className="products-flex-column">
-          <div className="filter-container">
-            <div className="products-row">
-              <div className="products-column">
-                <p>This is the filter</p>
-              </div>
+          <div className="products-row">
+            <div className="products-filter-column">
+              <p className="products-filter">This is the filter</p>
             </div>
-            <div className="products-column">
-              <div className="products-flex-wrap">{this.renderProducts()}</div>
-            </div>
+          <div className="products-column">
+            <div className="products-flex-wrap">{this.renderProducts()}</div>
           </div>
-        </div>
-        {this.renderPagination()}
+		  </div>
+        <div className="pagination-container">{this.renderPagination()}</div>
       </div>
     );
   }
