@@ -33,6 +33,28 @@ const userSchema = new Schema(
 	}
 )
 
+const categorySchema = new Schema(
+	{
+		clothing: {
+			men: {
+				type: [{ type: String }]
+			},
+			women: {
+				type: [{ type: String }]
+			}
+		},
+		shoes: {
+			type: [{ type: String }]
+		},
+		accessories: {
+			type: [{ type: String }]
+		}
+	},
+	{
+		timestamps: true
+	}
+)
+
 const apparelSchema = new Schema(
 	{
 		name: {
@@ -54,6 +76,9 @@ const apparelSchema = new Schema(
 		},
 		cost: {
 			type: Number
+		},
+		category_id: {
+			type: String
 		}
 	},
 	{
@@ -101,7 +126,7 @@ const phoneSchema = new Schema(
 			type: String
 		},
 		storage: {
-			type: [{type:String}]
+			type: [{ type: String }]
 		},
 		imageUrl: {
 			type: [{ type: String }]
@@ -116,7 +141,7 @@ const phoneSchema = new Schema(
 			type: Number
 		},
 		carrier: {
-			type: [{type:String}]
+			type: [{ type: String }]
 		}
 	},
 	{
