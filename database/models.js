@@ -36,13 +36,19 @@ const userSchema = new Schema(
 const categorySchema = new Schema(
 	{
 		category: {
-			type: String
+			type: String,
+			unique: true,
+			required: true
 		},
 		attire: {
-			type: String
+			type: String,
+			unique: true,
+			required: true
 		},
 		gender: {
-			type: String
+			type: String,
+			unique: true,
+			required: true
 		}
 	},
 	{
