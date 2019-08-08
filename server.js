@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const passport = require('passport')
 const dotenv = require('dotenv')
-
+const mongoose = require('mongoose')
 // Routers
 const AuthRouter = require('./routes/AuthRouter')
 const { userAuthorized } = require('./Auth/Auth')
@@ -18,6 +18,12 @@ dotenv.config()
 const PORT = process.env.PORT || 3001
 
 const app = express()
+
+const uri = process.env.ATLAS_URI
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connection.once('open', () => {
+	console.log(`connected to ${uri}`)
+})
 
 // intializing Middleware
 app.use(logger('dev'))
