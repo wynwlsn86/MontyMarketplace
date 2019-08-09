@@ -1,148 +1,173 @@
-const { Sequelize } = require('sequelize')
+const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
-const db = new Sequelize(
-	process.env.DATABASE_URL || 'postgres://localhost:5432/montymarketplace ',
+const mongooseMoney = require('mongoose-money')
+const Schema = mongoose.Schema
+
+const userSchema = new Schema(
 	{
-		database: 'montymarketplace ',
-		dialect: 'postgres',
-		define: {
-			underscored: true
+		name: {
+			first: {
+				type: String,
+				required: true
+			},
+			last: {
+				type: String,
+				required: true
+			}
+		},
+		password: {
+			type: String,
+			required: true
+		},
+		email: {
+			type: String,
+			required: true
+		},
+		username: {
+			type: String,
+			required: true
 		}
+	},
+	{
+		timestamps: true
 	}
 )
-const User = db.define('user', {
-	name: {
-		type: Sequelize.STRING,
-		allowNull: false
-	},
-	username: {
-		type: Sequelize.STRING,
-		allowNull: false,
-		unique: true
-	},
-	email: {
-		type: Sequelize.STRING,
-		allowNull: false,
-		unique: true,
-		validate: {
-			isEmail: true
+
+const categorySchema = new Schema(
+	{
+		category: {
+			type: String,
+			unique: true,
+			required: true
+		},
+		attire: {
+			type: String,
+			unique: true,
+			required: true
+		},
+		gender: {
+			type: String,
+			unique: true,
+			required: true
 		}
 	},
-	password: {
-		type: Sequelize.STRING,
-		allowNull: false
+	{
+		timestamps: true
 	}
-})
+)
 
-const Phone = db.define('phone', {
-	brand: {
-		type: Sequelize.STRING
+const apparelSchema = new Schema(
+	{
+		name: {
+			type: String,
+			required: true
+		},
+		brand: {
+			type: String
+		},
+		imageUrl: {
+			type: [{ type: String }]
+		},
+		description: {
+			type: String
+		},
+		attributes: {
+			colors: [{ type: String }],
+			sizes: [{ type: String }]
+		},
+		clearance: {
+			type: Boolean
+		},
+		price: {
+			type: Number
+		},
+		cost: {
+			type: Number
+		},
+		category_id: {
+			type: String
+		}
 	},
-	imageURL: {
-		type: Sequelize.STRING
-	},
-	modelNumber: {
-		type: Sequelize.STRING
-	},
-	storage: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
-	carrier: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
-	deviceType: {
-		type: Sequelize.STRING
-	},
-	quantity: {
-		type: Sequelize.INTEGER,
-		defaultValue: 0
-	},
-	color: {
-		type: Sequelize.STRING
-	},
-	physicalCondition: {
-		type: Sequelize.ARRAY(Sequelize.STRING)
-	},
-	currency: {
-		type: Sequelize.STRING,
-		defaultValue: 'USD'
-	},
-	price: {
-		type: Sequelize.DECIMAL(6, 2, 'string'),
-		defaultValue: 0
-	},
-	clearance: {
-		type: Sequelize.BOOLEAN
+	{
+		timestamps: true
 	}
-})
+)
 
-const Apparel = db.define('apparel', {
-	name: Sequelize.STRING,
-	brand: Sequelize.STRING,
-	price: Sequelize.DECIMAL(6, 2, 'string'),
-	description: Sequelize.TEXT,
-	cost: Sequelize.DECIMAL(6, 2, 'string'),
-	imageUrl: Sequelize.TEXT,
-	clearance: Sequelize.BOOLEAN
-})
-
-const Attribute = db.define('attribute', {
-	apparelId: {
-		type: Sequelize.INTEGER,
-		unique: false
+const customerSchema = new Schema(
+	{
+		name: {
+			type: String
+		},
+		email: {
+			type: String
+		},
+		phoneNumber: {
+			type: String
+		}
 	},
-	size: {
-		type: Sequelize.STRING
-	},
-	color: {
-		type: Sequelize.STRING
+	{
+		timestamps: true
 	}
-})
+)
 
-const Customer = db.define('customer', {
-	name: Sequelize.STRING,
-	email: Sequelize.STRING
-})
-
-const Purchase = db.define('purchase', {
-	itemId: Sequelize.INTEGER,
-	sizeId: Sequelize.INTEGER,
-	customerId: Sequelize.INTEGER
-})
-
-const Category = db.define('category', {
-	apparelId: {
-		type: Sequelize.INTEGER,
-		unique: false
+const orderSchema = new Schema(
+	{
+		product_id: {
+			type: String
+		},
+		customer_id: {
+			type: String
+		}
 	},
-	category: {
-		type: Sequelize.STRING
+	{
+		timestamps: true
 	}
-})
+)
 
-User.beforeCreate(async (user, options) => {
-	const hashedPassword = await bcrypt.hash(user.password, 12)
-	user.password = hashedPassword
-})
+const phoneSchema = new Schema(
+	{
+		brand: {
+			type: String
+		},
+		model: {
+			type: String
+		},
+		storage: {
+			type: [{ type: String }]
+		},
+		imageUrl: {
+			type: [{ type: String }]
+		},
+		condition: {
+			type: [{ type: String }]
+		},
+		price: {
+			type: Number
+		},
+		cost: {
+			type: Number
+		},
+		carrier: {
+			type: [{ type: String }]
+		}
+	},
+	{
+		timestamps: true
+	}
+)
 
-Apparel.hasMany(Attribute)
-Apparel.hasMany(Category)
-
-Attribute.belongsTo(Apparel, { through: 'apparel_id' })
-Category.belongsTo(Apparel, { through: 'apparel_id' })
-
-Purchase.hasMany(Apparel)
-Purchase.belongsTo(Customer)
-
-Customer.hasMany(Purchase, { as: 'customer_id' })
+const User = mongoose.model('Users', userSchema)
+const Apparel = mongoose.model('Apparel', apparelSchema)
+const Phone = mongoose.model('Phones', phoneSchema)
+const Customer = mongoose.model('Customers', customerSchema)
+const Order = mongoose.model('Orders', orderSchema)
+const Category = mongoose.model('Category', categorySchema)
 
 module.exports = {
 	User,
-	Customer,
-	Purchase,
 	Apparel,
-	Attribute,
-	Category,
 	Phone,
-	db
+	Customer,
+	Category,
+	Order
 }

@@ -11,28 +11,28 @@ const SECRET = process.env.APP_SECRET
 
 const signToken = (payload) => jwt.sign(payload, SECRET)
 
-// creating user signup
 passport.use(
 	'signup',
-
 	new LocalStrategy(
 		{
 			passReqToCallback: true,
 			usernameField: 'username',
 			passwordField: 'password'
 		},
-		// Passport requires two authentication fields
-		// using username and password
-		// reqToCallback allows more fields to be passed to create the user
 		async (req, username, password, done) => {
 			try {
-				const user = await User.create({
-					username: username,
-					password: password
+				password = bcrypt.hashSync(password, SaltFactor)
+				console.log(req.body)
+				const user = await new User({
+					name: { first: req.body.firstname, last: req.body.lastname },
+
+					// firstName: req.body.name.firstName,
+					email: req.body.email,
+					username,
+					password
 				})
-				if (!user) {
-					return done(null, false, { msg: 'Unable to create user' })
-				}
+				if (!user)
+					return done(null, false, { msg: '***Unable to create user***' })
 				done(null, user)
 			} catch (error) {
 				done(error)
@@ -49,23 +49,16 @@ passport.use(
 			passwordField: 'password'
 		},
 		async (username, password, done) => {
-			console.log('***username***', username)
 			try {
-				// finding users from db
-				const user = await User.findOne({
-					where: {
-						username: username
-					}
-				})
-				if (!user) {
-					return done(null, false, { msg: 'user not found' })
-				}
-				const validateUser = await bcrypt.compare(password, user.password)
-				if (!validateUser) {
-					return done(null, false, { msg: 'could not validate user password' })
-				}
-				// return user if validated
-				return done(null, user, { msg: 'User is validated and logged in' })
+				const user = await User.findOne().where({ username: username })
+
+				if (!user) return done(null, false, { msg: 'User not found' })
+
+				const authenticateUser = await bcrypt.compare(password, user.password)
+				if (!authenticateUser)
+					return done(null, false, { msg: 'Could not validate password' })
+
+				return done(null, user, { msg: 'User Authenticated' })
 			} catch (error) {
 				return done(error)
 			}
@@ -81,7 +74,7 @@ passport.use(
 		},
 		async (token, done) => {
 			try {
-				const user = await User.findbyPk(token.id)
+				const user = await User.findById(token.id)
 				user ? done(null, user) : done(null, false)
 			} catch (error) {
 				done(error)
@@ -90,17 +83,15 @@ passport.use(
 	)
 )
 
-// checking Auth from JWT
 const userAuthorized = (req, res, next) => {
 	passport.authenticate('jwt', { session: false }, async (error, token) => {
 		if (error || !token) {
-			// response.status(401).json({ message: 'Unauthorized' });
-			let err = new Error('*** Sorry Bro Try Again ***')
+			let err = new Error('Could not authenticate!')
 			err.status = 401
 			next(err)
 		}
 		try {
-			const user = await User.findOne({ where: { id: token.id } })
+			const user = await User.findById(token.id)
 			req.user = user
 		} catch (error) {
 			next(error)
