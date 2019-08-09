@@ -7,3 +7,21 @@
     display: flex;
     justify-content: center;
 }
+
+.carousel .slide .legend {
+    display: flex;
+    position: absolute;
+    bottom: 5em;
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+    height: 50%;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding-top: 3.8em;
+    font-size: 1.8em;
+    text-align: center;
+    opacity: 1;
+}
+
