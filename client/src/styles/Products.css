@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
 
 .product-images {
-  width: 11em;
-  padding: 1em;
+  width: 10em;
+  display: flex;
+  justify-content: center;
 }
 
-/* .products-row {
+.products-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -17,18 +18,27 @@
     flex-direction: column;
     flex-basis: 100%;
     flex: 1;
-} */
+}
+
+.products-filter-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: inherit;
+}
 
 .products-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 1em;
+  margin: 1.2em;
 }
 
 .products-flex-wrap {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 4em;
 }
 
 .products-price {
@@ -41,12 +51,12 @@
   font-family: "Questrial", sans-serif;
 }
 
-/* .filter-container {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-} */
+.products-filter {
+    border: 2px solid black;
+    width: 100%;
+    margin: 1.5em 0em 0em 1em;
+    padding: 1em 1em 40em 1em;
+}
 
 .pagination a {
   color: black;
@@ -54,4 +64,10 @@
 
 .pagination a:hover {
   color: #32bfc3;
+}
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
 }
