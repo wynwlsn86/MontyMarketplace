@@ -42,7 +42,8 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 			imageUrl,
 			name,
 			description,
-			attributes
+			attributes,
+			price
 		}
 		const apparel = await Apparel.create(data)
 		await apparel.save()
