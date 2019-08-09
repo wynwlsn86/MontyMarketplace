@@ -35,6 +35,7 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 	try {
 		const category = await Category.findById(req.params.category_id)
 		const { brand, imageUrl, name, description, attributes } = req.body
+
 		const data = {
 			category_id: category.id,
 			brand,
@@ -61,7 +62,7 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 				new: true
 			}
 		)
-		// await apparel.save()
+		await apparel.save()
 		res.send(apparel)
 	} catch (error) {
 		throw error
