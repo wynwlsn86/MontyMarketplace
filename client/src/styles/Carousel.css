@@ -9,7 +9,6 @@
 }
 
 .carousel .slide .legend {
-    display: flex;
     position: absolute;
     bottom: 5em;
     left: 50%;
