@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
+
+.product-images {
+  width: 11em;
+  padding: 1em;
+}
+
+/* .products-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.products-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+} */
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.products-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-price {
+  font-size: 0.9em;
+  font-family: "Questrial", sans-serif;
+}
+
+.products-name {
+  cursor: pointer;
+  font-family: "Questrial", sans-serif;
+}
+
+/* .filter-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+} */
+
+.pagination a {
+  color: black;
+}
+
+.pagination a:hover {
+  color: #32bfc3;
+}
