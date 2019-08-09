@@ -37,7 +37,6 @@ const categorySchema = new Schema(
 	{
 		category: {
 			type: String,
-			unique: true,
 			required: true
 		},
 		attire: {
