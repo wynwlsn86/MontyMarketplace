@@ -31,9 +31,21 @@ ApparelRouter.get('/:item_id', async (req, res) => {
 	}
 })
 
-ApparelRouter.post('/', async (req, res) => {
+ApparelRouter.post('/:category_id', async (req, res) => {
 	try {
-		const apparel = await Apparel.create(req.body)
+		const category = await Category.findById(req.params.category_id)
+		const { brand, imageUrl, name, description, attributes } = req.body
+		const body = req.body
+		const category_id = category.id
+		const data = {
+			category_id: category.id,
+			brand,
+			imageUrl,
+			name,
+			description,
+			attributes
+		}
+		const apparel = await Apparel.create(data)
 		await apparel.save()
 		res.send(apparel)
 	} catch (error) {
