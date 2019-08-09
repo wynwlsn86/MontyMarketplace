@@ -21,4 +21,20 @@ CategoryRouter.post('/', async (req, res) => {
 	}
 })
 
+CategoryRouter.put('/:category_id', async (req, res) => {
+	try {
+		const category = await Category.findByIdAndUpdate(
+			req.params.category_id,
+			req.body,
+			{
+				useFindAndModify: false,
+				new: true
+			}
+		)
+		res.send(category)
+	} catch (error) {
+		throw error
+	}
+})
+
 module.exports = CategoryRouter
