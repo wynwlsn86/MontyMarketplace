@@ -12,7 +12,7 @@ export default class DemoCarousel extends Component {
     return (
         <div className="carousel-center">
         <div className="carousel-container">
-      <Carousel showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={5000}>
+      <Carousel showStatus={false} showThumbs={false} infiniteLoop={true} autoPlay={true} interval={4000}>
         <div>
           <img src={shopPhoto} alt="shop" />
           <p className="legend">Legend 1</p>
