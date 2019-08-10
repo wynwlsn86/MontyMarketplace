@@ -1,21 +1,24 @@
 import React from 'react'
 import './App.css'
-import { Route, Switch } from 'react-router-dom'
-import { Header, Footer } from './components/common'
+import { Route, Switch, withRouter } from 'react-router-dom'
+import { Footer } from './components/common'
+import Header from './components/common/Header'
 import Home from './components/Home'
 import About from './components/About'
 import Products from './components/Products'
 import Product from './components/Product'
 import Contact from './components/Contact'
 import Phones from './components/Phones'
+import AdminDashbord from './components/AdminDashbord'
 
 function App() {
 	return (
 		<div className="App">
-			<Header />
+			{/* <Header /> */}
 			<main>
 				<Switch>
-					<Route exact path="/" render={(props) => <Home {...props} />} />
+					<AdminDashbord />
+					{/* <Route exact path="/" render={(props) => <Home {...props} />} />
 					<Route path="/about" render={(props) => <About {...props} />} />
 					<Route
 						exact
@@ -31,7 +34,11 @@ function App() {
 						path="/marketplace/:product_type/:item_id"
 						render={(props) => <Product {...props} />}
 					/>
-					<Route path="/contact" render={(props) => <Contact {...props} />} />
+					<Route path="/contact" render={(props) => <Contact {...props} />} /> */}
+					{/* <Route
+						path="/admin/dashboard"
+						render={(props) => <AdminDashbord {...props} />}
+					/> */}
 				</Switch>
 			</main>
 			<Footer />
