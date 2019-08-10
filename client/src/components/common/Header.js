@@ -5,7 +5,6 @@ import '../../styles/Header.css'
 import headerLogo from '../../assets/Monty-logo2.png'
 
 const Header = (props) => {
-	console.log(props)
 	const hideHeader =
 		props.location.pathname === '/admin/dashboard' ||
 		props.location.pathname === '/admin/login'

@@ -34,8 +34,8 @@ function App() {
 						path="/marketplace/:product_type/:item_id"
 						render={(props) => <Product {...props} />}
 					/>
-					<Route path="/contact" render={(props) => <Contact {...props} />} /> */}
-					{/* <Route
+					<Route path="/contact" render={(props) => <Contact {...props} />} />
+					<Route
 						path="/admin/dashboard"
 						render={(props) => <AdminDashbord {...props} />}
 					/> */}
