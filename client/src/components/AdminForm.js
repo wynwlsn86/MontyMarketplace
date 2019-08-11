@@ -25,9 +25,7 @@ export default class AdminForm extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		console.log(nextProps)
 		this.setInitialState()
-		console.log(this.state)
 	}
 	shouldComponentUpdate(nextProps, prevState) {
 		return nextProps.page !== prevState.page
