@@ -1,12 +1,19 @@
 import React from 'react'
 import { Input, Textarea } from 'muicss/react'
 
-export const FormInput = ({ name, value, placeholder, label, textarea }) => {
+export const FormInput = ({
+	name,
+	value,
+	placeholder,
+	label,
+	textarea,
+	floatingLabel
+}) => {
 	switch (textarea) {
 		case true:
 			return (
 				<Textarea
-					floatingLabel={true}
+					floatingLabel={floatingLabel}
 					placeholder={placeholder}
 					label={label}
 					defaultValue={value}
@@ -15,7 +22,7 @@ export const FormInput = ({ name, value, placeholder, label, textarea }) => {
 		default:
 			return (
 				<Input
-					floatingLabel={true}
+					floatingLabel={floatingLabel}
 					placeholder={placeholder}
 					label={label}
 					defaultValue={value}
