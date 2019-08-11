@@ -40,7 +40,7 @@ const categorySchema = new Schema(
 			required: true
 		},
 		attire: {
-			type: String,
+			type: [{ type: String }],
 			unique: true,
 			required: true
 		},
@@ -116,6 +116,9 @@ const orderSchema = new Schema(
 		},
 		customer_id: {
 			type: String
+		},
+		isFulfilled: {
+			type: Boolean
 		}
 	},
 	{
