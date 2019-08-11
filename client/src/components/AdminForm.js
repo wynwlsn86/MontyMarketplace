@@ -73,7 +73,7 @@ export default class AdminForm extends Component {
 		const data = {
 			itemName: itemName,
 			brand: brand,
-			imageUrl: imageUrl.length ? [...images, imageUrl] : [...images],
+			imageUrl: imageUrl.length ? [...images, imageUrl] : images,
 			description: description,
 			clearance: clearance && clearance.toLowerCase() === 'yes' ? true : false
 		}
@@ -90,6 +90,9 @@ export default class AdminForm extends Component {
 	handleRemoveImage = (item) => {
 		this.state.images.splice(item, 1)
 		this.setState({ images: [...this.state.images] })
+		if (this.state.images.length === 1) {
+			this.setState({ imageUrl: this.state.images[0] })
+		}
 	}
 
 	renderUpdateForm = () => {
