@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { getProducts } from '../services/api'
 import { Image } from './common'
+import Filter from '../components/Filter'
 import JwPagination from 'jw-react-pagination'
 
 import '../styles/Products.css'
@@ -84,7 +85,8 @@ export default class Products extends Component {
 			<div>
 				<div className="products-row">
 					<div className="products-filter-column">
-						<p className="products-filter">This is the filter</p>
+						{/* <p className="products-filter">This is the filter</p> */}
+						<Filter />
 					</div>
 					<div className="products-column">
 						<div className="products-flex-wrap">{this.renderProducts()}</div>

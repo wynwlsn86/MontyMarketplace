@@ -17,6 +17,16 @@ export const getProducts = async () => {
 	}
 }
 
+export const getCategories = async () => {
+	try{
+		const resp = await api.get('/categories')
+		return resp.data
+	}
+	catch(error){
+		throw error
+	}
+}
+
 export const getProduct = async (id) => {
 	try {
 		const resp = await api.get(`/apparel/${id}`)
