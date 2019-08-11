@@ -28,10 +28,7 @@ export default class AdminForm extends Component {
 		this.setInitialState()
 	}
 	shouldComponentUpdate(nextProps, prevState) {
-		return (
-			nextProps.page !== prevState.page &&
-			this.state.images !== prevState.images
-		)
+		return nextProps.page !== prevState.page
 	}
 
 	setFormData = () => {
@@ -91,7 +88,6 @@ export default class AdminForm extends Component {
 	}
 
 	handleRemoveImage = (item) => {
-		console.log(item)
 		this.state.images.splice(item, 1)
 		this.setState({ images: [...this.state.images] })
 	}
@@ -103,8 +99,7 @@ export default class AdminForm extends Component {
 			imageUrl,
 			images,
 			description,
-			clearance,
-			newImageUrl
+			clearance
 		} = this.state
 		return (
 			<Form onSubmit={this.handleSubmit} onChange={this.handleChange}>
@@ -120,7 +115,7 @@ export default class AdminForm extends Component {
 						floatingLabel={false}
 						label={`Item Image Url ${1}`}
 						name="newImageUrl"
-						value={imageUrl}
+						value={images[0] || imageUrl}
 					/>
 					<Button
 						variant="fab"
@@ -133,10 +128,10 @@ export default class AdminForm extends Component {
 				</div>
 				{images
 					? images.map((url, index) => (
-							<div className="image-input">
+							<div className="image-input" key={index}>
 								<FormInput
 									floatingLabel={false}
-									label={`Item Image Url ${index + 1}`}
+									label={`Item Image Url ${index + 2}`}
 									name="imageUrl"
 									value={imageUrl}
 								/>
@@ -147,6 +142,14 @@ export default class AdminForm extends Component {
 									type="button"
 									onClick={this.handleImageFields}>
 									+
+								</Button>
+								<Button
+									variant="fab"
+									color="danger"
+									size="small"
+									type="button"
+									onClick={() => this.handleRemoveImage(url)}>
+									-
 								</Button>
 							</div>
 					  ))
