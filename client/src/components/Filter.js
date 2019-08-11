@@ -24,8 +24,20 @@ export default class Filter extends Component {
       return categories.map((category) => {
         console.log(category)
         return(
-          <h1>{category.category.toUpperCase()}</h1>
-          
+          <div>
+            <h1>{category.category.toUpperCase()}</h1>
+            {
+              category.attire.map((attire) => {
+                console.log(attire)
+                return(
+                  <div>
+                    <input type="checkbox" id={attire} name={attire}/>
+                    <label for={attire}>{attire.toUpperCase()}</label>
+                  </div>
+              )})
+            }
+          </div>
+
         )
       })
     }
@@ -34,6 +46,12 @@ export default class Filter extends Component {
   componentDidMount = async () => {
     this.fetchCategories()
   }
+  
+  // RACHELLLLLL THE FONT COLOR FOR LABEL TAGS ARE WHITE!!!! THIS IS WHY YOU CAN'T SEE THEM
+  // YOU HAVE NO IDEA THE FRUSTRAING 5 MINUTES I SPENT FIGURING THAT OUT!!!
+  // HOPE THIS SAVES YOU THE SAME FRUSTRATION!!!!!
+  // <2
+
   
   render() {
     return (
