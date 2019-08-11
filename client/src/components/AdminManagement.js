@@ -2,12 +2,13 @@ import React, { Component } from 'react'
 import Loader from 'react-loader-spinner'
 import AdminForm from './AdminForm'
 import InventoryList from './InventoryList'
+import { Button } from 'muicss/react'
 export default class AdminManagement extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			inventory: [],
-			selectItem: {}
+			selectedItem: null
 		}
 	}
 
@@ -42,9 +43,31 @@ export default class AdminManagement extends Component {
 						<h3>{item.name}</h3>
 						<h3>{item.brand}</h3>
 						<h3>{item.quantity}</h3>
+						<Button
+							color="primary"
+							variant="raised"
+							onClick={() => this.props.setSelectedItem(item)}>
+							Edit
+						</Button>
+						<Button color="danger" variant="raised">
+							Delete
+						</Button>
 					</div>
 				)
 			})
+		}
+	}
+
+	renderUpdateForm = () => {
+		if (this.props.selectedItem) {
+			return (
+				<AdminForm
+					selectedItem={this.props.selectedItem}
+					page={this.props.page}
+				/>
+			)
+		} else {
+			return <h3>Please Select An Item To Update</h3>
 		}
 	}
 
@@ -61,10 +84,9 @@ export default class AdminManagement extends Component {
 					<Loader type="Triangle" color="#00BFFF" height={100} width={100} />
 				)
 			case 2:
-				return <AdminForm />
-
+				return <AdminForm page={this.props.page} />
 			case 3:
-				return <h3>Page3</h3>
+				return this.renderUpdateForm()
 			default:
 				return <h3>default</h3>
 		}

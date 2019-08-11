@@ -55,6 +55,21 @@ const categorySchema = new Schema(
 	}
 )
 
+const itemDetailSchema = new Schema(
+	{
+		color: {
+			type: String
+		},
+		size: {
+			type: String
+		},
+		apparel: [{ type: Schema.Types.ObjectId, ref: 'Apparel' }]
+	},
+	{
+		timestamps: true
+	}
+)
+
 const apparelSchema = new Schema(
 	{
 		name: {
@@ -70,18 +85,14 @@ const apparelSchema = new Schema(
 		description: {
 			type: String
 		},
-		attributes: {
-			colors: [{ type: String }],
-			sizes: [{ type: String }]
-		},
 		clearance: {
 			type: Boolean
 		},
 		price: {
-			type: Number
+			type: String
 		},
 		cost: {
-			type: Number
+			type: String
 		},
 		category_id: {
 			type: String
@@ -164,6 +175,7 @@ const Phone = mongoose.model('Phones', phoneSchema)
 const Customer = mongoose.model('Customers', customerSchema)
 const Order = mongoose.model('Orders', orderSchema)
 const Category = mongoose.model('Category', categorySchema)
+const ItemDetail = mongoose.model('ItemDetail', itemDetailSchema)
 
 module.exports = {
 	User,
@@ -171,5 +183,6 @@ module.exports = {
 	Phone,
 	Customer,
 	Category,
+	ItemDetail,
 	Order
 }

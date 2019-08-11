@@ -10,23 +10,35 @@ export default class AdminDashbord extends Component {
 		super()
 		this.state = {
 			inventory: [],
-			isLoading: false,
-			page: 1
+			page: 1,
+			selectedItem: null,
+			isLoading: false
 		}
 	}
 
 	async componentDidMount() {
-		this.setState({ isLoading: true })
+		await this.setState({ isLoading: true, selectedItem: null })
 		await this.fecthInventory()
 	}
+
 	onTabChange = (i) => {
-		this.setState({ page: i + 1 })
+		if (i + 1 !== 3) {
+			this.setState({ page: i + 1, selectedItem: null })
+		} else {
+			this.setState({ page: i + 1 })
+		}
+	}
+
+	setSelectedItem = (item) => {
+		this.setState({ selectedItem: item })
+		this.onTabChange(2)
 	}
 
 	fecthInventory = async () => {
 		const inventory = await getInventory()
 		this.setState({ inventory, isLoading: false })
 	}
+
 	render() {
 		return (
 			<div className="admin">
@@ -43,6 +55,7 @@ export default class AdminDashbord extends Component {
 						<Card className="manage">
 							<Tabs
 								justified={true}
+								selectedIndex={this.state.page - 1}
 								className="tab-header"
 								onChange={this.onTabChange}>
 								<Tab value="inventory" label="Inventory" />
@@ -51,8 +64,11 @@ export default class AdminDashbord extends Component {
 							</Tabs>
 							<AdminManagement
 								page={this.state.page}
+								setSelectedItem={this.setSelectedItem}
+								onTabChange={this.onTabChange}
 								inventory={this.state.inventory}
 								isLoading={this.state.isLoading}
+								selectedItem={this.state.selectedItem}
 							/>
 						</Card>
 					</Container>
