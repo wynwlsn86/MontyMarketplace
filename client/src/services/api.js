@@ -53,3 +53,12 @@ export const getPhone = async (id) => {
 		throw error
 	}
 }
+
+export const getInventory = async () => {
+	try {
+		const resp = await api.get('/inventory')
+		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
