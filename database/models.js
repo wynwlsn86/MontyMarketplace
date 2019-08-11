@@ -116,6 +116,9 @@ const orderSchema = new Schema(
 		},
 		customer_id: {
 			type: String
+		},
+		isFulfilled: {
+			type: Boolean
 		}
 	},
 	{

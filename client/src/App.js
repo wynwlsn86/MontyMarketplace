@@ -10,6 +10,7 @@ import Product from './components/Product'
 import Contact from './components/Contact'
 import Phones from './components/Phones'
 import AdminDashbord from './components/AdminDashbord'
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 
 function App() {
 	return (

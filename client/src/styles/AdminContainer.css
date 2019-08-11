@@ -50,6 +50,12 @@
 	transition: all 0.4s;
 }
 
+.tabs {
+}
+.tabs .mui-tabs__bar .mui-tabs__bar--justified ul {
+	color: #f8f8f8;
+}
+
 .container .admin-bottom-container .card form {
 	margin: 1em auto;
 	text-align: left;
@@ -62,4 +68,41 @@
 	align-self: center;
 	margin: 1em auto;
 	width: 60%;
+}
+
+.tab-header {
+	background-color: transparent;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+	/* width: 100%; */
+	padding-top: 1em;
+	position: relative;
+	top: -34px;
+}
+
+.inventory-item-container {
+	margin-top: 1em;
+	background-color: #f8f8f8;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 1em auto;
+}
+.admin-bottom-container .inventory-item-container h3 {
+	width: 30%;
+}
+
+.admin-bottom-container .inventory-header {
+}
+
+.admin-bottom-container .inventory-item {
+	cursor: pointer;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	transition: all 0.4s;
+}
+
+.admin-bottom-container .inventory-item:hover {
+	background-color: rgba(0, 0, 0, 0.2);
 }

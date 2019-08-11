@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
 import { Form, FormInput } from './common'
-import { Button } from 'muicss/react'
-
+import { Button, Divider, Tabs, Tab } from 'muicss/react'
+import Loader from 'react-loader-spinner'
 export default class AdminManagement extends Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		this.state = {
-			products: [],
+			inventory: [],
+			selectItem: {},
+			sortValue: '',
 			itemName: '',
 			brand: '',
 			imageUrl: '',
@@ -15,13 +17,49 @@ export default class AdminManagement extends Component {
 		}
 	}
 
-	async componentDidMount() {}
+	componentWillReceiveProps(props) {
+		this.setState({
+			inventory: props.inventory
+		})
+	}
 
 	handleChange = (e) => {
 		const { name, value } = e.target
 		this.setState({ [name]: value })
 	}
 
+	handleSort = (value) => {
+		const sortedInventory = this.state.inventory.sort((a, b) => {
+			if (a[`${value}`] > b[`${value}`] && value === 'quantity') {
+				return -1
+			}
+			if (a[`${value}`] < b[`${value}`]) {
+				return -1
+			}
+			if (a[`${value}`] > b[`${value}`]) {
+				return 1
+			}
+
+			return a[`${value}`] - b[`${value}`]
+		})
+		this.setState({ inventory: sortedInventory })
+	}
+
+	renderInventory = () => {
+		if (this.state.inventory.length) {
+			return this.state.inventory.map((item) => {
+				return (
+					<div className="inventory-item" key={item.id}>
+						<h3>{item.name}</h3>
+						<h3>{item.brand}</h3>
+						<h3>{item.quantity}</h3>
+					</div>
+				)
+			})
+		} else {
+			return <Loader type="Triangle" color="#00BFFF" height={100} width={100} />
+		}
+	}
 	handleSubmit = (e) => {
 		e.preventDefault()
 		const { itemName, brand, imageUrl, description, clearance } = this.state
@@ -38,7 +76,20 @@ export default class AdminManagement extends Component {
 		const { itemName, brand, imageUrl, description, clearance } = this.state
 		switch (this.props.page) {
 			case 'inventory':
-				return <h3>Inventory</h3>
+				return (
+					<div className="inventory-item-container">
+						<Tabs
+							className="inventory-header"
+							justified={true}
+							onChange={(i, value, tab) => this.handleSort(value)}>
+							<Tab value="name" label="Name" />
+							<Tab value="brand" label="Brand" />
+							<Tab value="quantity" label="Quantity" />
+						</Tabs>
+						<Divider />
+						{this.renderInventory()}
+					</div>
+				)
 			case 'add-inventory':
 				return (
 					<Form onSubmit={this.handleSubmit} onChange={this.handleChange}>
