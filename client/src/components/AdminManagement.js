@@ -1,19 +1,13 @@
 import React, { Component } from 'react'
-import { Form, FormInput } from './common'
-import { Button, Divider, Tabs, Tab } from 'muicss/react'
 import Loader from 'react-loader-spinner'
+import AdminForm from './AdminForm'
+import InventoryList from './InventoryList'
 export default class AdminManagement extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
 			inventory: [],
-			selectItem: {},
-			sortValue: '',
-			itemName: '',
-			brand: '',
-			imageUrl: '',
-			description: '',
-			clearance: ''
+			selectItem: {}
 		}
 	}
 
@@ -21,11 +15,6 @@ export default class AdminManagement extends Component {
 		this.setState({
 			inventory: props.inventory
 		})
-	}
-
-	handleChange = (e) => {
-		const { name, value } = e.target
-		this.setState({ [name]: value })
 	}
 
 	handleSort = (value) => {
@@ -56,66 +45,25 @@ export default class AdminManagement extends Component {
 					</div>
 				)
 			})
-		} else {
-			return <Loader type="Triangle" color="#00BFFF" height={100} width={100} />
-		}
-	}
-	handleSubmit = (e) => {
-		e.preventDefault()
-		const { itemName, brand, imageUrl, description, clearance } = this.state
-		const data = {
-			itemName: itemName,
-			brand: brand,
-			imageUrl: imageUrl,
-			description: description,
-			clearance: clearance === 'yes' ? true : false
 		}
 	}
 
 	render() {
-		const { itemName, brand, imageUrl, description, clearance } = this.state
 		switch (this.props.page) {
-			case 'inventory':
-				return (
-					<div className="inventory-item-container">
-						<Tabs
-							className="inventory-header"
-							justified={true}
-							onChange={(i, value, tab) => this.handleSort(value)}>
-							<Tab value="name" label="Name" />
-							<Tab value="brand" label="Brand" />
-							<Tab value="quantity" label="Quantity" />
-						</Tabs>
-						<Divider />
-						{this.renderInventory()}
-					</div>
+			case 1:
+				return this.state.inventory.length ? (
+					<InventoryList
+						inventory={this.state.inventory}
+						renderInventory={this.renderInventory}
+						handleSort={this.handleSort}
+					/>
+				) : (
+					<Loader type="Triangle" color="#00BFFF" height={100} width={100} />
 				)
-			case 'add-inventory':
-				return (
-					<Form onSubmit={this.handleSubmit} onChange={this.handleChange}>
-						<FormInput label="Item Name" name="itemName" value={itemName} />
-						<FormInput label="Brand" name="brand" value={brand} />
-						<FormInput
-							label="Item Image Url"
-							name="imageUrl"
-							value={imageUrl}
-						/>
-						<FormInput
-							label="Description"
-							name="description"
-							value={description}
-						/>
-						<FormInput
-							label="Clearance ex: Yes or No"
-							name="clearance"
-							value={clearance}
-						/>
-						<Button type="submit" variant="raised" color="primary">
-							Submit
-						</Button>
-					</Form>
-				)
-			case 'manage-inventory':
+			case 2:
+				return <AdminForm />
+
+			case 3:
 				return <h3>Page3</h3>
 			default:
 				return <h3>default</h3>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Card } from './common/index'
-import { Tabs, Tab, Divider } from 'muicss/react'
+import { Tabs, Tab } from 'muicss/react'
 import { getInventory } from '../services/api'
 import '../styles/AdminContainer.css'
 import { AdminChart } from './AdminChart'
@@ -11,7 +11,7 @@ export default class AdminDashbord extends Component {
 		this.state = {
 			inventory: [],
 			isLoading: false,
-			page: 'inventory'
+			page: 1
 		}
 	}
 
@@ -19,8 +19,8 @@ export default class AdminDashbord extends Component {
 		this.setState({ isLoading: true })
 		await this.fecthInventory()
 	}
-	onTabChange = (i, value, tab, e) => {
-		this.setState({ page: value })
+	onTabChange = (i) => {
+		this.setState({ page: i + 1 })
 	}
 
 	fecthInventory = async () => {
