@@ -9,8 +9,8 @@ export default class AdminForm extends Component {
 			itemToUpdate: null,
 			itemName: '',
 			brand: '',
+			images: [],
 			imageUrl: '',
-			newImageUrl: '',
 			description: '',
 			clearance: '',
 			prevPage: props.page
@@ -28,7 +28,10 @@ export default class AdminForm extends Component {
 		this.setInitialState()
 	}
 	shouldComponentUpdate(nextProps, prevState) {
-		return nextProps.page !== prevState.page
+		return (
+			nextProps.page !== prevState.page &&
+			this.state.images !== prevState.images
+		)
 	}
 
 	setFormData = () => {
@@ -67,16 +70,30 @@ export default class AdminForm extends Component {
 			imageUrl,
 			description,
 			clearance,
-			newImageUrl
+			newImageUrl,
+			images
 		} = this.state
 		const data = {
 			itemName: itemName,
 			brand: brand,
-			imageUrl: [imageUrl, newImageUrl.length ? newImageUrl : null],
+			imageUrl: imageUrl.length ? [...images, imageUrl] : [...images],
 			description: description,
 			clearance: clearance && clearance.toLowerCase() === 'yes' ? true : false
 		}
 		console.log(data)
+	}
+
+	handleImageFields = () => {
+		this.setState({
+			images: [...this.state.images, this.state.imageUrl],
+			imageUrl: ''
+		})
+	}
+
+	handleRemoveImage = (item) => {
+		console.log(item)
+		this.state.images.splice(item, 1)
+		this.setState({ images: [...this.state.images] })
 	}
 
 	renderUpdateForm = () => {
@@ -84,6 +101,7 @@ export default class AdminForm extends Component {
 			itemName,
 			brand,
 			imageUrl,
+			images,
 			description,
 			clearance,
 			newImageUrl
@@ -97,21 +115,40 @@ export default class AdminForm extends Component {
 					floatingLabel={false}
 				/>
 				<FormInput label="Brand" name="brand" value={brand} />
-				<FormInput
-					floatingLabel={false}
-					label={`Item Image Url ${1}`}
-					name="newImageUrl"
-					value={newImageUrl}
-				/>
-				{imageUrl
-					? imageUrl.map((url, index) => (
-							<FormInput
-								floatingLabel={false}
-								key={index}
-								label={`Item Image Url ${index + 2}`}
-								name="imageUrl"
-								value={url}
-							/>
+				<div className="image-input">
+					<FormInput
+						floatingLabel={false}
+						label={`Item Image Url ${1}`}
+						name="newImageUrl"
+						value={imageUrl}
+					/>
+					<Button
+						variant="fab"
+						color="primary"
+						size="small"
+						type="button"
+						onClick={this.handleImageFields}>
+						+
+					</Button>
+				</div>
+				{images
+					? images.map((url, index) => (
+							<div className="image-input">
+								<FormInput
+									floatingLabel={false}
+									label={`Item Image Url ${index + 1}`}
+									name="imageUrl"
+									value={imageUrl}
+								/>
+								<Button
+									variant="fab"
+									color="primary"
+									size="small"
+									type="button"
+									onClick={this.handleImageFields}>
+									+
+								</Button>
+							</div>
 					  ))
 					: null}
 				<FormInput label="Description" name="description" value={description} />
@@ -129,7 +166,14 @@ export default class AdminForm extends Component {
 	}
 
 	renderAddItemForm = () => {
-		const { itemName, brand, imageUrl, description, clearance } = this.state
+		const {
+			itemName,
+			brand,
+			imageUrl,
+			description,
+			clearance,
+			images
+		} = this.state
 		return (
 			<Form onSubmit={this.handleSubmit} onChange={this.handleChange}>
 				<FormInput
@@ -144,12 +188,50 @@ export default class AdminForm extends Component {
 					name="brand"
 					value={brand}
 				/>
-				<FormInput
-					floatingLabel={true}
-					label="Item Image Url"
-					name="imageUrl"
-					value={imageUrl}
-				/>
+				<div className="image-input">
+					<FormInput
+						floatingLabel={false}
+						label={`Item Image Url ${1}`}
+						name="imageUrl"
+						value={imageUrl}
+					/>
+					<Button
+						variant="fab"
+						type="button"
+						color="primary"
+						size="small"
+						onClick={this.handleImageFields}>
+						+
+					</Button>
+				</div>
+				{images
+					? images.map((url, index) => (
+							<div className="image-input" key={index}>
+								<FormInput
+									floatingLabel={false}
+									label={`Item Image Url ${index + 2}`}
+									name="imageUrl"
+									value={imageUrl}
+								/>
+								<Button
+									variant="fab"
+									color="primary"
+									size="small"
+									type="button"
+									onClick={this.handleImageFields}>
+									+
+								</Button>
+								<Button
+									variant="fab"
+									color="danger"
+									size="small"
+									type="button"
+									onClick={() => this.handleRemoveImage(url)}>
+									-
+								</Button>
+							</div>
+					  ))
+					: null}
 				<FormInput
 					floatingLabel={true}
 					label="Description"
@@ -182,7 +264,6 @@ export default class AdminForm extends Component {
 	}
 
 	render() {
-		console.log(this.props)
 		return this.renderForms()
 	}
 }
