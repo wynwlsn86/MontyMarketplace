@@ -19,19 +19,47 @@
 
 .container .admin-bottom-container {
 	margin: auto;
-	display: grid;
+	display: flex;
 	width: 80%;
-	grid-template-columns: 32em 71em;
-	grid-gap: 6em;
 	justify-content: space-between;
 	align-content: center;
+	height: auto;
 }
 
 .admin .card {
 	border-radius: 6px;
 	background-color: #e0f7fa;
+	/* height: auto; */
+	transition: all 0.4s;
 }
 
-.container .admin-top-container .card {
-	/* height: 12em; */
+.manage {
+	transition: all 0.4s;
+	width: 70em;
+	height: auto;
+}
+
+.customers {
+	height: 560px;
+	width: 30em;
+	margin-right: 7em;
+}
+
+.manage li a {
+	cursor: pointer;
+	transition: all 0.4s;
+}
+
+.container .admin-bottom-container .card form {
+	margin: 1em auto;
+	text-align: left;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+
+.container .admin-bottom-container .card form button {
+	align-self: center;
+	margin: 1em auto;
+	width: 60%;
 }

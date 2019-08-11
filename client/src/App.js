@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.css'
-import { Route, Switch, withRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { Footer } from './components/common'
 import Header from './components/common/Header'
 import Home from './components/Home'
@@ -17,8 +17,8 @@ function App() {
 			{/* <Header /> */}
 			<main>
 				<Switch>
-					<AdminDashbord />
-					{/* <Route exact path="/" render={(props) => <Home {...props} />} />
+					{/* <AdminDashbord /> */}
+					<Route exact path="/" render={(props) => <Home {...props} />} />
 					<Route path="/about" render={(props) => <About {...props} />} />
 					<Route
 						exact
@@ -38,7 +38,7 @@ function App() {
 					<Route
 						path="/admin/dashboard"
 						render={(props) => <AdminDashbord {...props} />}
-					/> */}
+					/>
 				</Switch>
 			</main>
 			<Footer />
