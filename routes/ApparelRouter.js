@@ -1,6 +1,6 @@
 const express = require('express')
 const ApparelRouter = express.Router()
-const { Apparel, Category } = require('../database/models')
+const { Apparel, Category, ItemDetail } = require('../database/models')
 
 ApparelRouter.get('/', async (req, res) => {
 	try {
@@ -34,7 +34,7 @@ ApparelRouter.get('/:item_id', async (req, res) => {
 ApparelRouter.post('/:category_id', async (req, res) => {
 	try {
 		const category = await Category.findById(req.params.category_id)
-		const { brand, imageUrl, name, description, attributes } = req.body
+		const { brand, imageUrl, name, description, attributes, price } = req.body
 
 		const data = {
 			category_id: category.id,
@@ -42,11 +42,18 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 			imageUrl,
 			name,
 			description,
-			attributes,
 			price
 		}
 		const apparel = await Apparel.create(data)
+		const newItem = {
+			apparel: apparel._id,
+			color: attributes.color,
+			size: attributes.size
+		}
+
+		const item = await ItemDetail.create(newItem)
 		await apparel.save()
+		await item.save()
 		res.send(apparel)
 	} catch (error) {
 		throw error
@@ -57,7 +64,7 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 	try {
 		const apparel = await Apparel.findByIdAndUpdate(
 			req.params.item_id,
-			req.body,
+			req.body.item,
 			{
 				useFindAndModify: false,
 				new: true
