@@ -50,7 +50,8 @@ export default class AdminForm extends Component {
 			brand: '',
 			imageUrl: '',
 			description: '',
-			clearance: ''
+			clearance: '',
+			images: []
 		})
 	}
 
@@ -67,7 +68,6 @@ export default class AdminForm extends Component {
 			imageUrl,
 			description,
 			clearance,
-			newImageUrl,
 			images
 		} = this.state
 		const data = {
