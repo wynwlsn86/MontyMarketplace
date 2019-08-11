@@ -141,7 +141,7 @@ const phoneSchema = new Schema(
 			type: [{ type: String }]
 		},
 		price: {
-			type: Number
+			type: String
 		},
 		cost: {
 			type: Number
