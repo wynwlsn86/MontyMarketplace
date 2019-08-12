@@ -1,6 +1,6 @@
 const express = require('express')
 const ApparelRouter = express.Router()
-const { Apparel, Category } = require('../database/models')
+const { Apparel, Category, ItemDetail } = require('../database/models')
 
 ApparelRouter.get('/', async (req, res) => {
 	try {
@@ -34,19 +34,52 @@ ApparelRouter.get('/:item_id', async (req, res) => {
 ApparelRouter.post('/:category_id', async (req, res) => {
 	try {
 		const category = await Category.findById(req.params.category_id)
-		const { brand, imageUrl, name, description, attributes } = req.body
+		const { brand, imageUrl, name, description, attributes, price } = req.body
 
+		const itemData = attributes.map((attribute) => {
+			const attributeData = {
+				color: attribute.color,
+				size: attribute.size,
+				colorQuantity: attribute.colorQuantity,
+				sizeQuantity: attribute.sizeQuantity
+			}
+			return attributeData
+		})
+
+		let sum = 0
+		await attributes.forEach(
+			(quantity) => (sum += quantity.sizeQuantity + quantity.colorQuantity)
+		)
 		const data = {
 			category_id: category.id,
 			brand,
 			imageUrl,
 			name,
 			description,
-			attributes,
-			price
+			price,
+			quantity: sum
 		}
+
+		// Im gonna have to add a conditional to this to handle not creating duplicates
+		// mongoose doesnt have findorcreate so I may have to do a query to findOne first and perform an update
+		// and if not found then create it
+
 		const apparel = await Apparel.create(data)
+
+		await itemData.forEach(async (data) => {
+			const newItemDetail = {
+				apparel: apparel._id,
+				colorQuantity: data.colorQuantity,
+				color: data.color,
+				size: data.size,
+				sizeQuantity: data.sizeQuantity
+			}
+			console.log()
+			const itemDetail = await ItemDetail.create(newItemDetail)
+			await itemDetail.save(itemDetail)
+		})
 		await apparel.save()
+
 		res.send(apparel)
 	} catch (error) {
 		throw error
@@ -57,7 +90,7 @@ ApparelRouter.put('/:item_id', async (req, res) => {
 	try {
 		const apparel = await Apparel.findByIdAndUpdate(
 			req.params.item_id,
-			req.body,
+			req.body.item,
 			{
 				useFindAndModify: false,
 				new: true

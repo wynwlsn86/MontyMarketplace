@@ -15,7 +15,6 @@ export default class Contact extends Component {
       item: false
     };
   }
-
   inputChange = e => {
     let value = e.target.value;
     let name = e.target.name;
