@@ -51,7 +51,21 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 			size: attributes.size
 		}
 
+<<<<<<< Updated upstream
 		const item = await ItemDetail.create(newItem)
+=======
+		await itemData.forEach(async (data) => {
+			const newItemDetail = {
+				apparel: apparel._id,
+				colorQuantity: data.colorQuantity,
+				color: data.color,
+				size: data.size,
+				sizeQuantity: data.sizeQuantity
+			}
+			const itemDetail = await ItemDetail.create(newItemDetail)
+			await itemDetail.save(itemDetail)
+		})
+>>>>>>> Stashed changes
 		await apparel.save()
 		await item.save()
 		res.send(apparel)
