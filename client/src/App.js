@@ -5,7 +5,7 @@ import { Footer } from './components/common'
 import Header from './components/common/Header'
 import Home from './components/Home'
 import About from './components/About'
-import AllProdcuts from './components/AllProdcuts'
+import AllProducts from './components/AllProducts'
 import ProductPage from './components/ProductPage'
 import Contact from './components/Contact'
 import Phones from './components/Phones'
@@ -24,7 +24,7 @@ function App() {
 					<Route
 						exact
 						path="/marketplace/apparel"
-						render={(props) => <AllProdcuts {...props} />}
+						render={(props) => <AllProducts {...props} />}
 					/>
 					<Route
 						exact

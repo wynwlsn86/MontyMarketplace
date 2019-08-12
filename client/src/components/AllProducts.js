@@ -4,7 +4,7 @@ import { Image } from './common'
 import Filter from './Filter'
 import JwPagination from 'jw-react-pagination'
 
-import '../styles/Products.css'
+import '../styles/AllProducts.css'
 
 export default class Products extends Component {
 	constructor() {
