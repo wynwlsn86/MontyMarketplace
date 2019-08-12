@@ -37,7 +37,12 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 		const { brand, imageUrl, name, description, attributes, price } = req.body
 
 		const itemData = attributes.map((attribute) => {
-			const attributeData = { color: attribute.color, size: attribute.size }
+			const attributeData = {
+				color: attribute.color,
+				size: attribute.size,
+				colorQuantity: attribute.colorQuantity,
+				sizeQuantity: attribute.sizeQuantity
+			}
 			return attributeData
 		})
 
@@ -64,9 +69,12 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 		await itemData.forEach(async (data) => {
 			const newItemDetail = {
 				apparel: apparel._id,
+				colorQuantity: data.colorQuantity,
 				color: data.color,
-				size: data.size
+				size: data.size,
+				sizeQuantity: data.sizeQuantity
 			}
+			console.log()
 			const itemDetail = await ItemDetail.create(newItemDetail)
 			await itemDetail.save(itemDetail)
 		})
