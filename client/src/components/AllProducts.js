@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { getProducts } from '../services/api'
 import { Image } from './common'
-import Filter from '../components/Filter'
+import Filter from './Filter'
 import JwPagination from 'jw-react-pagination'
 
 import '../styles/Products.css'

@@ -5,8 +5,8 @@ import { Footer } from './components/common'
 import Header from './components/common/Header'
 import Home from './components/Home'
 import About from './components/About'
-import Products from './components/Products'
-import Product from './components/Product'
+import AllProdcuts from './components/AllProdcuts'
+import ProductPage from './components/ProductPage'
 import Contact from './components/Contact'
 import Phones from './components/Phones'
 import AdminDashbord from './components/AdminDashbord'
@@ -24,7 +24,7 @@ function App() {
 					<Route
 						exact
 						path="/marketplace/apparel"
-						render={(props) => <Products {...props} />}
+						render={(props) => <AllProdcuts {...props} />}
 					/>
 					<Route
 						exact
@@ -33,7 +33,7 @@ function App() {
 					/>
 					<Route
 						path="/marketplace/:product_type/:item_id"
-						render={(props) => <Product {...props} />}
+						render={(props) => <ProductPage {...props} />}
 					/>
 					<Route path="/contact" render={(props) => <Contact {...props} />} />
 					<Route
