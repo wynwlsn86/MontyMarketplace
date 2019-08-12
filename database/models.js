@@ -96,6 +96,9 @@ const apparelSchema = new Schema(
 		},
 		category_id: {
 			type: String
+		},
+		quantity: {
+			type: Number
 		}
 	},
 	{
