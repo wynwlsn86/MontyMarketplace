@@ -36,20 +36,35 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 		const category = await Category.findById(req.params.category_id)
 		const { brand, imageUrl, name, description, attributes, price } = req.body
 
+		const itemData = attributes.map((attribute) => {
+			const attributeData = {
+				color: attribute.color,
+				size: attribute.size,
+				colorQuantity: attribute.colorQuantity,
+				sizeQuantity: attribute.sizeQuantity
+			}
+			return attributeData
+		})
+
+		let sum = 0
+		await attributes.forEach(
+			(quantity) => (sum += quantity.sizeQuantity + quantity.colorQuantity)
+		)
 		const data = {
 			category_id: category.id,
 			brand,
 			imageUrl,
 			name,
 			description,
-			price
+			price,
+			quantity: sum
 		}
+
+		// Im gonna have to add a conditional to this to handle not creating duplicates
+		// mongoose doesnt have findorcreate so I may have to do a query to findOne first and perform an update
+		// and if not found then create it
+
 		const apparel = await Apparel.create(data)
-		const newItem = {
-			apparel: apparel._id,
-			color: attributes.color,
-			size: attributes.size
-		}
 
 		await itemData.forEach(async (data) => {
 			const newItemDetail = {
@@ -63,7 +78,7 @@ ApparelRouter.post('/:category_id', async (req, res) => {
 			await itemDetail.save(itemDetail)
 		})
 		await apparel.save()
-		await item.save()
+
 		res.send(apparel)
 	} catch (error) {
 		throw error

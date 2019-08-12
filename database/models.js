@@ -60,10 +60,16 @@ const itemDetailSchema = new Schema(
 		color: {
 			type: String
 		},
+		colorQuantity: {
+			type: Number
+		},
 		size: {
 			type: String
 		},
-		apparel: [{ type: Schema.Types.ObjectId, ref: 'Apparel' }]
+		sizeQuantity: {
+			type: Number
+		},
+		apparel: { type: Schema.Types.ObjectId, ref: 'Apparel' }
 	},
 	{
 		timestamps: true
@@ -96,6 +102,9 @@ const apparelSchema = new Schema(
 		},
 		category_id: {
 			type: String
+		},
+		quantity: {
+			type: Number
 		}
 	},
 	{
