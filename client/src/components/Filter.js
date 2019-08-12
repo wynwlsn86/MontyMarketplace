@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import {getCategories} from '../services/api'
+
+import "../styles/Filter.css";
+
 export default class Filter extends Component {
   constructor(){
     super()
@@ -24,15 +27,15 @@ export default class Filter extends Component {
       return categories.map((category) => {
         console.log(category)
         return(
-          <div>
-            <h1>{category.category.toUpperCase()}</h1>
+          <div className="filter-container">
+            <h1 className="filter-category-header">{category.category.toUpperCase()}</h1>
             {
               category.attire.map((attire) => {
                 console.log(attire)
                 return(
-                  <div>
+                  <div className="filter-checkbox-container">
                     <input type="checkbox" id={attire} name={attire}/>
-                    <label for={attire}>{attire.toUpperCase()}</label>
+                    <label className="filter-label" for={attire}>{attire.toUpperCase()}</label>
                   </div>
               )})
             }
@@ -55,12 +58,10 @@ export default class Filter extends Component {
   
   render() {
     return (
-      <div>
-        <h1>filter</h1>
+
         <div>
           {this.renderCategories()}
         </div>
-      </div>
     )
   }
 }

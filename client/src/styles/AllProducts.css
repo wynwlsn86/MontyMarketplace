@@ -6,11 +6,6 @@
 	justify-content: center;
 }
 
-.product-images:hover {
-	/* opacity: 0.3;
-	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
-	width:11em;*/
-}
 .products-row {
 	display: flex;
 	flex-direction: row;
@@ -23,6 +18,7 @@
 	flex-direction: column;
 	flex-basis: 100%;
 	flex: 1;
+	margin-left: 1.5em;
 }
 
 .products-filter-column {
@@ -36,12 +32,16 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin: 1.5em 1em 4.5em 1em;
+	margin: 1em 1.5em -1em 1.5em;
 	transition: all 0.4s;
+	
 }
 
 .products-flex-column {
 	transition: all 0.4s;
+	width: 224px;
+	height: 224px;
+	margin: 1em 0em 4.5em 0em;
 }
 
 .products-flex-column:hover {
@@ -51,19 +51,24 @@
 .products-flex-wrap {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: flex-start;
 	margin-left: 4em;
+	margin-top: 1em;
 }
 
 .products-price {
 	font-size: 0.9em;
 	font-family: 'Questrial', sans-serif;
-	margin-top: -4em;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .products-name {
 	font-family: 'Questrial', sans-serif;
-	font-size: 1em;
+	font-size: 1.1em;
+	font-weight: bold;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -89,4 +94,5 @@
 	display: flex;
 	justify-content: center;
 	margin-top: auto;
+
 }
