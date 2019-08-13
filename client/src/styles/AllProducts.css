@@ -39,9 +39,9 @@
 
 .products-flex-column {
 	transition: all 0.4s;
-	width: 220px;
-	height: 220px;
-	margin: 2em 0em 4em 0.5em;
+	width: 215px;
+	height: 215px;
+	margin: 2em 0em 3em 0.5em;
 }
 
 .products-flex-column:hover {
