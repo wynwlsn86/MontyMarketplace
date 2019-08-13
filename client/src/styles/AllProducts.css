@@ -39,13 +39,14 @@
 
 .products-flex-column {
 	transition: all 0.4s;
-	width: 224px;
-	height: 224px;
-	margin: 1em 0em 4.5em 0em;
+	width: 220px;
+	height: 220px;
+	margin: 2em 0em 4em 0.5em;
 }
 
 .products-flex-column:hover {
 	box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
 }
 
 .products-flex-wrap {
@@ -69,6 +70,7 @@
 	font-family: 'Questrial', sans-serif;
 	font-size: 1.1em;
 	font-weight: bold;
+	line-height: 1em;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
