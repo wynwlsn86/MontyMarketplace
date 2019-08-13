@@ -12,6 +12,15 @@ OrderRouter.get('/', async (req, res) => {
 	}
 })
 
+OrderRouter.get('/customers', async (req, res) => {
+	try {
+		const customers = await Customer.find()
+		res.send(customers)
+	} catch (error) {
+		throw error
+	}
+})
+
 OrderRouter.post('/', async (req, res) => {
 	try {
 		let newCustomer
@@ -41,7 +50,18 @@ OrderRouter.post('/', async (req, res) => {
 			total: usdFormatter.format(purchasedApparel.price * item_quantity),
 			isFulfilled: false
 		}
-
+		const updateQuantity = {
+			quantity: purchasedApparel.quantity - data.item_quantity
+		}
+		const updateApparel = await Apparel.findByIdAndUpdate(
+			purchasedApparel._id,
+			updateQuantity,
+			{
+				useFindAndModify: false,
+				new: true
+			}
+		)
+		await updateApparel.save()
 		const order = await Order.create(data)
 		await order.save()
 		const itemDetails = await ItemDetail.findOne().where({

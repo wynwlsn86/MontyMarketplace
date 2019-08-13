@@ -1,15 +1,18 @@
 import React, { Component } from 'react'
 import { Container, Card } from './common/index'
 import { Tabs, Tab } from 'muicss/react'
-import { getInventory } from '../services/api'
+import { getInventory, getOrders, getCustomers } from '../services/api'
 import '../styles/AdminContainer.css'
 import { AdminChart } from './AdminChart'
 import AdminManagement from './AdminManagement'
+import CustomerTable from './CustomerTable'
 export default class AdminDashbord extends Component {
 	constructor() {
 		super()
 		this.state = {
 			inventory: [],
+			orders: [],
+			customers: [],
 			page: 1,
 			selectedItem: null,
 			isLoading: false
@@ -18,7 +21,9 @@ export default class AdminDashbord extends Component {
 
 	async componentDidMount() {
 		await this.setState({ isLoading: true, selectedItem: null })
-		await this.fecthInventory()
+		await this.fetchInventory()
+		await this.fetchOrders()
+		await this.fetchCustomers()
 	}
 
 	onTabChange = (i) => {
@@ -34,7 +39,25 @@ export default class AdminDashbord extends Component {
 		this.onTabChange(2)
 	}
 
-	fecthInventory = async () => {
+	fetchOrders = async () => {
+		try {
+			const orders = await getOrders()
+			this.setState({ orders })
+		} catch (error) {
+			throw error
+		}
+	}
+
+	fetchCustomers = async () => {
+		try {
+			const customers = await getCustomers()
+			this.setState({ customers })
+		} catch (error) {
+			throw error
+		}
+	}
+
+	fetchInventory = async () => {
 		const inventory = await getInventory()
 		this.setState({ inventory, isLoading: false })
 	}
@@ -47,11 +70,13 @@ export default class AdminDashbord extends Component {
 						<Card title="Total Orders" />
 						<Card title="Profit" />
 						<Card title="Orders">
-							<AdminChart />
+							<AdminChart orders={this.state.orders} />
 						</Card>
 					</Container>
 					<Container classname="admin-bottom-container">
-						<Card title="Customers" className="customers" />
+						<Card title="Customers" className="customers">
+							<CustomerTable customers={this.state.customers} />
+						</Card>
 						<Card className="manage">
 							<Tabs
 								justified={true}
