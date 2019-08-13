@@ -1,17 +1,18 @@
 .filter-label {
   color: black;
   font-size: 0.8em;
-  padding-left: 1em;
   margin-top: -0.4em;
+  padding-left: 1em;
+  
 }
 
 .filter-category-header {
     font-size: 1em;
-    padding: 2px;
+    padding: 0 0 0 5px;
 }
 
 .filter-container {
-  margin: 4em 0em -4em 1em;
+  margin: 5em 0em -4em 1em;
 }
 
 .filter-checkbox-container {
@@ -23,4 +24,5 @@
 .MuiExpansionPanelSummary-content {
   background-color: rgba(50, 191, 195, 0.5);
 }
+
 
