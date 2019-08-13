@@ -136,10 +136,22 @@ const customerSchema = new Schema(
 
 const orderSchema = new Schema(
 	{
-		product_id: {
+		apparal: {
+			type: String
+		},
+		item_quantity: {
+			type: Number
+		},
+		size: {
+			type: String
+		},
+		color: {
 			type: String
 		},
 		customer_id: {
+			type: String
+		},
+		total: {
 			type: String
 		},
 		isFulfilled: {
