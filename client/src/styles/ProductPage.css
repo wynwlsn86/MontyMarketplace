@@ -1,0 +1,70 @@
+.product-page-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-left: 15em;
+}
+
+.product-page-image-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+
+}
+
+.product-page-info-column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+.product-page-container {
+    width: 75%;
+    margin-top: 5em;
+border: 1px solid black;
+    
+}
+
+.product-page-image {
+    width: 3em;
+ 
+    
+}
+
+.product-page-image-container {
+    display: flex;
+    justify-content: flex-start;
+    width: 20%;
+}
+
+.product-page-name {
+    font-size: 2.2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+.product-page-description {
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+}
+
+.product-page-price {
+    font-size: 1.2em;
+    font-family: 'Raleway', sans-serif;
+}
+
+.product-page-info-container {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    line-height: 5em;
+}
+
+.product-page-center {
+    display: flex;
+    justify-content: center;
+}
