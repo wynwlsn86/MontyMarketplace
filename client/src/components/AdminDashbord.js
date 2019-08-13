@@ -67,9 +67,11 @@ export default class AdminDashbord extends Component {
 			<div className="admin">
 				<Container classname="admin-container">
 					<Container classname="admin-top-container">
-						<Card title="Total Orders" />
+						<Card title="Total Orders">
+							<h3>{this.state.orders.length}</h3>
+						</Card>
 						<Card title="Profit" />
-						<Card title="Orders">
+						<Card title="Order Status">
 							<AdminChart orders={this.state.orders} />
 						</Card>
 					</Container>
