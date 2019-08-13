@@ -1,11 +1,8 @@
 const express = require('express')
 const OrderRouter = express.Router()
 const { Apparel, Customer, Order, ItemDetail } = require('../database/models')
-const usdFormatter = new Intl.NumberFormat('en-us', {
-	style: 'currency',
-	currency: 'USD',
-	minimumFractionDigits: 2
-})
+const usdFormatter = require('../tools/CurrencyFormatter')
+
 OrderRouter.get('/', async (req, res) => {
 	try {
 		const orders = await Order.find()
