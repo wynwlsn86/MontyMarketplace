@@ -50,10 +50,12 @@ a {
 
 a:hover {
   color: #ffd83e;
+  text-decoration: none;
 }
 
 a:focus {
     border-bottom: 2px solid #fbcc06;
+    text-decoration: none;
 }
 
 .header-logo {
