@@ -37,6 +37,7 @@ app.use('/categories', CategoryRouter)
 app.use('/orders', OrderRouter)
 app.use(passport.initialize())
 
+// mongoose connection to mongo cloud db
 const uri = process.env.ATLAS_URI
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
 mongoose.connection.once('open', () => {
