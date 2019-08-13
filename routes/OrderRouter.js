@@ -1,7 +1,11 @@
 const express = require('express')
 const OrderRouter = express.Router()
 const { Apparel, Customer, Order, ItemDetail } = require('../database/models')
-
+const usdFormatter = new Intl.NumberFormat('en-us', {
+	style: 'currency',
+	currency: 'USD',
+	minimumFractionDigits: 2
+})
 OrderRouter.get('/', async (req, res) => {
 	try {
 		const orders = await Order.find()
@@ -37,13 +41,10 @@ OrderRouter.post('/', async (req, res) => {
 			customer_id: existingCustomer ? existingCustomer._id : newCustomer._id,
 			size: size,
 			color: color,
-			total: `${parseFloat(
-				purchasedApparel.price * parseFloat(item_quantity)
-			)}`,
+			total: usdFormatter.format(purchasedApparel.price * item_quantity),
 			isFulfilled: false
 		}
 
-		// console.log(data)
 		const order = await Order.create(data)
 		await order.save()
 		const itemDetails = await ItemDetail.findOne().where({
@@ -69,5 +70,7 @@ OrderRouter.post('/', async (req, res) => {
 		throw error
 	}
 })
+
+OrderRouter.pus
 
 module.exports = OrderRouter
