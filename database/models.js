@@ -115,7 +115,12 @@ const apparelSchema = new Schema(
 const customerSchema = new Schema(
 	{
 		name: {
-			type: String
+			first: {
+				type: String
+			},
+			last: {
+				type: String
+			}
 		},
 		email: {
 			type: String

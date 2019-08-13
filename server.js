@@ -14,6 +14,7 @@ const emailRouter = require('./routes/emailRouter')
 const PurchaseRouter = require('./routes/PurchaseRouter')
 const InventoryRouter = require('./routes/InventoryRouter')
 const CategoryRouter = require('./routes/CategoryRouter')
+const OrderRouter = require('./routes/OrderRouter')
 
 dotenv.config()
 const PORT = process.env.PORT || 3001
@@ -35,6 +36,7 @@ app.use('/phones', phoneRouter)
 app.use('/contact', emailRouter)
 app.use('/purchases', PurchaseRouter)
 app.use('/categories', CategoryRouter)
+app.use('/orders', OrderRouter)
 app.use(passport.initialize())
 
 const uri = process.env.ATLAS_URI
