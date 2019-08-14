@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+
 .header-container {
   background-color: #32bfc3;
   width: 100%;
@@ -26,6 +28,7 @@
 li {
      list-style: none;
   color: white;
+  font-family: 'Raleway', sans-serif;
 }
 
 .nav-one {
