@@ -69,7 +69,7 @@ export default class Products extends Component {
                 })
               }
             >
-              <Image source={product.imageUrl} alt={product.name} />
+              <Image source={product.imageUrl} alt={product.name} className="product-images"/>
               <h3 className="products-name">{product.name}</h3>
               <p className="products-price">${product.price}</p>
             </div>
