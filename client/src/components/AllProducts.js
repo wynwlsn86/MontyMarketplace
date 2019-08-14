@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { getProducts } from "../services/api";
+import { getProducts, getCategories } from "../services/api";
 import { Image } from "./common";
 import Filter from "./Filter";
 import JwPagination from "jw-react-pagination";
@@ -13,12 +13,15 @@ export default class Products extends Component {
       products: [],
       isLoading: false,
       pageOfItems: [],
-      pageSize: 10
+      pageSize: 10,
+      categories: null,
+      filterValues: ["5d4f87a3661c183f766cdec7"]
     };
   }
   async componentDidMount() {
     this.setState({ isLoading: true });
     await this.fetchProducts();
+    await this.fetchCategories();
   }
 
   fetchProducts = async () => {
@@ -29,6 +32,48 @@ export default class Products extends Component {
       throw error;
     }
   };
+
+    fetchCategories = async () => {
+    try {
+      const categories = await getCategories();
+      this.setState({ categories, isLoading: false });
+    } catch (error) {
+      throw error;
+    }
+  };
+
+  renderFilteredProducts = () => {
+    const {products, categories, filterValues} = this.state;
+    if(filterValues){
+      const filter =  filterValues.map(value => {
+        return products.filter(product => {
+          if (product.category_id == value){
+            return product
+          }
+        })
+      })
+      return filter[0].map(product => {
+        return (
+          <div className="products-flex-column">
+            <div
+              className="products-container"
+              key={product._id}
+              onClick={() =>
+                this.props.history.push({
+                  pathname: `/marketplace/apparel/${product._id}`,
+                  state: { productId: product._id }
+                })
+              }
+            >
+              <Image source={product.imageUrl} alt={product.name} />
+              <h3 className="products-name">{product.name}</h3>
+              <p className="products-price">${product.price}</p>
+            </div>
+          </div>
+        );
+      });
+    }
+  }
 
   onChangePage = pageOfItems => {
     this.setState({ pageOfItems: pageOfItems });
@@ -56,7 +101,6 @@ export default class Products extends Component {
     const { pageOfItems } = this.state;
     if (pageOfItems) {
       return pageOfItems.map(product => {
-        console.log(product);
         return (
           <div className="products-flex-column">
             <div
@@ -79,6 +123,10 @@ export default class Products extends Component {
     }
   };
 
+  filterProducts = () => {
+
+  }
+
   render() {
     return (
       <div>
@@ -87,10 +135,13 @@ export default class Products extends Component {
             <Filter />
           </div>
           <div className="products-column">
-            <div className="products-flex-wrap">{this.renderProducts()}</div>
-
+            <div className="products-flex-wrap">
+              {
+                this.state.filterValues ? this.renderFilteredProducts() : this.renderProducts()
+              }</div>
             <div className="pagination-container">
               {this.renderPagination()}
+              {/* {this.renderFilteredProducts()} */}
             </div>
           </div>{" "}
         </div>

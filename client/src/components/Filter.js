@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { getCategories } from "../services/api";
-
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
@@ -20,7 +19,7 @@ export default class Filter extends Component {
   fetchCategories = async () => {
     try {
       const categories = await getCategories();
-      console.log(categories);
+      // console.log(categories);
       this.setState({ categories, isLoading: false });
     } catch (error) {
       throw error;
@@ -31,7 +30,7 @@ export default class Filter extends Component {
     const { categories } = this.state;
     if (categories) {
       return categories.map(category => {
-        console.log(category);
+        // console.log(category);
         return (
           <div className="filter-container">
             <ExpansionPanel>
@@ -47,10 +46,10 @@ export default class Filter extends Component {
               <ExpansionPanelDetails>
                 <Typography>
                   {category.attire.map(attire => {
-                    console.log(attire);
+                    // console.log(attire);
                     return (
                       <div className="filter-checkbox-container">
-                        <input type="checkbox" id={attire} name={attire} />
+                        <input type="checkbox" id={attire} name={attire} onChange={this.renderFilteredProducts} />
                         <label className="filter-label" for={attire}>
                           {attire.toUpperCase()}
                         </label>
