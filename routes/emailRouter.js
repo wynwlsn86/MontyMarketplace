@@ -13,7 +13,7 @@ emailRouter.post('/', async (req, res) => {
 		})
 
 		let adminEmail = await adminTransporter.sendMail({
-			from: req.body.user_email,
+			from: req.body.userEmail,
 			to: '',
 			cc: '',
 			subject: `${req.body.name} purchased ${req.body.item}`,

@@ -1,12 +1,17 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import '../../styles/Header.css'
 
 import headerLogo from '../../assets/Monty-logo2.png'
 
-export const Header = () => {
+const Header = (props) => {
+	const hideHeader =
+		props.location.pathname === '/admin/dashboard' ||
+		props.location.pathname === '/admin/login'
+			? { display: 'none' }
+			: { display: 'flex' }
 	return (
-		<div className="header-container">
+		<div className="header-container" style={hideHeader}>
 			<div className="header-logo-container">
 				<img src={headerLogo} alt="Monty logo" className="header-logo" />
 			</div>
@@ -33,3 +38,5 @@ export const Header = () => {
 		</div>
 	)
 }
+
+export default withRouter(Header)

@@ -1,13 +1,22 @@
 const express = require('express')
 const ApparelRouter = express.Router()
-const { Apparel, Attribute, Category } = require('../database/models')
+const { Apparel, Category, ItemDetail } = require('../database/models')
 
 ApparelRouter.get('/', async (req, res) => {
 	try {
-		const items = await Apparel.findAll({
-			include: [{ all: true }]
+		const apparel = await Apparel.find()
+		res.send(apparel)
+	} catch (error) {
+		throw error
+	}
+})
+
+ApparelRouter.get('/brands/:brand', async (req, res) => {
+	try {
+		const apparel = await Apparel.find().where({
+			brand: req.params.brand
 		})
-		res.send(items)
+		res.send(apparel)
 	} catch (error) {
 		throw error
 	}
@@ -15,10 +24,63 @@ ApparelRouter.get('/', async (req, res) => {
 
 ApparelRouter.get('/:item_id', async (req, res) => {
 	try {
-		const items = await Apparel.findByPk(req.params.item_id, {
-			include: [{ all: true }]
+		const apparel = await Apparel.findById(req.params.item_id)
+		res.send(apparel)
+	} catch (error) {
+		throw error
+	}
+})
+
+ApparelRouter.post('/:category_id', async (req, res) => {
+	try {
+		const category = await Category.findById(req.params.category_id)
+		const { brand, imageUrl, name, description, attributes, price } = req.body
+
+		const itemData = attributes.map((attribute) => {
+			const attributeData = {
+				color: attribute.color,
+				size: attribute.size,
+				colorQuantity: attribute.colorQuantity,
+				sizeQuantity: attribute.sizeQuantity
+			}
+			return attributeData
 		})
-		res.send(items)
+
+		let sum = 0
+		await attributes.forEach(
+			(quantity) => (sum += quantity.sizeQuantity + quantity.colorQuantity)
+		)
+		const data = {
+			category_id: category.id,
+			brand,
+			imageUrl,
+			name,
+			description,
+			price,
+			quantity: sum
+		}
+
+		// Im gonna have to add a conditional to this to handle not creating duplicates
+		// mongoose doesnt have findorcreate so I may have to do a query to findOne first and perform an update
+		// and if not found then create it
+
+		const apparel = await Apparel.create(data)
+
+		await itemData.forEach(async (data) => {
+			const newItemDetail = {
+				apparel: apparel._id,
+				colorQuantity: data.colorQuantity,
+				color: data.color,
+				size: data.size,
+				sizeQuantity: data.sizeQuantity
+			}
+			console.log()
+			const itemDetail = await ItemDetail.create(newItemDetail)
+			await itemDetail.save(itemDetail)
+		})
+		await apparel.save()
+
+		res.send(apparel)
 	} catch (error) {
 		throw error
 	}
@@ -26,82 +88,16 @@ ApparelRouter.get('/:item_id', async (req, res) => {
 
 ApparelRouter.put('/:item_id', async (req, res) => {
 	try {
-		const updateItem = await Apparel.update({
-			where: {
-				id: req.params.item_id
+		const apparel = await Apparel.findByIdAndUpdate(
+			req.params.item_id,
+			req.body.item,
+			{
+				useFindAndModify: false,
+				new: true
 			}
-		})
-		res.send(updateItem)
-	} catch (error) {
-		throw error
-	}
-})
-
-/*
-Format Post Like this:
-{
-	"item": {
-		"name": "Sick Shirt",
-		"price": "32.98",
-		"cost": "12.00",
-		"description": "Awesome shirt",
-		"brand":"Nike",
-		"clearance": false,
-		"imageUrl": "imagee"
-	},
-	"category": {
-		"category": "shirts"
-	},
-	"attributes": {
-		"color": "black",
-		"size": "sm"
-	}
-}
-*/
-ApparelRouter.post('/', async (req, res) => {
-	try {
-		const {
-			name,
-			brand,
-			price,
-			cost,
-			description,
-			clearance,
-			imageUrl
-		} = req.body.item
-		const items = await Apparel.findOrCreate({
-			raw: true,
-			where: {
-				name: name,
-				brand: brand,
-				price: price,
-				cost: cost,
-				description: description,
-				clearance: clearance,
-				imageUrl: imageUrl
-			}
-		})
-
-		if (items) {
-			const { id } = items[0]
-			const item = await Apparel.findByPk(id)
-			const categories = await Category.findOrCreate({
-				where: {
-					category: req.body.category.category
-				}
-			})
-
-			const attributes = await Attribute.findOrCreate({
-				where: {
-					apparel_id: id,
-					color: req.body.attributes.color,
-					size: req.body.attributes.size
-				}
-			})
-			await item.addCategory(categories[0])
-			await item.addAttribute(attributes[0])
-		}
-		res.send(items)
+		)
+		await apparel.save()
+		res.send(apparel)
 	} catch (error) {
 		throw error
 	}
@@ -109,18 +105,8 @@ ApparelRouter.post('/', async (req, res) => {
 
 ApparelRouter.delete('/:item_id', async (req, res) => {
 	try {
-		await Apparel.destroy({ where: { id: req.params.item_id } })
-		await Attribute.destroy({
-			where: {
-				apparel_id: req.params.item_id
-			}
-		})
-		await Category.destroy({
-			where: {
-				apparel_id: req.params.item_id
-			}
-		})
-		res.send({ msg: 'Item Removed' })
+		await Apparel.findOneAndDelete(req.params.item_id)
+		res.send({ msg: `Item ${req.params.item_id} was deleted!` })
 	} catch (error) {
 		throw error
 	}

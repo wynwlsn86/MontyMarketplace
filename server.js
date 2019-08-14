@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const logger = require('morgan')
 const passport = require('passport')
 const dotenv = require('dotenv')
-
+const mongoose = require('mongoose')
 // Routers
 const AuthRouter = require('./routes/AuthRouter')
 const { userAuthorized } = require('./Auth/Auth')
@@ -13,6 +13,7 @@ const phoneRouter = require('./routes/PhoneRouter')
 const emailRouter = require('./routes/emailRouter')
 const PurchaseRouter = require('./routes/PurchaseRouter')
 const InventoryRouter = require('./routes/InventoryRouter')
+const CategoryRouter = require('./routes/CategoryRouter')
 
 dotenv.config()
 const PORT = process.env.PORT || 3001
@@ -33,8 +34,14 @@ app.use('/inventory', InventoryRouter)
 app.use('/phones', phoneRouter)
 app.use('/contact', emailRouter)
 app.use('/purchases', PurchaseRouter)
+app.use('/categories', CategoryRouter)
 app.use(passport.initialize())
 
+const uri = process.env.ATLAS_URI
+mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true })
+mongoose.connection.once('open', () => {
+	console.log(`connected to ${uri}`)
+})
 // Test Message
 app.get('/', (req, res) => {
 	try {

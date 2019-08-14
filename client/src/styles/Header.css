@@ -56,6 +56,7 @@ li {
 
 .nav-one a:hover {
   color: #fbcc06;
+
 }
 
 .nav-two a:hover {
@@ -64,6 +65,7 @@ li {
 
 .nav-one a:focus {
     border-bottom: 2px solid #fbcc06;
+    text-decoration: none;
 }
 
 .nav-two a:focus {

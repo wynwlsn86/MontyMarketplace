@@ -1,0 +1,28 @@
+.filter-label {
+  color: black;
+  font-size: 0.8em;
+  margin-top: -0.4em;
+  padding-left: 1em;
+  
+}
+
+.filter-category-header {
+    font-size: 1em;
+    padding: 0 0 0 5px;
+}
+
+.filter-container {
+  margin: 5em 0em -4em 1em;
+}
+
+.filter-checkbox-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+
+.MuiExpansionPanelSummary-content {
+  background-color: rgba(50, 191, 195, 0.5);
+}
+
+

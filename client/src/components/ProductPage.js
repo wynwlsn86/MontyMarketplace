@@ -6,7 +6,7 @@ export default class Product extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			products: [],
+			product: [],
 			productId: props.location.state.productId,
 			productType: props.match.params.product_type,
 			isLoading: false
@@ -19,6 +19,7 @@ export default class Product extends Component {
 	fetchProduct = async () => {
 		if (this.state.productType === 'apparel') {
 			const product = await getProduct(this.state.productId)
+
 			this.setState({ product })
 		} else {
 			const product = await getPhone(this.state.productId)

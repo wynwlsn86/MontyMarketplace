@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { getProducts } from "../services/api";
 import { Image } from "./common";
+import Filter from "./Filter";
 import JwPagination from "jw-react-pagination";
 
-import "../styles/Products.css";
+import "../styles/AllProducts.css";
 
 export default class Products extends Component {
   constructor() {
@@ -23,7 +24,6 @@ export default class Products extends Component {
   fetchProducts = async () => {
     try {
       const products = await getProducts();
-      // console.log(products)
       this.setState({ products, isLoading: false });
     } catch (error) {
       throw error;
@@ -56,22 +56,21 @@ export default class Products extends Component {
     const { pageOfItems } = this.state;
     if (pageOfItems) {
       return pageOfItems.map(product => {
+        console.log(product);
         return (
           <div className="products-flex-column">
-            <div className="products-container">
-              <h3
-                className="products-name"
-                key={product.id}
-                onClick={() =>
-                  this.props.history.push({
-                    pathname: `/marketplace/apparel/${product.id}`,
-                    state: { productId: product.id }
-                  })
-                }
-              >
-                {product.name}
-              </h3>
+            <div
+              className="products-container"
+              key={product._id}
+              onClick={() =>
+                this.props.history.push({
+                  pathname: `/marketplace/apparel/${product._id}`,
+                  state: { productId: product._id }
+                })
+              }
+            >
               <Image source={product.imageUrl} alt={product.name} />
+              <h3 className="products-name">{product.name}</h3>
               <p className="products-price">${product.price}</p>
             </div>
           </div>
@@ -83,15 +82,18 @@ export default class Products extends Component {
   render() {
     return (
       <div>
-          <div className="products-row">
-            <div className="products-filter-column">
-              <p className="products-filter">This is the filter</p>
-            </div>
+        <div className="products-row">
+          <div className="products-filter-column">
+            <Filter />
+          </div>
           <div className="products-column">
             <div className="products-flex-wrap">{this.renderProducts()}</div>
-          </div>
-		  </div>
-        <div className="pagination-container">{this.renderPagination()}</div>
+
+            <div className="pagination-container">
+              {this.renderPagination()}
+            </div>
+          </div>{" "}
+        </div>
       </div>
     );
   }
