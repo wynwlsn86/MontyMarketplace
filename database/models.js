@@ -40,13 +40,11 @@ const categorySchema = new Schema(
 			required: true
 		},
 		attire: {
-			type: [{ type: String }],
-			unique: true,
+			type: String,
 			required: true
 		},
 		gender: {
 			type: String,
-			unique: true,
 			required: true
 		}
 	},
