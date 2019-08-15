@@ -21,8 +21,17 @@
   flex-direction: row;
 }
 
-.MuiExpansionPanelSummary-content {
+.md-expansion-panel {
+  border: 1px solid black;
   background-color: rgba(50, 191, 195, 0.5);
+  outline: none;
 }
+
+.md-paper .md-paper--1 .md-expansion-panel-list {
+  outline: none;
+}
+
+
+
 
 
