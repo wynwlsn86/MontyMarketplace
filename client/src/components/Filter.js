@@ -1,11 +1,7 @@
 import React, { Component } from "react";
 import { getCategories } from "../services/api";
 
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { ExpansionPanel, ExpansionList} from "react-md";
 
 import "../styles/Filter.css";
 
@@ -34,19 +30,13 @@ export default class Filter extends Component {
         console.log(category);
         return (
           <div className="filter-container">
-            <ExpansionPanel>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className="filter-category-header">
-                  {category.category.toUpperCase()}
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  {category.attire.map(attire => {
+            <ExpansionList>
+              <ExpansionPanel label="Apparel">
+                {/* {category.category.toUpperCase()} */}
+                <p>filter content</p>
+              </ExpansionPanel>
+              <ExpansionPanel label="Shoes">
+                {/* {category.attire.map(attire => {
                     console.log(attire);
                     return (
                       <div className="filter-checkbox-container">
@@ -56,10 +46,10 @@ export default class Filter extends Component {
                         </label>
                       </div>
                     );
-                  })}
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+                  })} */}
+                  <p>filter content</p>
+              </ExpansionPanel>
+            </ExpansionList>
           </div>
         );
       });
