@@ -59,26 +59,21 @@ ApparelRouter.post('/', async (req, res) => {
 		const categoryAttire = await Category.findOne().where({
 			attire: attire
 		})
-		console.log(categoryAttire)
 		if (!categoryGroup) {
-			// console.log('workig')
 			const newCategory = await Category.create({
 				group: group,
 				attire: [],
 				gender: gender
 			})
-			// console.log(newCategory)
 			await newCategory.save()
 		}
 		if (!categoryAttire) {
 			const findCategoryGroup = await Category.findOne().where({
 				group: group
 			})
-			console.log(findCategoryGroup)
 			await findCategoryGroup.update({
 				attire: [...findCategoryGroup.attire, attire]
 			})
-			console.log(findCategoryGroup.attire)
 		}
 		await apparel.save()
 		res.send('done')
