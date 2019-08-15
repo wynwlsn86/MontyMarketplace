@@ -18,11 +18,10 @@ export const getProducts = async () => {
 }
 
 export const getCategories = async () => {
-	try{
+	try {
 		const resp = await api.get('/categories')
 		return resp.data
-	}
-	catch(error){
+	} catch (error) {
 		throw error
 	}
 }
@@ -57,6 +56,24 @@ export const getPhone = async (id) => {
 export const getInventory = async () => {
 	try {
 		const resp = await api.get('/inventory')
+		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
+
+export const getOrders = async () => {
+	try {
+		const orders = await api.get('/orders')
+		return orders.data
+	} catch (error) {
+		throw error
+	}
+}
+
+export const getCustomers = async () => {
+	try {
+		const resp = await api.get('/orders/customers')
 		return resp.data
 	} catch (error) {
 		throw error

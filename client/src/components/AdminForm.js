@@ -196,7 +196,7 @@ export default class AdminForm extends Component {
 				/>
 				<div className="image-input">
 					<FormInput
-						floatingLabel={false}
+						floatingLabel={true}
 						label={`Item Image Url ${1}`}
 						name="imageUrl"
 						value={imageUrl}
@@ -214,7 +214,7 @@ export default class AdminForm extends Component {
 					? images.map((url, index) => (
 							<div className="image-input" key={index}>
 								<FormInput
-									floatingLabel={false}
+									floatingLabel={true}
 									label={`Item Image Url ${index + 2}`}
 									name="imageUrl"
 									value={imageUrl}

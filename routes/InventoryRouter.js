@@ -15,7 +15,7 @@ InventoryRouter.get('/', async (req, res) => {
 				cost: item.cost,
 				imageUrl: item.imageUrl,
 				description: item.description,
-				quantity: item.attributes.colors.length + item.attributes.sizes.length
+				quantity: item.quantity || 0
 			}
 			return data
 		})

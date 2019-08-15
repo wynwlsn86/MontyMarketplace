@@ -1,0 +1,50 @@
+@import '~react-md/src/scss/react-md';
+
+$md-light-theme: true; // optional for light theme
+$md-primary-color: $md-cyan-500;
+$md-secondary-color: $md-deep-orange-a-200;
+
+@include react-md-everything;
+
+// Or for a subsection
+@include react-md-theme-everything(
+	$md-cyan-500,
+	$md-deep-orange-a-200,
+	$md-light-theme,
+	'custom-theme'
+);
+
+.admin {
+	margin: auto;
+	width: 80%;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	text-align: center;
+	margin-top: 8em;
+	// padding-left: 10em;
+
+	.admin-content {
+		// margin: auto;
+		width: 100%;
+	}
+}
+
+.admin-header {
+	top: 0;
+	z-index: 1000;
+}
+.admin-header {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 1000;
+}
+
+.admin-header button {
+	align-self: flex-end;
+	margin-right: 2em;
+}
