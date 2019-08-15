@@ -31,59 +31,115 @@ ApparelRouter.get('/:item_id', async (req, res) => {
 	}
 })
 
-ApparelRouter.post('/:category_id', async (req, res) => {
+ApparelRouter.post('/', async (req, res) => {
 	try {
-		const category = await Category.findById(req.params.category_id)
-		const { brand, imageUrl, name, description, attributes, price } = req.body
-
-		const itemData = attributes.map((attribute) => {
-			const attributeData = {
-				color: attribute.color,
-				size: attribute.size,
-				colorQuantity: attribute.colorQuantity,
-				sizeQuantity: attribute.sizeQuantity
-			}
-			return attributeData
-		})
-
-		let sum = 0
-		await attributes.forEach(
-			(quantity) => (sum += quantity.sizeQuantity + quantity.colorQuantity)
-		)
+		const {
+			apparel: { name, imageUrl, description, clearance, price, cost, brand },
+			category: { attire, group, gender }
+		} = req.body
 		const data = {
-			category_id: category.id,
-			brand,
-			imageUrl,
-			name,
-			description,
-			price,
-			quantity: sum
+			name: name,
+			imageUrl: imageUrl,
+			description: description,
+			clearance: clearance,
+			price: price,
+			cost: cost,
+			brand: brand,
+			category: {
+				attire: attire,
+				group: group,
+				gender: gender
+			}
 		}
 
-		// Im gonna have to add a conditional to this to handle not creating duplicates
-		// mongoose doesnt have findorcreate so I may have to do a query to findOne first and perform an update
-		// and if not found then create it
-
 		const apparel = await Apparel.create(data)
-
-		await itemData.forEach(async (data) => {
-			const newItemDetail = {
-				apparel: apparel._id,
-				colorQuantity: data.colorQuantity,
-				color: data.color,
-				size: data.size,
-				sizeQuantity: data.sizeQuantity
-			}
-			const itemDetail = await ItemDetail.create(newItemDetail)
-			await itemDetail.save(itemDetail)
+		const categoryGroup = await Category.findOne().where({
+			group: group
 		})
+		const categoryAttire = await Category.findOne().where({
+			attire: attire
+		})
+		console.log(categoryAttire)
+		if (!categoryGroup) {
+			// console.log('workig')
+			const newCategory = await Category.create({
+				group: group,
+				attire: [],
+				gender: gender
+			})
+			// console.log(newCategory)
+			await newCategory.save()
+		}
+		if (!categoryAttire) {
+			const findCategoryGroup = await Category.findOne().where({
+				group: group
+			})
+			console.log(findCategoryGroup)
+			await findCategoryGroup.update({
+				attire: [...findCategoryGroup.attire, attire]
+			})
+			console.log(findCategoryGroup.attire)
+		}
 		await apparel.save()
-
-		res.send(apparel)
+		res.send('done')
 	} catch (error) {
 		throw error
 	}
 })
+
+// ApparelRouter.post('/:category_id', async (req, res) => {
+// 	try {
+// 		const category = await Category.findById(req.params.category_id)
+// 		const { brand, imageUrl, name, description, attributes, price } = req.body
+
+// 		const itemData = attributes.map((attribute) => {
+// 			const attributeData = {
+// 				color: attribute.color,
+// 				size: attribute.size,
+// 				colorQuantity: attribute.colorQuantity,
+// 				sizeQuantity: attribute.sizeQuantity
+// 			}
+// 			return attributeData
+// 		})
+
+// 		let sum = 0
+// 		await attributes.forEach(
+// 			(quantity) => (sum += quantity.sizeQuantity + quantity.colorQuantity)
+// 		)
+// 		const data = {
+// 			category_id: category.id,
+// 			brand,
+// 			imageUrl,
+// 			name,
+// 			description,
+// 			price,
+// 			quantity: sum
+// 		}
+
+// 		// Im gonna have to add a conditional to this to handle not creating duplicates
+// 		// mongoose doesnt have findorcreate so I may have to do a query to findOne first and perform an update
+// 		// and if not found then create it
+
+// 		const apparel = await Apparel.create(data)
+
+// 		await itemData.forEach(async (data) => {
+// 			const newItemDetail = {
+// 				apparel: apparel._id,
+// 				colorQuantity: data.colorQuantity,
+// 				color: data.color,
+// 				size: data.size,
+// 				sizeQuantity: data.sizeQuantity
+// 			}
+// 			const itemDetail = await ItemDetail.create(newItemDetail)
+// 			await itemDetail.save(itemDetail)
+// 		})
+// 		await apparel.save()
+
+// 		res.send(apparel)
+// 	} catch (error) {
+// 		throw error
+// 	}
+// })
 
 ApparelRouter.put('/:item_id', async (req, res) => {
 	try {

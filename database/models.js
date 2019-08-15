@@ -35,18 +35,14 @@ const userSchema = new Schema(
 
 const categorySchema = new Schema(
 	{
-		category: {
-			type: String,
-			required: true
+		group: {
+			type: String
 		},
 		attire: {
-			type: [{ type: String }],
-			unique: true,
-			required: true
+			type: [{ type: String }]
 		},
 		gender: {
 			type: String,
-			unique: true,
 			required: true
 		}
 	},
@@ -85,6 +81,14 @@ const apparelSchema = new Schema(
 		brand: {
 			type: String
 		},
+		category: {
+			group: {
+				type: String
+			},
+			attire: {
+				type: String
+			}
+		},
 		imageUrl: {
 			type: [{ type: String }]
 		},
@@ -98,9 +102,6 @@ const apparelSchema = new Schema(
 			type: String
 		},
 		cost: {
-			type: String
-		},
-		category_id: {
 			type: String
 		},
 		quantity: {
