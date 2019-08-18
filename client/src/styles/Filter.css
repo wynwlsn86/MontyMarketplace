@@ -1,14 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
+
 .filter-label {
   color: black;
   font-size: 0.8em;
   margin-top: -0.4em;
   padding-left: 1em;
-  
 }
 
 .filter-category-header {
-    font-size: 1em;
-    padding: 0 0 0 5px;
+  font-size: 1em;
+  padding: 0 0 0 5px;
 }
 
 .filter-container {
@@ -21,17 +22,43 @@
   flex-direction: row;
 }
 
-.md-expansion-panel {
-  border: 1px solid black;
+.md-panel-column {
   background-color: rgba(50, 191, 195, 0.5);
-  outline: none;
+}
+
+.md-panel-column:hover {
+  cursor: pointer;
+}
+
+.md-panel-content {
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 5px;
 }
 
 .md-paper .md-paper--1 .md-expansion-panel-list {
   outline: none;
 }
 
+.md-text {
+  color: black;
+  font-family: "Questrial", sans-serif;
+  font-size: 1.5em;
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px 0 5px 5px;
+  letter-spacing: 3px;
+}
 
+.md-icon {
+  opacity: 0;
+}
 
+.md-panel-header {
+  outline: none;
+}
 
-
+.md-dialog-footer {
+  opacity: 0;
+}
