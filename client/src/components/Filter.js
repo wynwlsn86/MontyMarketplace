@@ -29,13 +29,8 @@ export default class Filter extends Component {
       return categories.map(category => {
         console.log(category);
         return (
-          <div className="filter-container">
-            <ExpansionList>
-              <ExpansionPanel label="Apparel">
-                {/* {category.category.toUpperCase()} */}
-                <p>filter content</p>
-              </ExpansionPanel>
-              <ExpansionPanel label="Shoes">
+          <div>
+
                 {/* {category.attire.map(attire => {
                     console.log(attire);
                     return (
@@ -47,9 +42,7 @@ export default class Filter extends Component {
                       </div>
                     );
                   })} */}
-                  <p>filter content</p>
-              </ExpansionPanel>
-            </ExpansionList>
+
           </div>
         );
       });
@@ -61,6 +54,15 @@ export default class Filter extends Component {
   };
 
   render() {
-    return <div>{this.renderCategories()}</div>;
+    return           <div className="filter-container">
+    <ExpansionList>
+      <ExpansionPanel label="Apparel">
+        {this.renderCategories()}
+      </ExpansionPanel>
+      <ExpansionPanel label="Shoes">
+        {this.renderCategories()}
+      </ExpansionPanel>
+    </ExpansionList>
+  </div>
   }
 }
