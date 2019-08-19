@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { AdminChart } from './AdminChart'
-import { Card, CardTitle, Grid, Cell } from 'react-md'
+import { Card, Grid, Cell } from 'react-md'
 export default class AdminStats extends Component {
 	render() {
 		return (
