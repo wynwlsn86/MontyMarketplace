@@ -35,18 +35,14 @@ const userSchema = new Schema(
 
 const categorySchema = new Schema(
 	{
-		category: {
-			type: String,
-			required: true
+		group: {
+			type: String
 		},
 		attire: {
-			type: [{ type: String }],
-			unique: true,
-			required: true
+			type: [{ type: String }]
 		},
 		gender: {
 			type: String,
-			unique: true,
 			required: true
 		}
 	},
@@ -85,6 +81,14 @@ const apparelSchema = new Schema(
 		brand: {
 			type: String
 		},
+		category: {
+			group: {
+				type: String
+			},
+			attire: {
+				type: String
+			}
+		},
 		imageUrl: {
 			type: [{ type: String }]
 		},
@@ -100,9 +104,6 @@ const apparelSchema = new Schema(
 		cost: {
 			type: String
 		},
-		category_id: {
-			type: String
-		},
 		quantity: {
 			type: Number
 		}
@@ -115,7 +116,12 @@ const apparelSchema = new Schema(
 const customerSchema = new Schema(
 	{
 		name: {
-			type: String
+			first: {
+				type: String
+			},
+			last: {
+				type: String
+			}
 		},
 		email: {
 			type: String
@@ -131,10 +137,22 @@ const customerSchema = new Schema(
 
 const orderSchema = new Schema(
 	{
-		product_id: {
+		apparal: {
+			type: String
+		},
+		item_quantity: {
+			type: Number
+		},
+		size: {
+			type: String
+		},
+		color: {
 			type: String
 		},
 		customer_id: {
+			type: String
+		},
+		total: {
 			type: String
 		},
 		isFulfilled: {

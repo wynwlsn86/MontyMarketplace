@@ -8,9 +8,22 @@ const InventoryList = ({ renderInventory, handleSort }) => {
 				className="inventory-header"
 				justified={true}
 				onChange={(i, value, tab) => handleSort(value)}>
-				<Tab value="name" label="Name" />
-				<Tab value="brand" label="Brand" />
-				<Tab value="quantity" label="Quantity" />
+				<Tab
+					value="name"
+					label="Name"
+					onActive={(i, value, tab) => handleSort(value)}
+				/>
+				<Tab
+					value="brand"
+					label="Brand"
+					onActive={(i, value, tab) => handleSort(value)}
+				/>
+				<Tab
+					value="quantity"
+					label="Quantity"
+					onActive={(i, value, tab) => handleSort(value)}
+				/>
+				<Tab value="manage" label="Manage" />
 			</Tabs>
 			{renderInventory()}
 		</div>

@@ -41,21 +41,35 @@ li {
     padding: 0 2vw 1vw 2vw;
 }
 
-a {
+.nav-one a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-two a {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
   
 }
 
-a:hover {
-  color: #ffd83e;
-  text-decoration: none;
+.nav-one a:hover {
+  color: #fbcc06;
+
 }
 
-a:focus {
+.nav-two a:hover {
+  color: #fbcc06;
+}
+
+.nav-one a:focus {
     border-bottom: 2px solid #fbcc06;
     text-decoration: none;
+}
+
+.nav-two a:focus {
+  border-bottom: 2px solid #fbcc06;
 }
 
 .header-logo {

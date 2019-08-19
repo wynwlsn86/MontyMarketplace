@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 import { getCategories } from "../services/api";
+<<<<<<< HEAD
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+=======
+
+import { ExpansionPanel, ExpansionList} from "react-md";
+>>>>>>> bc194b79d9689663d8ec43f9b0a24cf0558359b2
 
 import "../styles/Filter.css";
 
@@ -32,6 +37,7 @@ export default class Filter extends Component {
       return categories.map(category => {
         // console.log(category);
         return (
+<<<<<<< HEAD
           <div className="filter-container">
             <ExpansionPanel>
               <ExpansionPanelSummary
@@ -47,6 +53,12 @@ export default class Filter extends Component {
                 <Typography>
                   {category.attire.map(attire => {
                     // console.log(attire);
+=======
+          <div>
+
+                {/* {category.attire.map(attire => {
+                    console.log(attire);
+>>>>>>> bc194b79d9689663d8ec43f9b0a24cf0558359b2
                     return (
                       <div className="filter-checkbox-container">
                         <input type="checkbox" id={attire} name={attire} onChange={this.renderFilteredProducts} />
@@ -55,10 +67,8 @@ export default class Filter extends Component {
                         </label>
                       </div>
                     );
-                  })}
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
+                  })} */}
+
           </div>
         );
       });
@@ -70,6 +80,15 @@ export default class Filter extends Component {
   };
 
   render() {
-    return <div>{this.renderCategories()}</div>;
+    return           <div className="filter-container">
+    <ExpansionList>
+      <ExpansionPanel label="Apparel">
+        {this.renderCategories()}
+      </ExpansionPanel>
+      <ExpansionPanel label="Shoes">
+        {this.renderCategories()}
+      </ExpansionPanel>
+    </ExpansionList>
+  </div>
   }
 }
