@@ -75,10 +75,17 @@ export default class Products extends Component {
     }
   }
 
-  addToFilter = () => {
-    const filterValues = this.state.filterValues
-    filterValues.shift(this.value)
-    this.setState({filterValues})
+  addToFilter = (e) => {
+    if(this.state.filterValues){
+      const filterValues = this.state.filterValues
+      filterValues.shift(this.value)
+      console.log(e.target.value)
+      this.setState({filterValues})
+    }
+    else{
+      const filterValues = [e.target.value]
+      this.setState({filterValues})
+    }
   }
 
   onChangePage = pageOfItems => {
@@ -138,7 +145,8 @@ export default class Products extends Component {
       <div>
         <div className="products-row">
           <div className="products-filter-column">
-            <Filter />
+            <Filter 
+              addToFilter={this.addToFilter} />
           </div>
           <div className="products-column">
             <div className="products-flex-wrap">

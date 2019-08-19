@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { getCategories } from "../services/api";
-// import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import Typography from "@material-ui/core/Typography";
@@ -50,7 +49,7 @@ export default class Filter extends Component {
                               console.log(attire);
                               return (
                                 <div className="filter-checkbox-container">
-                                  <input type="checkbox" id={attire} name={attire} onChange={this.renderFilteredProducts} />
+                                  <input type="checkbox" id={attire} name={attire} value={attire} onChange={this.props.addToFilter} />
                                   <label className="filter-label" for={attire}>
                                     {attire.toUpperCase()}
                                   </label>
