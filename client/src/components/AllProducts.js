@@ -15,7 +15,7 @@ export default class Products extends Component {
       pageOfItems: [],
       pageSize: 10,
       categories: null,
-      filterValues: ["5d4f87a3661c183f766cdec7"]
+      filterValues: null
     };
   }
   async componentDidMount() {
@@ -73,6 +73,12 @@ export default class Products extends Component {
         );
       });
     }
+  }
+
+  addToFilter = () => {
+    const filterValues = this.state.filterValues
+    filterValues.shift(this.value)
+    this.setState({filterValues})
   }
 
   onChangePage = pageOfItems => {
