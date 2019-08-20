@@ -79,3 +79,16 @@ export const getCustomers = async () => {
 		throw error
 	}
 }
+
+export const getProductsByCategory = async (categories) => {
+	console.log(categories)
+	try {
+		const resp = await api.get(
+			`/categories/filter/${JSON.stringify(categories)}`
+		)
+		console.log(resp)
+		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
