@@ -15,7 +15,7 @@ export default class Products extends Component {
       pageOfItems: [],
       pageSize: 10,
       categories: null,
-      filterValues: null
+      filterValues: []
     };
   }
   async componentDidMount() {
@@ -44,10 +44,10 @@ export default class Products extends Component {
 
   renderFilteredProducts = () => {
     const {products, categories, filterValues} = this.state;
-    if(filterValues){
+    if(filterValues.length > 0){
       const filter =  filterValues.map(value => {
         return products.filter(product => {
-          if (product.category_id == value){
+          if (product.category.group === value){
             return product
           }
         })
@@ -76,16 +76,29 @@ export default class Products extends Component {
   }
 
   addToFilter = (e) => {
-    if(this.state.filterValues){
-      const filterValues = this.state.filterValues
-      filterValues.shift(this.value)
-      console.log(e.target.value)
-      this.setState({filterValues})
-    }
-    else{
-      const filterValues = [e.target.value]
-      this.setState({filterValues})
-    }
+    console.log("running")
+    // if(this.state.filterValues.length > 0){
+    //   console.log('if')
+      if(this.state.filterValues.includes(e.target.value)){
+        let filter = this.state.filterValues.indexOf(e.target.value)
+        let newFilter = this.state.filterValues.splice(filter, 1)
+        this.setState({filterValues: newFilter})
+      }
+      else{
+        console.log('else')
+        const filterValues = this.state.filterValues
+        filterValues.push(e.target.value)
+        console.log(e.target.value)
+        console.log(filterValues)
+        this.setState({filterValues})
+      }
+      
+    // }
+    // else{
+    //   console.log('first else')
+    //   const filterValues = e.target.value
+    //   this.setState({filterValues})
+    // }
   }
 
   onChangePage = pageOfItems => {

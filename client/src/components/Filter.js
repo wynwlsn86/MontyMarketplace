@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { getCategories } from "../services/api";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
 import { ExpansionPanel, ExpansionList} from "react-md";
+
 import "../styles/Filter.css";
 
 export default class Filter extends Component {
@@ -18,7 +16,7 @@ export default class Filter extends Component {
   fetchCategories = async () => {
     try {
       const categories = await getCategories();
-      // console.log(categories);
+      console.log(categories);
       this.setState({ categories, isLoading: false });
     } catch (error) {
       throw error;
@@ -31,41 +29,22 @@ export default class Filter extends Component {
       return categories.map(category => {
         console.log(category);
         return (
-
-          <div className="filter-container">
-            <ExpansionPanel>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className="filter-category-header">
-                  {category.group.toUpperCase()}
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                           {category.attire.map(attire => {
-                              console.log(attire);
-                              return (
-                                <div className="filter-checkbox-container">
-                                  <input type="checkbox" id={attire} name={attire} value={attire} onChange={this.props.addToFilter} />
-                                  <label className="filter-label" for={attire}>
-                                    {attire.toUpperCase()}
-                                  </label>
-                                </div>
-                              );
-                            })}  
-                </Typography>
-              </ExpansionPanelDetails>
+          <ExpansionPanel label="Apparel">
+            <h1>{category.group}</h1>
+                {category.attire.map(attire => {
+                    console.log(attire);
+                    return (
+                      <div className="filter-checkbox-container">
+                        <input type="checkbox" id={attire} name={attire} />
+                        <label className="filter-label" for={attire}>
+                          {attire.toUpperCase()}
+                        </label>
+                      </div>
+                    );
+                  })}
             </ExpansionPanel>
-          </div>
-
-
-
-
-      )
-      })
+        );
+      });
     }
   };
 
@@ -74,9 +53,10 @@ export default class Filter extends Component {
   };
 
   render() {
-    return <div className="filter-container">
-            {this.renderCategories()}
-            <button>Filter</button>
-           </div>
+    return           <div className="filter-container">
+    <ExpansionList>
+      {this.renderCategories()}
+    </ExpansionList>
+  </div>
   }
 }
