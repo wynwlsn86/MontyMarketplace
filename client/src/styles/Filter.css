@@ -7,13 +7,9 @@
   padding-left: 1em;
 }
 
-.filter-category-header {
-  font-size: 1em;
-  padding: 0 0 0 5px;
-}
 
 .filter-container {
-  margin: 5em 0em -4em 1em;
+  margin: 4.5em 0 0 1em;
 }
 
 .filter-checkbox-container {
@@ -23,7 +19,7 @@
 }
 
 .md-panel-column {
-  background-color: rgba(50, 191, 195, 0.5);
+ 
 }
 
 .md-panel-column:hover {
@@ -44,15 +40,16 @@
 .md-text {
   color: black;
   font-family: "Questrial", sans-serif;
-  font-size: 1.5em;
+  font-size: 1.8em;
   display: flex;
   justify-content: flex-start;
-  padding: 5px 0 5px 5px;
   letter-spacing: 3px;
+  padding: 5px 0 0 5px;
 }
 
 .md-icon {
   opacity: 0;
+
 }
 
 .md-panel-header {
@@ -61,4 +58,11 @@
 
 .md-dialog-footer {
   opacity: 0;
+}
+
+.md-fake-btn {
+  background-color: rgba(50, 191, 195, 0.5);
+  height: 3em;
+  width: 16em;
+  margin-bottom: 0.8em;
 }
