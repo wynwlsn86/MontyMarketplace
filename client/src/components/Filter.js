@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { getCategories } from "../services/api";
 
 import { ExpansionPanel, ExpansionList } from "react-md";
 
@@ -45,9 +44,12 @@ export default class Filter extends Component {
     return (
       <div className="filter-container">
         <ExpansionList>{this.renderCategories()}</ExpansionList>
-        <button onClick={this.props.renderFilteredProducts}>Apply</button>
-        <button onClick={this.props.fetchProducts}>Clear Filter</button>
-      </div>
+        <div className="filter-buttons-container">
+        <button className="filter-apply-button" onClick={this.props.renderFilteredProducts}>Apply</button>
+        <button className="filter-clear-button" onClick={this.props.fetchProducts}>Clear Filter</button>
+      </div></div>
+
+
     );
   }
 }
