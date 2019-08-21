@@ -18,6 +18,7 @@ export default class Filter extends Component {
     if (categories) {
       return categories.map(category => {
         return (
+
           <ExpansionPanel label={category.group} key={category._id}>
             {category.attire.map(attire => {
               const group = category.group;
@@ -35,6 +36,7 @@ export default class Filter extends Component {
               );
             })}
           </ExpansionPanel>
+
         );
       });
     }
@@ -48,6 +50,8 @@ export default class Filter extends Component {
         <button className="filter-apply-button" onClick={this.props.renderFilteredProducts}>Apply</button>
         <button className="filter-clear-button" onClick={this.props.fetchProducts}>Clear Filter</button>
       </div></div>
+
+
     );
   }
 }
