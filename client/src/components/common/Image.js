@@ -2,10 +2,10 @@ import React from "react";
 
 
 
-export const Image = ({ source, alt, className}) => {
+export const Image = ({ source, alt, classname }) => {
   return (
  
-      <img src={source} alt={alt} className={className} />
+      <img src={source} alt={alt} className={classname} />
 
   );
 };
