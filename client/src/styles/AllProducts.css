@@ -6,6 +6,11 @@
 	justify-content: center;
 }
 
+.products-image-container {
+display: flex;
+justify-content: center;
+}
+
 .products-row {
 	display: flex;
 	flex-direction: row;
@@ -18,6 +23,7 @@
 	flex-direction: column;
 	flex-basis: 100%;
 	flex: 1;
+	margin-left: 1em;
 }
 
 .products-filter-column {
@@ -32,16 +38,16 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin: 1em 1.5em -1em 4em;
 	transition: all 0.4s;
-	
 }
 
 .products-flex-column {
 	transition: all 0.4s;
 	width: 215px;
 	height: 215px;
-	margin: 2em 0 3em 0;
+	display: flex;
+	justify-content: center;
+	margin: 2em 1em 3em 0;
 }
 
 .products-flex-column:hover {
@@ -53,7 +59,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-start;
-	margin-left: 2em;
+	margin-left: 1em;
 	margin-top: 1em;
 }
 
@@ -74,7 +80,7 @@
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
+	padding: 0 10px 0 10px;
 }
 
 
