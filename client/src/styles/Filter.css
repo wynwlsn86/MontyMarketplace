@@ -65,6 +65,6 @@
 .md-panel-column {
   background-color: rgba(50, 191, 195, 0.5);
   height: 1.5em;
-  width: 8em;
+  margin-bottom: 0.8em; 
   color: black;
 }
