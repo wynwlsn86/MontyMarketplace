@@ -18,9 +18,11 @@
   flex-direction: row;
 }
 
-.md-panel-column {
- 
+.filter-label {
+  font-size: 1em;
+  color: black;
 }
+
 
 .md-panel-column:hover {
   cursor: pointer;
@@ -60,9 +62,9 @@
   opacity: 0;
 }
 
-.md-fake-btn {
+.md-panel-column {
   background-color: rgba(50, 191, 195, 0.5);
-  height: 3em;
-  width: 16em;
-  margin-bottom: 0.8em;
+  height: 1.5em;
+  width: 8em;
+  color: black;
 }
