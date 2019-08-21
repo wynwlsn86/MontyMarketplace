@@ -11,6 +11,24 @@ CategoryRouter.get('/', async (req, res) => {
 	}
 })
 
+CategoryRouter.get('/filter/:data', async (req, res) => {
+	try {
+		const categories = JSON.parse(req.params.data)
+
+		await categories.forEach(async (category) => {
+			const products = await Apparel.find({
+				category: {
+					attire: category.attire,
+					group: category.group
+				}
+			})
+			res.send(products)
+		})
+	} catch (error) {
+		throw error
+	}
+})
+
 CategoryRouter.post('/', async (req, res) => {
 	try {
 		const newCategory = await Category.create(req.body)
