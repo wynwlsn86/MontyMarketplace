@@ -32,7 +32,7 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	margin: 1em 1.5em -1em 1.5em;
+	margin: 1em 1.5em -1em 4em;
 	transition: all 0.4s;
 	
 }
@@ -41,7 +41,7 @@
 	transition: all 0.4s;
 	width: 215px;
 	height: 215px;
-	margin: 2em 0em 3em 0.5em;
+	margin: 2em 0 3em 0;
 }
 
 .products-flex-column:hover {
