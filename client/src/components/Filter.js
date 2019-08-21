@@ -18,7 +18,6 @@ export default class Filter extends Component {
     if (categories) {
       return categories.map(category => {
         return (
-
           <ExpansionPanel label={category.group} key={category._id}>
             {category.attire.map(attire => {
               const group = category.group;
@@ -36,7 +35,6 @@ export default class Filter extends Component {
               );
             })}
           </ExpansionPanel>
-
         );
       });
     }

@@ -12,11 +12,8 @@ input[type="checkbox"] {
   font-weight: bold;
 }
 
-
 .filter-container {
-
   margin: 4em 0em -4em 1em;
-
 }
 
 .filter-checkbox-container {
@@ -88,10 +85,7 @@ input[type="checkbox"] {
 .md-text {
   color: black;
   font-family: "Questrial", sans-serif;
-
   font-size: 2em;
-
-
   display: flex;
   justify-content: flex-start;
   letter-spacing: 3px;
@@ -100,7 +94,6 @@ input[type="checkbox"] {
 
 .md-icon {
   opacity: 0;
-
 }
 
 .md-panel-header {
@@ -112,9 +105,8 @@ input[type="checkbox"] {
   opacity: 0;
 }
 
-.md-fake-btn {
+.md-panel-column {
   background-color: rgba(50, 191, 195, 0.5);
-  height: 3em;
-  width: 16em;
-  margin-bottom: 0.8em;
+  height: 1.5em;
+  color: black;
 }
