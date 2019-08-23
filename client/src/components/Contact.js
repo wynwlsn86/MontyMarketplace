@@ -51,7 +51,7 @@ export default class Contact extends Component {
                 <h2 className="contact-form-header">Get In Touch</h2>
 
                 <form>
-                  <label>Name</label>
+                  <label className="contact-name-label">Name</label>
                   <div className="contact-form-name-container">
                     <input
                       type="text"
@@ -60,7 +60,7 @@ export default class Contact extends Component {
                     />
                   </div>
 
-                  <label>Email</label>
+                  <label className="contact-email-label">Email</label>
                   <div className="contact-form-email-container">
                     <input
                       type="text"
@@ -91,7 +91,7 @@ export default class Contact extends Component {
               <div className="contact-para-container">
                 <p className="contact-para">Drops us a line.</p>
                 <p className="contact-para">
-                  We will get back to you as soon as possible with an answer
+                  We will get back to you as soon as possible<br /> with an answer
                   offering the best price.
                 </p>
                 <p className="contact-para">(242)816-83683</p>
