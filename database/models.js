@@ -169,26 +169,23 @@ const phoneSchema = new Schema(
 		brand: {
 			type: String
 		},
-		model: {
+		model_number: {
 			type: String
 		},
 		storage: {
-			type: [{ type: String }]
-		},
-		imageUrl: {
-			type: [{ type: String }]
+			type: String
 		},
 		condition: {
-			type: [{ type: String }]
+			type: String
 		},
 		price: {
 			type: String
 		},
 		cost: {
-			type: Number
+			type: String
 		},
-		carrier: {
-			type: [{ type: String }]
+		imei : {
+			type: String
 		}
 	},
 	{
