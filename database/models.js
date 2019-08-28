@@ -164,6 +164,17 @@ const orderSchema = new Schema(
 	}
 )
 
+const phoneImageSchema = new Schema(
+	{
+		imageUrl: {
+			type: String
+		}
+	},
+	{
+		timestamps: true
+	}
+)
+
 const phoneSchema = new Schema(
 	{
 		brand: {
@@ -184,8 +195,12 @@ const phoneSchema = new Schema(
 		cost: {
 			type: String
 		},
-		imei : {
+		imei: {
 			type: String
+		},
+		imageUrl: {
+			type: mongoose.Schema.Types.ObjectId,
+			ref: 'PhoneImage'
 		}
 	},
 	{
@@ -200,6 +215,7 @@ const Customer = mongoose.model('Customers', customerSchema)
 const Order = mongoose.model('Orders', orderSchema)
 const Category = mongoose.model('Category', categorySchema)
 const ItemDetail = mongoose.model('ItemDetail', itemDetailSchema)
+const PhoneImage = mongoose.model('PhoneImage', phoneImageSchema)
 
 module.exports = {
 	User,
@@ -208,5 +224,6 @@ module.exports = {
 	Customer,
 	Category,
 	ItemDetail,
+	PhoneImage,
 	Order
 }

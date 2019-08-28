@@ -1,11 +1,15 @@
 const express = require('express')
 const PhoneRouter = express.Router()
-const { Phone } = require('../database/models')
+const { Phone, PhoneImage } = require('../database/models')
 
-PhoneRouter.get('/', async (req, res) => {
+PhoneRouter.get('/', async (req, res, next) => {
 	try {
-		const phones = await Phone.find()
-		res.send(phones)
+		await Phone.find()
+			.populate('imageUrl')
+			.exec((err, phones) => {
+				if (err) res.status(400).send({ error: 'Image Not found' })
+				res.send(phones)
+			})
 	} catch (error) {
 		throw error
 	}
@@ -22,9 +26,19 @@ PhoneRouter.get('/:item_id', async (req, res) => {
 
 PhoneRouter.post('/', async (req, res) => {
 	try {
-		const phone = await Phone.create()
+		const phone = await Phone.create(re)
 		await phone.save()
 		res.send(phones)
+	} catch (error) {
+		throw error
+	}
+})
+
+PhoneRouter.post('/images', async (req, res) => {
+	try {
+		const image = await PhoneImage.create(req.body)
+		await image.save()
+		res.send(image)
 	} catch (error) {
 		throw error
 	}
