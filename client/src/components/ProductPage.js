@@ -38,7 +38,7 @@ export default class Product extends Component {
         <div>
 			{/* BACK BUTTON IS STATIC FOR NOW */}
           <div className="back-container">
-            <p>BACK</p>
+            <button className="back-button">BACK</button>
           </div>
           <div className="product-page-center">
             <div className="product-page-container">
