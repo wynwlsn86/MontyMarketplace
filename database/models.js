@@ -183,8 +183,24 @@ const phoneSchema = new Schema(
 		model_number: {
 			type: String
 		},
+		esn: {
+			type: String
+		},
+		esn: {
+			type: String
+		},
 		storage: {
 			type: String
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
+		},
+		// associate in sub document
+		imageUrl: {
+			type: [{ type: String }]
+>>>>>>> Stashed changes
 		},
 		condition: {
 			type: String
