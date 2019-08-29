@@ -185,9 +185,19 @@ const phoneSchema = new Schema(
 		},
 		esn: {
 			type: String
+<<<<<<< Updated upstream
 		},
 		storage: {
 			type: String
+=======
+		},
+		storage: {
+			type: String
+		},
+		// associate in sub document
+		imageUrl: {
+			type: [{ type: String }]
+>>>>>>> Stashed changes
 		},
 		condition: {
 			type: String
