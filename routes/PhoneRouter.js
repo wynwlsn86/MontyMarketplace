@@ -26,7 +26,7 @@ PhoneRouter.get('/:item_id', async (req, res) => {
 
 PhoneRouter.post('/', async (req, res) => {
 	try {
-		const phone = await Phone.create(re)
+		const phone = await Phone.create(req)
 		await phone.save()
 		res.send(phones)
 	} catch (error) {

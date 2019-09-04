@@ -54,6 +54,7 @@ export default class Contact extends Component {
                   <label className="contact-name-label">Name</label>
                   <div className="contact-form-name-container">
                     <input
+                    className="contact-name-input"
                       type="text"
                       name="name"
                       onChange={this.inputChange}
@@ -63,6 +64,7 @@ export default class Contact extends Component {
                   <label className="contact-email-label">Email</label>
                   <div className="contact-form-email-container">
                     <input
+                    className="contact-email-input"
                       type="text"
                       name="email"
                       onChange={this.inputChange}
