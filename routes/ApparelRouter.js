@@ -34,11 +34,19 @@ ApparelRouter.get('/:item_id', async (req, res) => {
 ApparelRouter.post('/', async (req, res) => {
 	try {
 		const {
-			apparel: { name, imageUrl, description, clearance, price, cost, brand },
+			apparel: {
+				itemName,
+				imageUrl,
+				description,
+				clearance,
+				price,
+				cost,
+				brand
+			},
 			category: { attire, group, gender }
 		} = req.body
 		const data = {
-			name: name,
+			name: itemName,
 			imageUrl: imageUrl,
 			description: description,
 			clearance: clearance,

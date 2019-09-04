@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const JWTStrategy = require('passport-jwt').Strategy
 const ExtractJwt = require('passport-jwt').ExtractJwt
+const SaltFactor = 12
 require('dotenv').config()
 
 const SECRET = process.env.APP_SECRET
@@ -22,15 +23,16 @@ passport.use(
 		async (req, username, password, done) => {
 			try {
 				password = bcrypt.hashSync(password, SaltFactor)
-				console.log(req.body)
 				const user = await new User({
-					name: { first: req.body.firstname, last: req.body.lastname },
-
-					// firstName: req.body.name.firstName,
+					name: {
+						first: req.body.firstname,
+						last: req.body.lastname
+					},
 					email: req.body.email,
 					username,
 					password
 				})
+				await user.save()
 				if (!user)
 					return done(null, false, { msg: '***Unable to create user***' })
 				done(null, user)
@@ -51,7 +53,7 @@ passport.use(
 		async (username, password, done) => {
 			try {
 				const user = await User.findOne().where({ username: username })
-
+				console.log(user)
 				if (!user) return done(null, false, { msg: 'User not found' })
 
 				const authenticateUser = await bcrypt.compare(password, user.password)

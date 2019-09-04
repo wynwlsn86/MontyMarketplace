@@ -8,6 +8,15 @@ const api = axios.create({
 	}
 })
 
+export const login = async (data) => {
+	try {
+		const resp = await api.post('/auth/login', data)
+		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
+
 export const getProducts = async () => {
 	try {
 		const resp = await api.get('/apparel')
@@ -81,13 +90,20 @@ export const getCustomers = async () => {
 }
 
 export const getProductsByCategory = async (categories) => {
-	console.log(categories)
 	try {
 		const resp = await api.get(
 			`/categories/filter/${JSON.stringify(categories)}`
 		)
-		console.log(resp)
 		return resp.data
+	} catch (error) {
+		throw error
+	}
+}
+
+export const addProduct = async (data) => {
+	try {
+		const resp = await api.post('/apparel', { apparel: data })
+		return resp
 	} catch (error) {
 		throw error
 	}

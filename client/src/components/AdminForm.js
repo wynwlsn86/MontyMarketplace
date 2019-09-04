@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Form, FormInput } from './common'
 import Loader from 'react-loader-spinner'
 import { Button } from 'muicss/react'
+import { addProduct } from '../services/api'
 export default class AdminForm extends Component {
 	constructor(props) {
 		super(props)
@@ -77,7 +78,17 @@ export default class AdminForm extends Component {
 			description: description,
 			clearance: clearance && clearance.toLowerCase() === 'yes' ? true : false
 		}
+		this.handleAddProduct(data)
+	}
+
+	handleAddProduct = async (data) => {
 		console.log(data)
+		try {
+			await addProduct(data)
+			await this.setInitialState()
+		} catch (error) {
+			throw error
+		}
 	}
 
 	handleImageFields = () => {

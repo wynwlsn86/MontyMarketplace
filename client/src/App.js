@@ -11,6 +11,7 @@ import Contact from './components/Contact'
 import Phones from './components/Phones'
 import AdminDashbord from './components/AdminDashbord'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
+import SignIn from './components/SignIn'
 
 function App() {
 	return (
@@ -36,6 +37,10 @@ function App() {
 						render={(props) => <ProductPage {...props} />}
 					/>
 					<Route path="/contact" render={(props) => <Contact {...props} />} />
+					<Route
+						path="/admin/login"
+						render={(props) => <SignIn {...props} />}
+					/>
 					<Route
 						path="/admin/dashboard"
 						render={(props) => <AdminDashbord {...props} />}
