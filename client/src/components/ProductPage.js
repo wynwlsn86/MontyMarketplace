@@ -36,7 +36,7 @@ export default class Product extends Component {
     if (product) {
       return (
         <div>
-			{/* BACK BUTTON IS STATIC FOR NOW */}
+          {/* BACK BUTTON IS STATIC FOR NOW */}
           <div className="back-container">
             <button className="back-button">BACK</button>
           </div>
