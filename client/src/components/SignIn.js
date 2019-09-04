@@ -24,7 +24,6 @@ export default class SignIn extends Component {
 		const { username, password } = this.state
 		try {
 			const signIn = await login({ username, password })
-			console.log(signIn)
 			this.setState({ token: signIn.token })
 		} catch (error) {
 			this.setState({ error: 'Invalid Credentials' })
@@ -50,6 +49,7 @@ export default class SignIn extends Component {
 						placeholder="Password"
 					/>
 					<button type="submit">Sign In</button>
+					{this.state.error ? <h4>{this.state.error}</h4> : null}
 				</form>
 			</div>
 		)
