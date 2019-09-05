@@ -1,0 +1,11 @@
+.phones-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 5em 5em 10em 5em;
+}
+
+.phone-images {
+    width: 14em;
+}
