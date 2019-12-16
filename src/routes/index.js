@@ -5,7 +5,6 @@ import AuthRouter from './AuthRouter'
 import CategoryRouter from './CategoryRouter'
 
 const Router = ExpressRouter()
-
 Router.use('/apparel', ApparelRouter)
 Router.use('/auth', AuthRouter)
 Router.use('/categories', CategoryRouter)

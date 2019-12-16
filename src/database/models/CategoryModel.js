@@ -2,15 +2,10 @@ import { Schema } from 'mongoose'
 
 const CategorySchema = new Schema(
   {
-    group: {
-      type: String
-    },
-    attire: {
-      type: [{ type: String }]
-    },
+    name: String,
     gender: {
-      type: String,
-      required: true
+      type: String
+      // required: true
     }
   },
   {

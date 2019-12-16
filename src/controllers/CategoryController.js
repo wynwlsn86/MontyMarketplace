@@ -1,6 +1,15 @@
-import { CategoryModel, ApparelModel } from '../database/Schema'
+import {
+  CategoryModel,
+  ApparelModel,
+  SubCategoryModel
+} from '../database/Schema'
 
 class CategoryController {
+  constructor() {
+    this.createCategory = this.createCategory.bind(this)
+    this.createSubCategory = this.createSubCategory.bind(this)
+  }
+
   async getCategory(req, res) {
     try {
       const category = await CategoryModel.find()
@@ -30,9 +39,19 @@ class CategoryController {
 
   async createCategory(req, res) {
     try {
-      const newCategory = await CategoryModel.create(req.body)
+      const newCategory = new CategoryModel(req.body.category)
       newCategory.save()
-      res.send(newCategory)
+      return newCategory
+    } catch (error) {
+      throw error
+    }
+  }
+
+  async createSubCategory(req, res) {
+    try {
+      const newSubCategory = new SubCategoryModel(req.body.subCategory)
+      await newSubCategory.save()
+      return newSubCategory
     } catch (error) {
       throw error
     }

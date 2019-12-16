@@ -28,7 +28,7 @@ const PhoneSchema = new Schema(
     },
     imageUrl: {
       type: Schema.Types.ObjectId,
-      ref: 'PhoneImage'
+      ref: 'phone_images'
     }
   },
   {

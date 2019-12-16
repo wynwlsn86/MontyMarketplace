@@ -23,10 +23,12 @@ const ApparelSchema = new Schema(
     },
     category: {
       group: {
-        type: String
+        type: Schema.Types.ObjectId,
+        ref: 'categories'
       },
       attire: {
-        type: String
+        type: Schema.Types.ObjectId,
+        ref: 'sub_categories'
       }
     },
     imageUrl: {

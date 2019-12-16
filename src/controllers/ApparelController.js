@@ -1,6 +1,28 @@
-import { ApparelModel, CategoryModel } from '../database/Schema'
+import {
+  ApparelModel,
+  CategoryModel,
+  SubCategoryModel
+} from '../database/Schema'
+import { CategoryController } from './CategoryController'
 
 class ApparelController {
+  constructor() {
+    this.createItem = this.createItem
+  }
+  createItem = async (req, res, params) => {
+    try {
+      const newItem = new ApparelModel({
+        ...params.item,
+        category: {
+          group: params.category._id,
+          attire: params.subCategory._id
+        }
+      })
+      return newItem
+    } catch (error) {
+      throw error
+    }
+  }
   async getApparel(req, res) {
     try {
       const apparel = await ApparelModel.find()
@@ -27,60 +49,67 @@ class ApparelController {
       throw error
     }
   }
+
   async addItem(req, res) {
     try {
-      const {
-        apparel: {
-          itemName,
-          imageUrl,
-          description,
-          clearance,
-          price,
-          cost,
-          brand
-        },
-        category: { attire, group, gender }
-      } = req.body
-      const data = {
-        name: itemName,
-        imageUrl: imageUrl,
-        description: description,
-        clearance: clearance,
-        price: price,
-        cost: cost,
-        brand: brand,
-        category: {
-          attire: attire,
-          group: group,
-          gender: gender
+      const { item, subCategory, category } = req.body
+      const categoryInstance = new CategoryController()
+      const subCategoryQuery = await SubCategoryModel.findOne({
+        name: subCategory.name
+      })
+      const categoryQuery = await CategoryModel.findOne({ name: category.name })
+      const apparelQuery = await ApparelModel.findOne({ name: item.name })
+      if (apparelQuery) {
+        res.status(400).send({ message: 'This item exists' })
+      } else {
+        if (subCategoryQuery && categoryQuery) {
+          const newItem = new ApparelModel({
+            ...item,
+            category: {
+              group: category._id,
+              attire: subCategory._id
+            }
+          })
+          await newItem.save()
+          res.send(newItem)
+        } else if (!subCategoryQuery && !categoryQuery) {
+          let newItem = await this.createItem(req, res, {
+            item,
+            subCategory: await categoryInstance.createSubCategory(
+              { body: { subCategory } },
+              res
+            ),
+            category: await categoryInstance.createCategory(
+              { body: { category } },
+              res
+            )
+          })
+          await newItem.save()
+          res.send(newItem)
+        } else if (categoryQuery && !subCategoryQuery) {
+          let newItem = await this.createItem(req, res, {
+            item,
+            subCategory: await categoryInstance.createSubCategory(
+              { body: { subCategory } },
+              res
+            ),
+            category: categoryQuery._id
+          })
+          await newItem.save()
+          res.send(newItem)
+        } else {
+          let newItem = await this.createItem(req, res, {
+            item,
+            subCategory: subCategoryQuery._id,
+            category: await categoryInstance.createCategory(
+              { body: { category } },
+              res
+            )
+          })
+          await newItem.save()
+          res.send(newItem)
         }
       }
-
-      const apparel = await ApparelModel.create(data)
-      const categoryGroup = await CategoryModel.findOne().where({
-        group: group
-      })
-      const categoryAttire = await CategoryModel.findOne().where({
-        attire: attire
-      })
-      if (!categoryGroup) {
-        const newCategory = await CategoryModel.create({
-          group: group,
-          attire: [],
-          gender: gender
-        })
-        await newCategory.save()
-      }
-      if (!categoryAttire) {
-        const findCategoryGroup = await CategoryModel.findOne().where({
-          group: group
-        })
-        await findCategoryGroup.update({
-          attire: [...findCategoryGroup.attire, attire]
-        })
-      }
-      await apparel.save()
-      res.send('done')
     } catch (error) {
       throw error
     }

@@ -2,15 +2,10 @@ import { UserModel } from '../database/Schema'
 import { VerifyPassword, signToken, HashPassword } from '../auth'
 
 class AuthController {
-  constructor() {
-    this.User = UserModel
-    this.User = this.User.bind(this)
-  }
-
   async loginUser(req, res) {
     try {
       const { email, password } = req.body
-      const user = await this.User.findOne({ email })
+      const user = await UserModel.findOne({ email })
       if (user && (await VerifyPassword(user, password))) {
         const payload = {
           _id: user._id,
@@ -29,8 +24,8 @@ class AuthController {
   async registerUser(req, res) {
     try {
       const { email, username, password, name } = req.body
-      const password_digest = HashPassword(password, res)
-      const newUser = new this.User({
+      const password_digest = await HashPassword(password, res)
+      const newUser = new UserModel({
         name,
         email,
         username,
