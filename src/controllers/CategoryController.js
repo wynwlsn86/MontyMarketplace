@@ -19,6 +19,22 @@ class CategoryController {
     }
   }
 
+  async getCategoryByDepartment(req, res) {
+    try {
+      const category = await CategoryModel.findOne().where(
+        req.query.name ? { name: req.query.name } : { gender: req.query.gender }
+      )
+      const items = await ApparelModel.find().where({
+        category: {
+          group: category._id
+        }
+      })
+      res.send(items)
+    } catch (error) {
+      throw error
+    }
+  }
+
   async filterByCategory(req, res) {
     try {
       const categories = JSON.parse(req.params.data)

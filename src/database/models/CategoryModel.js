@@ -4,8 +4,8 @@ const CategorySchema = new Schema(
   {
     name: String,
     gender: {
-      type: String
-      // required: true
+      type: String,
+      required: true
     }
   },
   {

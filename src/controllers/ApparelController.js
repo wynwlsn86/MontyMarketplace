@@ -57,7 +57,10 @@ class ApparelController {
       const subCategoryQuery = await SubCategoryModel.findOne({
         name: subCategory.name
       })
-      const categoryQuery = await CategoryModel.findOne({ name: category.name })
+      const categoryQuery = await CategoryModel.findOne({
+        name: category.name,
+        gender: category.gender
+      })
       const apparelQuery = await ApparelModel.findOne({ name: item.name })
       if (apparelQuery) {
         res.status(400).send({ message: 'This item exists' })
