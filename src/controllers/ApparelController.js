@@ -13,10 +13,8 @@ class ApparelController {
     try {
       const newItem = new ApparelModel({
         ...params.item,
-        category: {
-          group: params.category._id,
-          attire: params.subCategory._id
-        }
+        group: params.category._id,
+        attire: params.subCategory._id
       })
       return newItem
     } catch (error) {
@@ -68,10 +66,8 @@ class ApparelController {
         if (subCategoryQuery && categoryQuery) {
           const newItem = new ApparelModel({
             ...item,
-            category: {
-              group: category._id,
-              attire: subCategory._id
-            }
+            group: category._id,
+            attire: subCategory._id
           })
           await newItem.save()
           res.send(newItem)

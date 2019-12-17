@@ -21,15 +21,13 @@ const ApparelSchema = new Schema(
         }
       ]
     },
-    category: {
-      group: {
-        type: Schema.Types.ObjectId,
-        ref: 'categories'
-      },
-      attire: {
-        type: Schema.Types.ObjectId,
-        ref: 'sub_categories'
-      }
+    group: {
+      type: Schema.Types.ObjectId,
+      ref: 'categories'
+    },
+    attire: {
+      type: Schema.Types.ObjectId,
+      ref: 'sub_categories'
     },
     imageUrl: {
       type: [{ type: String }]

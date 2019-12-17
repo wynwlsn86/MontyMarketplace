@@ -25,9 +25,7 @@ class CategoryController {
         req.query.name ? { name: req.query.name } : { gender: req.query.gender }
       )
       const items = await ApparelModel.find().where({
-        category: {
-          group: category._id
-        }
+        group: category._id
       })
       res.send(items)
     } catch (error) {
@@ -41,10 +39,8 @@ class CategoryController {
 
       await categories.forEach(async category => {
         const products = await ApparelModel.find({
-          category: {
-            attire: category.attire,
-            group: category.group
-          }
+          attire: category.attire,
+          group: category.group
         })
         res.send(products)
       })
