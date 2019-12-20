@@ -5,11 +5,6 @@ import {
 } from '../database/Schema'
 
 class CategoryController {
-  constructor() {
-    this.createCategory = this.createCategory.bind(this)
-    this.createSubCategory = this.createSubCategory.bind(this)
-  }
-
   async getCategory(req, res) {
     try {
       const category = await CategoryModel.find()
@@ -33,17 +28,14 @@ class CategoryController {
     }
   }
 
-  async filterByCategory(req, res) {
+  async getItemsByPrimaryCategory(req, res) {
     try {
-      const categories = JSON.parse(req.params.data)
-
-      await categories.forEach(async category => {
-        const products = await ApparelModel.find({
-          attire: category.attire,
-          group: category.group
-        })
-        res.send(products)
-      })
+      const items = await ApparelModel.find(
+        req.query.category
+          ? { category_id: req.query.category }
+          : { sub_category_id: req.query.sub_category }
+      )
+      res.send(items)
     } catch (error) {
       throw error
     }

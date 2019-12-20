@@ -21,11 +21,11 @@ const ApparelSchema = new Schema(
         }
       ]
     },
-    group: {
+    category_id: {
       type: Schema.Types.ObjectId,
       ref: 'categories'
     },
-    attire: {
+    sub_category_id: {
       type: Schema.Types.ObjectId,
       ref: 'sub_categories'
     },

@@ -3,7 +3,6 @@ import {
   CategoryModel,
   SubCategoryModel
 } from '../database/Schema'
-import { CategoryController } from './CategoryController'
 
 class ApparelController {
   constructor() {
@@ -50,65 +49,20 @@ class ApparelController {
 
   async addItem(req, res) {
     try {
-      const { item, subCategory, category } = req.body
-      const categoryInstance = new CategoryController()
-      const subCategoryQuery = await SubCategoryModel.findOne({
-        name: subCategory.name
+      const category = await CategoryModel.findOneAndUpdate(
+        {
+          name: req.body.category.name,
+          gender: req.body.category.gender
+        },
+        req.body.category,
+        { upsert: true }
+      )
+      const newItem = new ApparelModel({
+        ...req.body.item,
+        category_id: category._id
       })
-      const categoryQuery = await CategoryModel.findOne({
-        name: category.name,
-        gender: category.gender
-      })
-      const apparelQuery = await ApparelModel.findOne({ name: item.name })
-      if (apparelQuery) {
-        res.status(400).send({ message: 'This item exists' })
-      } else {
-        if (subCategoryQuery && categoryQuery) {
-          const newItem = new ApparelModel({
-            ...item,
-            group: category._id,
-            attire: subCategory._id
-          })
-          await newItem.save()
-          res.send(newItem)
-        } else if (!subCategoryQuery && !categoryQuery) {
-          let newItem = await this.createItem(req, res, {
-            item,
-            subCategory: await categoryInstance.createSubCategory(
-              { body: { subCategory } },
-              res
-            ),
-            category: await categoryInstance.createCategory(
-              { body: { category } },
-              res
-            )
-          })
-          await newItem.save()
-          res.send(newItem)
-        } else if (categoryQuery && !subCategoryQuery) {
-          let newItem = await this.createItem(req, res, {
-            item,
-            subCategory: await categoryInstance.createSubCategory(
-              { body: { subCategory } },
-              res
-            ),
-            category: categoryQuery._id
-          })
-          await newItem.save()
-          res.send(newItem)
-        } else {
-          let newItem = await this.createItem(req, res, {
-            item,
-            subCategory: subCategoryQuery._id,
-            category: await categoryInstance.createCategory(
-              { body: { category } },
-              res
-            )
-          })
-          await newItem.save()
-          res.send(newItem)
-        }
-      }
+      await newItem.save()
+      res.send(newItem)
     } catch (error) {
       throw error
     }
