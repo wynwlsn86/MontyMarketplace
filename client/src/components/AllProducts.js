@@ -52,17 +52,16 @@ export default class Products extends Component {
 	}
 
 	addToFilter = (item) => {
-		// console.log(item)
 		const { filterValues } = this.state
 		if (filterValues.length === 0)
 			this.setState({ filterValues: [...filterValues, item] })
 		else {
 			return filterValues.filter((category) => {
 				if (category.attire !== item.attire) {
-					this.setState({ filterValues: [...filterValues, item] })
+					return this.setState({ filterValues: [...filterValues, item] })
 				} else {
 					filterValues.splice(filterValues.indexOf(category), 1)
-					this.setState({ filterValues: [...filterValues] })
+					return this.setState({ filterValues: [...filterValues] })
 				}
 			})
 		}
@@ -108,7 +107,6 @@ export default class Products extends Component {
 	renderProducts = () => {
 		const { pageOfItems } = this.state
 		if (pageOfItems) {
-			console.log(pageOfItems)
 			return pageOfItems.map((product) => {
 				return (
 					<div className="products-flex-column" key={product._id}>
