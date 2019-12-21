@@ -6,7 +6,13 @@ const CategorySchema = new Schema(
     gender: {
       type: String,
       required: true
-    }
+    },
+    subCategories: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: 'sub_categories'
+      }
+    ]
   },
   {
     timestamps: true

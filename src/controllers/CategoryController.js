@@ -7,8 +7,11 @@ import {
 class CategoryController {
   async getCategory(req, res) {
     try {
-      const category = await CategoryModel.find()
-      res.send(category)
+      await CategoryModel.find()
+        .populate('subCategories')
+        .exec((err, data) => {
+          res.send(data)
+        })
     } catch (error) {
       throw error
     }
@@ -43,9 +46,15 @@ class CategoryController {
 
   async createCategory(req, res) {
     try {
-      const newCategory = new CategoryModel(req.body.category)
+      const newSubCategory = new SubCategoryModel(req.body.subCategory)
+      const newCategory = new CategoryModel({
+        ...req.body.category,
+        subCategories: newSubCategory._id
+      })
+
+      await newSubCategory.save()
       newCategory.save()
-      return newCategory
+      res.send(newCategory)
     } catch (error) {
       throw error
     }

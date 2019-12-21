@@ -3,8 +3,9 @@ import { Schema } from 'mongoose'
 const SubCategorySchema = new Schema(
   {
     name: String,
-    products: {
-      type: [{ type: Schema.Types.ObjectId, ref: 'apparels' }]
+    category_id: {
+      type: Schema.Types.ObjectId,
+      ref: 'categories'
     }
   },
   {
