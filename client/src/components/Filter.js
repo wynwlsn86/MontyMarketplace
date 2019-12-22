@@ -4,17 +4,9 @@ import { ExpansionPanel, ExpansionList } from 'react-md'
 
 import '../styles/Filter.css'
 
-export default class Filter extends Component {
-  constructor() {
-    super()
-    this.state = {
-      categories: null,
-      isLoading: true
-    }
-  }
-
-  renderCategories = () => {
-    const { categories, addToFilter } = this.props
+const Filter = props => {
+  const renderCategories = () => {
+    const { categories, addToFilter } = props
     if (categories) {
       return categories.map((category, index) => {
         return (
@@ -37,24 +29,23 @@ export default class Filter extends Component {
       })
     }
   }
-
-  render() {
-    return (
-      <div className="filter-container">
-        <ExpansionList>{this.renderCategories()}</ExpansionList>
-        <div className="filter-buttons-container">
-          <button
-            className="filter-apply-button"
-            onClick={this.props.applyFilter}
-            disabled={this.props.disableApply}
-          >
-            Apply
-          </button>
-          <button className="filter-clear-button" onClick={this.props.resetAll}>
-            Clear Filter
-          </button>
-        </div>
+  return (
+    <div className="filter-container">
+      <ExpansionList>{renderCategories()}</ExpansionList>
+      <div className="filter-buttons-container">
+        <button
+          className="filter-apply-button"
+          onClick={props.applyFilter}
+          disabled={props.disableApply}
+        >
+          Apply
+        </button>
+        <button className="filter-clear-button" onClick={props.resetAll}>
+          Clear Filter
+        </button>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
+export default Filter
