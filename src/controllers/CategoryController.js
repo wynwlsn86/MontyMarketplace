@@ -5,6 +5,9 @@ import {
 } from '../database/Schema'
 
 class CategoryController {
+  constructor() {
+    this.items = []
+  }
   async getCategory(req, res) {
     try {
       await CategoryModel.find()
@@ -33,9 +36,14 @@ class CategoryController {
 
   async getItemsByCategory(req, res) {
     try {
-      const items = await ApparelModel.find({
-        subCategory_id: req.params.subCategory_id
-      })
+      const params = JSON.parse(req.params.subCategory_id)
+      let items = []
+      for (let i = 0; i < params.length; i++) {
+        const apparel = await ApparelModel.find({
+          subCategory_id: params[i]
+        })
+        items.push(...apparel)
+      }
       res.send(items)
     } catch (error) {
       throw error

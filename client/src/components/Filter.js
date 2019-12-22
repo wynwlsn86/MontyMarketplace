@@ -16,14 +16,21 @@ export default class Filter extends Component {
   renderCategories = () => {
     const { categories, addToFilter } = this.props
     if (categories) {
-      return categories.map(category => {
+      return categories.map((category, index) => {
         return (
           <ExpansionPanel label={category.name} key={category._id}>
-            {category.subCategories.map(subCategory => (
-              <>
+            {category.subCategories.map((subCategory, subIndex) => (
+              <div key={subCategory._id}>
                 <label>{subCategory.name}</label>
-                <input type="checkbox" />
-              </>
+                <input
+                  type="checkbox"
+                  value={subCategory.isChecked}
+                  checked={subCategory.isChecked}
+                  onChange={() =>
+                    addToFilter({ index, subIndex }, subCategory._id)
+                  }
+                />
+              </div>
             ))}
           </ExpansionPanel>
         )
@@ -38,14 +45,12 @@ export default class Filter extends Component {
         <div className="filter-buttons-container">
           <button
             className="filter-apply-button"
-            onClick={this.props.renderFilteredProducts}
+            onClick={this.props.applyFilter}
+            disabled={this.props.disableApply}
           >
             Apply
           </button>
-          <button
-            className="filter-clear-button"
-            onClick={this.props.fetchProducts}
-          >
+          <button className="filter-clear-button" onClick={this.props.resetAll}>
             Clear Filter
           </button>
         </div>

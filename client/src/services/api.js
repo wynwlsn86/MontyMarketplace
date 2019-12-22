@@ -29,7 +29,20 @@ export const getProducts = async () => {
 export const getCategories = async () => {
   try {
     const resp = await api.get('/categories')
-    return resp.data
+    const categories = resp.data.map(category => {
+      const data = {
+        ...category,
+        subCategories: category.subCategories.map(subCategory => {
+          const data = {
+            ...subCategory,
+            isChecked: false
+          }
+          return data
+        })
+      }
+      return data
+    })
+    return categories
   } catch (error) {
     throw error
   }
@@ -92,7 +105,7 @@ export const getCustomers = async () => {
 export const getProductsByCategory = async categories => {
   try {
     const resp = await api.get(
-      `/categories/filter/${JSON.stringify(categories)}`
+      `/categories/department/${JSON.stringify(categories)}`
     )
     return resp.data
   } catch (error) {
