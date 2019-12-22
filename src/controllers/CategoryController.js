@@ -46,14 +46,13 @@ class CategoryController {
 
   async createCategory(req, res) {
     try {
-      const newSubCategory = new SubCategoryModel(req.body.subCategory)
-      const newCategory = new CategoryModel({
-        ...req.body.category,
-        subCategories: newSubCategory._id
-      })
-
-      await newSubCategory.save()
-      newCategory.save()
+      const newCategory = await CategoryModel.findOneAndUpdate(
+        {
+          name: req.body.category.name
+        },
+        { ...req.body.category },
+        { upsert: true }
+      )
       res.send(newCategory)
     } catch (error) {
       throw error
@@ -62,9 +61,15 @@ class CategoryController {
 
   async createSubCategory(req, res) {
     try {
+      const category = await CategoryModel.findOne({
+        _id: req.params.category_id
+      })
       const newSubCategory = new SubCategoryModel(req.body.subCategory)
+      await category.updateOne({
+        subCategories: [...category.subCategories, newSubCategory._id]
+      })
       await newSubCategory.save()
-      return newSubCategory
+      res.send({ category, newSubCategory })
     } catch (error) {
       throw error
     }
