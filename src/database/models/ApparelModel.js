@@ -9,23 +9,18 @@ const ApparelSchema = new Schema(
     brand: {
       type: String
     },
-    details: {
-      type: [
-        {
-          size: String,
-          quantity: Number
-        },
-        {
-          color: String,
-          quantity: Number
-        }
-      ]
-    },
+    details: [
+      {
+        size: String,
+        color: String,
+        quantity: Number
+      }
+    ],
     category_id: {
       type: Schema.Types.ObjectId,
       ref: 'categories'
     },
-    sub_category_id: {
+    subCategory_id: {
       type: Schema.Types.ObjectId,
       ref: 'sub_categories'
     },

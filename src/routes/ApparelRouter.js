@@ -11,7 +11,7 @@ ApparelRouter.get('/brands/:brand', apparelController.getApparelByBrand)
 ApparelRouter.post('/', authenticate, (req, res) =>
   apparelController.addItem(req, res)
 )
-ApparelRouter.put('/apparel_id', authenticate, apparelController.updateItem)
+ApparelRouter.put('/:apparel_id', authenticate, apparelController.updateItem)
 ApparelRouter.delete('/:apparel_id', authenticate, apparelController.removeItem)
 
 export default ApparelRouter

@@ -5,21 +5,6 @@ import {
 } from '../database/Schema'
 
 class ApparelController {
-  constructor() {
-    this.createItem = this.createItem
-  }
-  createItem = async (req, res, params) => {
-    try {
-      const newItem = new ApparelModel({
-        ...params.item,
-        group: params.category._id,
-        attire: params.subCategory._id
-      })
-      return newItem
-    } catch (error) {
-      throw error
-    }
-  }
   async getApparel(req, res) {
     try {
       const apparel = await ApparelModel.find()
@@ -49,17 +34,8 @@ class ApparelController {
 
   async addItem(req, res) {
     try {
-      const category = await CategoryModel.findOneAndUpdate(
-        {
-          name: req.body.category.name,
-          gender: req.body.category.gender
-        },
-        req.body.category,
-        { upsert: true }
-      )
       const newItem = new ApparelModel({
-        ...req.body.item,
-        category_id: category._id
+        ...req.body.item
       })
       await newItem.save()
       res.send(newItem)
@@ -69,15 +45,36 @@ class ApparelController {
   }
   async updateItem(req, res) {
     try {
-      const apparel = await ApparelModel.findByIdAndUpdate(
-        req.params.apparel_id,
-        req.body.item,
+      // This is gonna be tricky to set up on the front end, we'll have to calcutale the total on the client side and then send it down like this:
+      // {
+      //   item: {
+      //     "name": "New Item",
+      //     "category_id": "5dfed576e10a27d66cae0fa6",
+      //     "subCategory_id": "5dfed62f3911291ad3f64f8c",
+      //     "details":{
+      //       "size": "lg",
+      //       "quantity": 50,
+      //       "color": "green"
+      //     }
+      //   }
+      // }
+      const apparel = await ApparelModel.findOneAndUpdate(
+        { _id: req.params.apparel_id },
         {
-          useFindAndModify: false,
-          new: true
+          $set: {
+            'details.$[el]': req.body.item.details
+          }
+        },
+        {
+          // upsert: true,
+          arrayFilters: [
+            {
+              'el.size': req.body.item.details.size
+              // 'el.color': req.body.item.details.color //if we want to get specific we have to pass the color down as well, but Jesse will have to make sure he inputs a color to begin with
+            }
+          ]
         }
       )
-      await apparel.save()
       res.send(apparel)
     } catch (error) {
       throw error
