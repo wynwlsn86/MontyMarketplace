@@ -31,13 +31,11 @@ class CategoryController {
     }
   }
 
-  async getItemsByPrimaryCategory(req, res) {
+  async getItemsByCategory(req, res) {
     try {
-      const items = await ApparelModel.find(
-        req.query.category
-          ? { category_id: req.query.category }
-          : { sub_category_id: req.query.sub_category }
-      )
+      const items = await ApparelModel.find({
+        subCategory_id: req.params.subCategory_id
+      })
       res.send(items)
     } catch (error) {
       throw error

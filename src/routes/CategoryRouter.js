@@ -6,8 +6,10 @@ const categoryController = new CategoryController()
 
 CategoryRouter.get('/', categoryController.getCategory)
 CategoryRouter.post('/', categoryController.createCategory)
-// Format this route like so /department/?category=objectId or /department/?sub_category=ObjectId
-CategoryRouter.get('/department', categoryController.getItemsByPrimaryCategory)
+CategoryRouter.get(
+  '/department/:subCategory_id',
+  categoryController.getItemsByCategory
+)
 CategoryRouter.post(
   '/:category_id/sub-category',
   categoryController.createSubCategory
