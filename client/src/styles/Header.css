@@ -82,3 +82,171 @@ li {
     display: flex;
     justify-content: flex-start;
 }
+
+@media (min-width: 320px) {
+.nav-column-two {
+      width: 24vw;
+  }
+  
+  .nav-one {
+   font-size: 0.8em;
+    padding: 0 1vw 1vw 2vw;
+  }
+  
+  .nav-two {
+      font-size: 0.55em;
+      padding: 0 0.5vw 1vw 1vw;
+  }
+  
+  .header-logo {
+      width: 23vw;
+
+  
+  }
+  
+  .header-logo-container {
+      width: 98vw;
+  }
+}
+
+@media (min-width: 375px) {
+  .nav-column-two {
+    width: 24vw;
+}
+
+.nav-one {
+ font-size: 0.9em;
+  padding: 0 2vw 1vw 2vw;
+}
+
+.nav-two {
+    font-size: 0.6em;
+    padding: 0 1vw 1vw 1vw;
+}
+
+.header-logo {
+    width: 22vw;
+
+}
+
+.header-logo-container {
+    width: 98vw;
+
+}
+}
+
+@media (min-width: 425px) {
+  .nav-column-two {
+    width: 24vw;
+}
+
+.nav-one {
+ font-size: 1em;
+  padding: 0 2vw 1vw 2vw;
+}
+
+.nav-two {
+    font-size: 0.7em;
+    padding: 0 1vw 1vw 1vw;
+}
+
+.header-logo {
+    width: 20vw;
+
+}
+
+.header-logo-container {
+    width: 98vw;
+
+}
+}
+
+@media (min-width: 768px) {
+  .nav-column-two {
+    width: 22vw;
+}
+
+.nav-one {
+ font-size: 1.3em;
+  padding: 0 2vw 1vw 2vw;
+}
+
+.nav-two {
+    font-size: 1em;
+    padding: 0 1vw 1vw 1vw;
+}
+
+.header-logo {
+    width: 16vw;
+
+}
+
+.header-logo-container {
+    width: 99vw;
+}
+}
+
+@media (min-width: 1024px) {
+    .nav-column-two {
+      width: 20vw;
+  }
+  
+  .header-logo {
+      width: 14vw;
+
+}
+
+.header-logo-container {
+  width: 99vw;
+}
+}
+
+@media (min-width: 1440px) {
+  .nav-column-two {
+    width: 18vw;
+}
+
+.nav-one {
+ font-size: 1.5em;
+  padding: 0 4vw 1vw 4vw;
+}
+
+.nav-two {
+    font-size: 1em;
+    padding: 0 2vw 1vw 2vw;
+}
+
+.header-logo {
+    width: 12vw;
+
+}
+
+.header-logo-container {
+    width: 99vw;
+}
+}
+
+@media (min-width: 2560px) {
+  .nav-column-two {
+    width: 18vw;
+}
+
+.nav-one {
+ font-size: 2.5em;
+  padding: 0 4vw 1vw 4vw;
+}
+
+.nav-two {
+    font-size: 2em;
+    padding: 0 2vw 1vw 2vw;
+}
+
+.header-logo {
+    width: 12vw;
+
+}
+
+.header-logo-container {
+    width: 99vw;
+}
+}
