@@ -20,6 +20,7 @@ export default class AdminForm extends Component {
         size: '',
         color: ''
       },
+      wantsToAddCategory: false,
       images: [],
       details: [],
       categories: [],
@@ -33,12 +34,16 @@ export default class AdminForm extends Component {
 
   handlePrimaryDropDown = e => {
     let index = e.target.value
-    this.setState(state => {
-      state.subCategories = state.categories[index].subCategories
-      state.itemData.category = state.categories[index]._id
-      state.itemData.subCategory = state.categories[0]._id
-      return state
-    })
+    if (typeof index === 'number') {
+      this.setState(state => {
+        state.subCategories = state.categories[index].subCategories
+        state.itemData.category = state.categories[index]._id
+        state.itemData.subCategory = state.categories[0]._id
+        return state
+      })
+    } else {
+      this.setState({ wantsToAddCategory: true })
+    }
   }
 
   getCategories = async () => {
@@ -53,7 +58,6 @@ export default class AdminForm extends Component {
           return state
         })
       })
-      console.log(this.state.subCategories)
     } catch (error) {
       throw error
     }
@@ -69,6 +73,12 @@ export default class AdminForm extends Component {
               value={index}
             >{`${category.name} (${category.gender})`}</option>
           ))}
+          <option
+            value={true}
+            onSelect={() => this.setState({ wantsToAddCategory: true })}
+          >
+            Add Category
+          </option>
         </select>
       </>
     ) : null
@@ -81,6 +91,7 @@ export default class AdminForm extends Component {
           {this.state.subCategories.map(category => (
             <option value={category._id}>{`${category.name}`}</option>
           ))}
+          <option value={true}>Add SubCategory</option>
         </select>
       </>
     ) : null
