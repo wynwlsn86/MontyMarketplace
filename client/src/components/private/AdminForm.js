@@ -31,17 +31,25 @@ export default class AdminForm extends Component {
     this.getCategories()
   }
 
+  handlePrimaryDropDown = e => {
+    let index = e.target.value
+    this.setState(state => {
+      state.subCategories = state.categories[index].subCategories
+      state.itemData.category = state.categories[index]._id
+      state.itemData.subCategory = state.categories[0]._id
+      return state
+    })
+  }
+
   getCategories = async () => {
     try {
       const categories = await this.Service.getCategories()
       categories.forEach(category => {
-        const subCategories = category.subCategories
-        delete category.subCategories
         this.setState(state => {
-          state.subCategories = [...state.subCategories, ...subCategories]
           state.categories = [...state.categories, category]
-          state.itemData.subCategory = subCategories[0]._id
           state.itemData.category = categories[0]._id
+          state.itemData.subCategory = categories[0].subCategories[0]._id
+          state.subCategories = categories[0].subCategories
           return state
         })
       })
@@ -55,10 +63,10 @@ export default class AdminForm extends Component {
     this.state.categories.length ? (
       <>
         <label htmlFor="category">Primary Category</label>
-        <select name="category" onChange={this.handleChange}>
-          {this.state.categories.map(category => (
+        <select name="category" onChange={this.handlePrimaryDropDown}>
+          {this.state.categories.map((category, index) => (
             <option
-              value={category._id}
+              value={index}
             >{`${category.name} (${category.gender})`}</option>
           ))}
         </select>

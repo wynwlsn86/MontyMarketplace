@@ -7,7 +7,7 @@
   height: 100%;
 }
 .wrapper .form-wrapper .form-col input {
-  padding: 0.4em 0em;
+  padding: 0.4em 0.2em;
   border-radius: 4px;
   border: 1px solid #80deea;
   outline: none;
@@ -45,8 +45,6 @@
   width: 40px;
   border-radius: 50%;
 }
-.wrapper .row {
-}
 
 .wrapper .detail-card-wrapper {
   display: grid;
@@ -73,4 +71,8 @@
   border-radius: 50%;
   background: #ef5350;
   border: none;
+}
+
+@media (max-width: 1024px) {
+  /* Media Queries for the form should go here */
 }
