@@ -1,45 +1,44 @@
-import React, { Component } from "react";
-import Axios from "axios";
-
-import "../styles/Contact.css";
-import contactPhoto from "../assets/contact-photo.png";
+import React, { Component } from 'react'
+import Axios from 'axios'
+import '../styles/Contact.css'
+import contactPhoto from '../assets/contact-photo.png'
 
 export default class Contact extends Component {
   constructor(props) {
-    super();
+    super()
     this.state = {
       name: null,
       email: null,
       body: null,
       sent: false,
       item: false
-    };
+    }
   }
   inputChange = e => {
-    let value = e.target.value;
-    let name = e.target.name;
-    this.setState({ [name]: value });
-  };
+    let value = e.target.value
+    let name = e.target.name
+    this.setState({ [name]: value })
+  }
 
   handleFormSubmit = async e => {
-    e.preventdefault();
+    e.preventdefault()
     if (this.state.name && this.state.email && this.state.body) {
       let data = {
         name: this.state.name,
         email: this.state.email,
         body: this.state.body
-      };
+      }
       Axios
         // ***************************** not sure about the route
-        .post("http://localhost3001/contact", data)
+        .post('http://localhost3001/contact', data)
         .then(res => {
-          this.setState({ sent: true });
+          this.setState({ sent: true })
         })
         .catch(e => {
-          console.log(e.message);
-        });
+          console.log(e.message)
+        })
     }
-  };
+  }
 
   render() {
     return (
@@ -54,7 +53,7 @@ export default class Contact extends Component {
                   <label className="contact-name-label">Name</label>
                   <div className="contact-form-name-container">
                     <input
-                    className="contact-name-input"
+                      className="contact-name-input"
                       type="text"
                       name="name"
                       onChange={this.inputChange}
@@ -64,7 +63,7 @@ export default class Contact extends Component {
                   <label className="contact-email-label">Email</label>
                   <div className="contact-form-email-container">
                     <input
-                    className="contact-email-input"
+                      className="contact-email-input"
                       type="text"
                       name="email"
                       onChange={this.inputChange}
@@ -93,8 +92,8 @@ export default class Contact extends Component {
               <div className="contact-para-container">
                 <p className="contact-para">Drops us a line.</p>
                 <p className="contact-para">
-                  We will get back to you as soon as possible<br /> with an answer
-                  offering the best price.
+                  We will get back to you as soon as possible
+                  <br /> with an answer offering the best price.
                 </p>
                 <p className="contact-para">(242)816-83683</p>
               </div>
@@ -102,6 +101,6 @@ export default class Contact extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
