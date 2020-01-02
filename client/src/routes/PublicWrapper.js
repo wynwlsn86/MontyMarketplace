@@ -2,7 +2,7 @@ import React from 'react'
 import { Footer } from '../components/common'
 import Header from '../components/common/Header'
 
-const Wrapper = ({ children }) => {
+const PublicWrapper = ({ children }) => {
   return (
     <>
       <Header />
@@ -11,4 +11,4 @@ const Wrapper = ({ children }) => {
     </>
   )
 }
-export default Wrapper
+export default PublicWrapper

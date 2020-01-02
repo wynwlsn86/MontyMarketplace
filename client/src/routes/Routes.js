@@ -1,65 +1,18 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Home from '../views/Home'
-import About from '../views/About'
-import AllProducts from '../views/AllProducts'
-import ProductPage from '../views/ProductPage'
-import Contact from '../views/Contact'
-import Phones from '../views/Phones'
-import AdminDashboard from '../views/AdminDashboard'
-import SignIn from '../views/SignIn'
-import Wrapper from './Wrapper'
-import AuthenticatedRoute from './AuthenticatedRoute'
-import AdminWrapper from './AdminWrapper'
+import PrivateRoutes from './PrivateRoutes'
+import PublicRoutes from './PublicRoutes'
 
-const Routes = ({ isAuthenticated, setAuthenticated }) => {
-  console.log(isAuthenticated)
-  if (isAuthenticated === true) {
-    return (
-      <AdminWrapper setAuthenticated={setAuthenticated}>
-        <AuthenticatedRoute
-          exact
-          isAuthenticated={isAuthenticated}
-          path="/admin/dashboard"
-          render={props => <AdminDashboard {...props} />}
-        />
-      </AdminWrapper>
-    )
-  } else {
-    return (
-      <Wrapper isAuthenticated={isAuthenticated}>
-        <Switch>
-          <Route exact path="/" render={props => <Home {...props} />} />
-          <Route path="/about" render={props => <About {...props} />} />
-          <Route
-            exact
-            path="/marketplace/apparel"
-            render={props => <AllProducts {...props} />}
-          />
-          <Route
-            exact
-            path="/marketplace/phones"
-            render={props => <Phones {...props} />}
-          />
-          <Route
-            path="/marketplace/:product_type/:item_id"
-            render={props => <ProductPage {...props} />}
-          />
-          <Route path="/contact" render={props => <Contact {...props} />} />
-          <Route
-            path="/admin/login"
-            render={props => (
-              <SignIn
-                {...props}
-                isAuthenticated={isAuthenticated}
-                setAuthenticated={setAuthenticated}
-              />
-            )}
-          />
-        </Switch>
-      </Wrapper>
-    )
-  }
-}
+const Routes = ({ isAuthenticated, setAuthenticated }) =>
+  isAuthenticated === true ? (
+    <PrivateRoutes
+      isAuthenticated={isAuthenticated}
+      setAuthenticated={setAuthenticated}
+    />
+  ) : (
+    <PublicRoutes
+      isAuthenticated={isAuthenticated}
+      setAuthenticated={setAuthenticated}
+    />
+  )
 
 export default Routes

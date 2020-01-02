@@ -7,15 +7,11 @@ import { __GetToken } from './services/TokenServices'
 function App() {
   const [isAuthenticated, setAuthenticated] = useState(false)
   const CheckForToken = () => {
-    const token = __GetToken()
-    console.log(isAuthenticated)
-    if (token) {
+    if (__GetToken()) {
       setAuthenticated(true)
     }
   }
-  useEffect(() => {
-    CheckForToken()
-  }, [])
+  useEffect(() => CheckForToken(), [isAuthenticated])
 
   return (
     <div className="App">

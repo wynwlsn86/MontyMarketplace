@@ -17,7 +17,7 @@ const AdminSidebar = ({ setAuthenticated }) => (
       <li className="nav-one">
         <Link to="/admin/customers">Customers</Link>
       </li>
-      <li className="nav-two">
+      <li className="nav-one">
         <Link to="/admin/add-inventory">Add To Inventory</Link>
       </li>
     </div>
@@ -25,7 +25,10 @@ const AdminSidebar = ({ setAuthenticated }) => (
       <div className="col">
         <li
           className="nav-one"
-          onClick={(() => __ClearToken(), setAuthenticated(false))}
+          onClick={() => {
+            setAuthenticated(false)
+            return __ClearToken()
+          }}
         >
           <Link to="/">Sign Out</Link>
         </li>
