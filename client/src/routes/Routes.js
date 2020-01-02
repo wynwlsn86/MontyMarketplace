@@ -6,13 +6,27 @@ import AllProducts from '../views/AllProducts'
 import ProductPage from '../views/ProductPage'
 import Contact from '../views/Contact'
 import Phones from '../views/Phones'
-import AdminDashbord from '../views/AdminDashbord'
+import AdminDashboard from '../views/AdminDashboard'
 import SignIn from '../views/SignIn'
 import Wrapper from './Wrapper'
 import AuthenticatedRoute from './AuthenticatedRoute'
+import AdminWrapper from './AdminWrapper'
+
 const Routes = ({ isAuthenticated, setAuthenticated }) => {
-  return (
-    <main>
+  console.log(isAuthenticated)
+  if (isAuthenticated === true) {
+    return (
+      <AdminWrapper setAuthenticated={setAuthenticated}>
+        <AuthenticatedRoute
+          exact
+          isAuthenticated={isAuthenticated}
+          path="/admin/dashboard"
+          render={props => <AdminDashboard {...props} />}
+        />
+      </AdminWrapper>
+    )
+  } else {
+    return (
       <Wrapper isAuthenticated={isAuthenticated}>
         <Switch>
           <Route exact path="/" render={props => <Home {...props} />} />
@@ -35,20 +49,17 @@ const Routes = ({ isAuthenticated, setAuthenticated }) => {
           <Route
             path="/admin/login"
             render={props => (
-              <SignIn {...props} setAuthenticated={setAuthenticated} />
+              <SignIn
+                {...props}
+                isAuthenticated={isAuthenticated}
+                setAuthenticated={setAuthenticated}
+              />
             )}
-          />
-
-          <AuthenticatedRoute
-            exact
-            isAuthenticated={isAuthenticated}
-            path="/admin/dashboard"
-            render={props => <AdminDashbord {...props} />}
           />
         </Switch>
       </Wrapper>
-    </main>
-  )
+    )
+  }
 }
 
 export default Routes

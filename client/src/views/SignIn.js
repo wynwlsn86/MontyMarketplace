@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
-import '../styles/SignIn.css'
 import AuthService from '../services/AuthServices'
+import '../styles/SignIn.css'
 
 export default class SignIn extends Component {
-  constructor(props) {
+  constructor() {
     super()
     this.Service = new AuthService()
     this.state = {
@@ -25,8 +25,11 @@ export default class SignIn extends Component {
     e.preventDefault()
     const { email, password } = this.state
     try {
-      const signIn = await this.Service.login({ email, password })
-      this.setState({ token: signIn.token })
+      const resp = await this.Service.login({ email, password })
+      if (resp.status === 200) {
+        this.props.setAuthenticated(true)
+        this.props.history.push('/admin/dashboard')
+      }
     } catch (error) {
       this.setState({ error: 'Invalid Credentials' })
       throw error
@@ -34,7 +37,8 @@ export default class SignIn extends Component {
   }
 
   render() {
-    if (this.state.token) {
+    const { isAuthenticated } = this.props
+    if (isAuthenticated && isAuthenticated === true) {
       return <Redirect to="/admin/dashboard" />
     }
     return (
