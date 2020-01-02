@@ -11,4 +11,23 @@ export default class AuthService {
       throw error
     }
   }
+  createCategory = async category => {
+    try {
+      const resp = await Api.post('/categories', {
+        category: { name: category }
+      })
+      return resp.data
+    } catch (error) {
+      throw error
+    }
+  }
+
+  addItemToInventory = async item => {
+    try {
+      const resp = await Api.post('/apparel', { item: item })
+      return resp
+    } catch (error) {
+      throw error
+    }
+  }
 }

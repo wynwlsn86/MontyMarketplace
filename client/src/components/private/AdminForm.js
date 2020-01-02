@@ -1,26 +1,31 @@
 import React, { Component } from 'react'
 import '../../styles/AdminForm.css'
 import PublicServices from '../../services/PublicServices'
+import AuthService from '../../services/AuthServices'
+import UploadForm from './components/UploadForm'
+import DropDown from './components/Dropdowns'
 export default class AdminForm extends Component {
   constructor(props) {
     super(props)
-    this.Service = new PublicServices()
+    this.PublicService = new PublicServices()
+    this.AuthService = new AuthService()
     this.state = {
       itemData: {
         name: '',
         brand: '',
         image_url: '',
         description: '',
-        clearance: false,
-        category: '',
-        subCategory: '',
         cost: '',
+        price: ''
+      },
+      detailData: {
         quantity: '',
-        price: '',
         size: '',
         color: ''
       },
-      wantsToAddCategory: false,
+      clearance: false,
+      category: '',
+      subCategory: '',
       images: [],
       details: [],
       categories: [],
@@ -34,26 +39,22 @@ export default class AdminForm extends Component {
 
   handlePrimaryDropDown = e => {
     let index = e.target.value
-    if (typeof index === 'number') {
-      this.setState(state => {
-        state.subCategories = state.categories[index].subCategories
-        state.itemData.category = state.categories[index]._id
-        state.itemData.subCategory = state.categories[0]._id
-        return state
-      })
-    } else {
-      this.setState({ wantsToAddCategory: true })
-    }
+    this.setState(state => {
+      state.subCategories = state.categories[index].subCategories
+      state.itemData.category = state.categories[index]._id
+      state.itemData.subCategory = state.categories[0]._id
+      return state
+    })
   }
 
   getCategories = async () => {
     try {
-      const categories = await this.Service.getCategories()
+      const categories = await this.PublicService.getCategories()
       categories.forEach(category => {
         this.setState(state => {
           state.categories = [...state.categories, category]
-          state.itemData.category = categories[0]._id
-          state.itemData.subCategory = categories[0].subCategories[0]._id
+          state.category = categories[0]._id
+          state.subCategory = categories[0].subCategories[0]._id
           state.subCategories = categories[0].subCategories
           return state
         })
@@ -65,35 +66,20 @@ export default class AdminForm extends Component {
 
   renderCategories = () =>
     this.state.categories.length ? (
-      <>
-        <label htmlFor="category">Primary Category</label>
-        <select name="category" onChange={this.handlePrimaryDropDown}>
-          {this.state.categories.map((category, index) => (
-            <option
-              value={index}
-            >{`${category.name} (${category.gender})`}</option>
-          ))}
-          <option
-            value={true}
-            onSelect={() => this.setState({ wantsToAddCategory: true })}
-          >
-            Add Category
-          </option>
-        </select>
-      </>
+      <DropDown
+        categories={this.state.categories}
+        label="Primary Categories"
+        name="category"
+      />
     ) : null
 
   renderSubCategories = () =>
     this.state.subCategories.length ? (
-      <>
-        <label htmlFor="subCategory">Secondary Category</label>
-        <select name="subCategory" onChange={this.handleChange}>
-          {this.state.subCategories.map(category => (
-            <option value={category._id}>{`${category.name}`}</option>
-          ))}
-          <option value={true}>Add SubCategory</option>
-        </select>
-      </>
+      <DropDown
+        categories={this.state.subCategories}
+        label="Sub Categories"
+        name="subCategory"
+      />
     ) : null
 
   removeDetail = index => {
@@ -103,7 +89,34 @@ export default class AdminForm extends Component {
   }
 
   handleSubmit = async e => {
+    e.preventDefault()
     try {
+      const {
+        itemData: {
+          brand,
+          name,
+          image_url,
+          description,
+          subCategory,
+          category,
+          clearance,
+          price
+        }
+      } = this.state
+      const data = {
+        name,
+        brand,
+        image_url: [image_url],
+        description,
+        subCategory_id: subCategory,
+        caetgory_id: category,
+        clearance,
+        price
+      }
+      const resp = await this.AuthService.addItemToInventory(data)
+      if (resp.status === 200 || resp.status === 201) {
+        this.props.history.push('/admin/dashboard')
+      }
     } catch (error) {
       throw error
     }
@@ -117,7 +130,7 @@ export default class AdminForm extends Component {
           <h3>Added Details</h3>
           <div className="wrapper detail-card-wrapper">
             {details.map((detail, index) => (
-              <div className="card">
+              <div className="card" key={index}>
                 <button type="button" onClick={() => this.removeDetail(index)}>
                   X
                 </button>
@@ -154,33 +167,13 @@ export default class AdminForm extends Component {
 
   render() {
     const {
-      itemData: { name, description, image_url, color, size, price, quantity }
+      itemData: { color, size, price, quantity }
     } = this.state
     return (
       <div className="wrapper form-container">
         <div className="form-wrapper">
-          <form className="form-col">
-            <input
-              onChange={this.handleChange}
-              type="text"
-              value={name}
-              name="name"
-              placeholder="Item Name"
-            />
-            <input
-              onChange={this.handleChange}
-              type="text"
-              value={description}
-              name="description"
-              placeholder="Item Description"
-            />
-            <input
-              onChange={this.handleChange}
-              type="text"
-              value={image_url}
-              name="image_url"
-              placeholder="Image Url"
-            />
+          <form className="form-col" onSubmit={this.handleSubmit}>
+            <UploadForm formData={this.state.itemData} />
             <label htmlFor="clearance">Clearance Item</label>
             <select name="clearance" onChange={this.handleChange}>
               <option value={false}>No</option>
@@ -191,38 +184,7 @@ export default class AdminForm extends Component {
             <div className=" item-details">
               <h3>Item Details</h3>
               <div className="input-wrapper row">
-                <label htmlFor="size">Size</label>
-                <input
-                  onChange={this.handleChange}
-                  type="text"
-                  value={size}
-                  name="size"
-                  placeholder="ex: Med"
-                />
-                <label htmlFor="size">Color</label>
-                <input
-                  onChange={this.handleChange}
-                  type="text"
-                  value={color}
-                  name="color"
-                  placeholder="ex: Red"
-                />
-                <label htmlFor="quantity">Quantity</label>
-                <input
-                  onChange={this.handleChange}
-                  type="text"
-                  value={quantity}
-                  name="quantity"
-                  placeholder="ex: 2"
-                />
-                <label htmlFor="price">Price</label>
-                <input
-                  onChange={this.handleChange}
-                  type="text"
-                  value={price}
-                  name="price"
-                  placeholder="ex: 20.00"
-                />
+                <UploadForm formData={this.state.detailData} />
                 <button
                   type="button"
                   onClick={() =>
