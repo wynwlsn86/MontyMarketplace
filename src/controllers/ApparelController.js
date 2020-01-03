@@ -69,8 +69,8 @@ class ApparelController {
           // upsert: true,
           arrayFilters: [
             {
-              'el.size': req.body.item.details.size
-              // 'el.color': req.body.item.details.color //if we want to get specific we have to pass the color down as well, but Jesse will have to make sure he inputs a color to begin with
+              'el.size': req.body.item.details.size,
+              'el.color': req.body.item.details.color //if we want to get specific we have to pass the color down as well, but Jesse will have to make sure he inputs a color to begin with
             }
           ]
         }
