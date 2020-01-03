@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import headerLogo from '../../assets/Monty-logo2.png'
 import { __ClearToken } from '../../services/TokenServices'
 const AdminSidebar = ({ setAuthenticated }) => (
@@ -9,19 +9,29 @@ const AdminSidebar = ({ setAuthenticated }) => (
         <img src={headerLogo} alt="Monty logo" className="header-logo" />
       </div>
       <li className="nav-one">
-        <Link to="/admin/dashboard">Dashboard</Link>
+        <NavLink activeClassName="nav-active" to="/admin/dashboard">
+          Dashboard
+        </NavLink>
       </li>
       <li className="nav-one">
-        <Link to="/admin/inventory">Inventory</Link>
+        <NavLink activeClassName="nav-active" to="/admin/inventory">
+          Inventory
+        </NavLink>
       </li>
       <li className="nav-one">
-        <Link to="/admin/customers">Customers</Link>
+        <NavLink activeClassName="nav-active" to="/admin/customers">
+          Customers
+        </NavLink>
       </li>
       <li className="nav-one">
-        <Link to="/admin/add-inventory">Add To Inventory</Link>
+        <NavLink activeClassName="nav-active" to="/admin/add-inventory">
+          Add To Inventory
+        </NavLink>
       </li>
       <li className="nav-one">
-        <Link to="/admin/departments">Manage Departments</Link>
+        <NavLink activeClassName="nav-active" to="/admin/departments">
+          Manage Departments
+        </NavLink>
       </li>
     </div>
     <div className="nav-column-two">
@@ -33,7 +43,9 @@ const AdminSidebar = ({ setAuthenticated }) => (
             return __ClearToken()
           }}
         >
-          <Link to="/">Sign Out</Link>
+          <NavLink activeClassName="nav-active" to="/">
+            Sign Out
+          </NavLink>
         </li>
       </div>
     </div>

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import Routes from './routes/Routes'
+import { withRouter } from 'react-router-dom'
 import './App.css'
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css'
 import { __GetToken } from './services/TokenServices'
 
-function App() {
+function App(props) {
   const [isAuthenticated, setAuthenticated] = useState(false)
-  const CheckForToken = () => {
+
+  useEffect(() => {
     if (__GetToken()) {
       setAuthenticated(true)
+      props.history.push('/admin/dashboard')
     }
-  }
-  useEffect(() => CheckForToken(), [isAuthenticated])
+  }, [isAuthenticated, props.history])
 
   return (
     <div className="App">
@@ -23,4 +25,4 @@ function App() {
   )
 }
 
-export default App
+export default withRouter(App)

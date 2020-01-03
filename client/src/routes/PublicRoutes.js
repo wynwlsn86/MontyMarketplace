@@ -8,6 +8,7 @@ import Contact from '../views/Contact'
 import Phones from '../views/Phones'
 import SignIn from '../views/SignIn'
 import PublicWrapper from './PublicWrapper'
+import NotFound from '../components/common/NotFound'
 
 const PublicRoutes = ({ isAuthenticated, setAuthenticated }) => (
   <PublicWrapper isAuthenticated={isAuthenticated}>
@@ -39,6 +40,7 @@ const PublicRoutes = ({ isAuthenticated, setAuthenticated }) => (
           />
         )}
       />
+      <Route component={NotFound} />
     </Switch>
   </PublicWrapper>
 )
