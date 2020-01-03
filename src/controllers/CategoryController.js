@@ -58,7 +58,7 @@ class CategoryController {
           gender: req.body.category.gender
         },
         { ...req.body.category },
-        { upsert: true, new: true },
+        { upsert: true },
         (err, doc) => {
           if (err) throw err
           res.send(doc)
@@ -96,6 +96,21 @@ class CategoryController {
         }
       )
       res.send(category)
+    } catch (error) {
+      throw error
+    }
+  }
+  async deleteCategory(req, res) {
+    try {
+      await CategoryModel.findById(req.params.category_id)
+        .populate('subCategories')
+        .exec(async (err, data) => {
+          if (err) throw error
+          await CategoryModel.deleteOne({ _id: data._id })
+          data.subCategories.forEach(
+            async sub => await SubCategoryModel.deleteOne({ _id: sub._id })
+          )
+        })
     } catch (error) {
       throw error
     }

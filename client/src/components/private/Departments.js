@@ -65,6 +65,17 @@ export default class Departments extends Component {
     }
   }
 
+  handleDelete = (index, id) => {
+    const categories = this.state.categories
+    categories.splice(index, 1)
+    this.setState(
+      {
+        categories
+      },
+      async () => await this.AuthService.removeCategory(id)
+    )
+  }
+
   displayCategories = () => {
     if (this.state.categories.length) {
       let coords = {
@@ -86,7 +97,9 @@ export default class Departments extends Component {
               {category.name.charAt(0).toUpperCase() + category.name.slice(1)}
             </h2>
             <p>For {category.gender}</p>
-
+            <button onClick={() => this.handleDelete(index, category._id)}>
+              X
+            </button>
             <button
               className="primary show"
               onClick={() => this.handleShow(index)}

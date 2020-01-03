@@ -15,5 +15,6 @@ CategoryRouter.post(
 )
 // CategoryRouter.put('/sub-category/:category_id')
 CategoryRouter.put('/:category_id', categoryController.updateCategory)
+CategoryRouter.delete('/:category_id', categoryController.deleteCategory)
 
 export default CategoryRouter

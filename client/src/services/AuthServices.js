@@ -28,4 +28,13 @@ export default class AuthService {
       throw error
     }
   }
+
+  removeCategory = async id => {
+    try {
+      const resp = await Api.delete(`/categories/${id}`)
+      return resp
+    } catch (error) {
+      throw error
+    }
+  }
 }
