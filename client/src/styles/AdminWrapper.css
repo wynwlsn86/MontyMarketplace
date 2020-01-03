@@ -16,4 +16,5 @@
 
 .wrapper.admin .content.admin {
   flex: 3;
+  overflow-y: scroll;
 }

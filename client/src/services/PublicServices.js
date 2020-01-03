@@ -17,6 +17,7 @@ export default class PublicService {
         const data = {
           ...category,
           isChecked: false,
+          toAdd: false,
           subCategories: category.subCategories.map(subCategory => {
             const data = {
               ...subCategory,
