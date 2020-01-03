@@ -4,6 +4,7 @@ import PublicServices from '../../services/PublicServices'
 import AuthService from '../../services/AuthServices'
 import UploadForm from './components/UploadForm'
 import DropDown from './components/Dropdowns'
+import DetailCard from './components/DetailCard'
 export default class AdminForm extends Component {
   constructor(props) {
     super(props)
@@ -37,12 +38,12 @@ export default class AdminForm extends Component {
     this.getCategories()
   }
 
-  handlePrimaryDropDown = e => {
-    let index = e.target.value
+  handlePrimaryDropDown = value => {
+    let index = value
     this.setState(state => {
       state.subCategories = state.categories[index].subCategories
-      state.itemData.category = state.categories[index]._id
-      state.itemData.subCategory = state.categories[0]._id
+      state.category = state.categories[index]._id
+      state.subCategory = state.categories[0]._id
       return state
     })
   }
@@ -70,6 +71,7 @@ export default class AdminForm extends Component {
         categories={this.state.categories}
         label="Primary Categories"
         name="category"
+        onChange={this.handlePrimaryDropDown}
       />
     ) : null
 
@@ -79,6 +81,8 @@ export default class AdminForm extends Component {
         categories={this.state.subCategories}
         label="Sub Categories"
         name="subCategory"
+        value="category"
+        onChange={this.handleChange}
       />
     ) : null
 
@@ -90,65 +94,23 @@ export default class AdminForm extends Component {
 
   handleSubmit = async e => {
     e.preventDefault()
-    try {
-      const {
-        itemData: {
-          brand,
-          name,
-          image_url,
-          description,
-          subCategory,
-          category,
-          clearance,
-          price
-        }
-      } = this.state
-      const data = {
-        name,
-        brand,
-        image_url: [image_url],
-        description,
-        subCategory_id: subCategory,
-        caetgory_id: category,
-        clearance,
-        price
-      }
-      const resp = await this.AuthService.addItemToInventory(data)
-      if (resp.status === 200 || resp.status === 201) {
-        this.props.history.push('/admin/dashboard')
-      }
-    } catch (error) {
-      throw error
-    }
   }
 
   renderDetails = () => {
     const { details } = this.state
     if (details.length) {
-      return (
-        <div className="detail-wrapper">
-          <h3>Added Details</h3>
-          <div className="wrapper detail-card-wrapper">
-            {details.map((detail, index) => (
-              <div className="card" key={index}>
-                <button type="button" onClick={() => this.removeDetail(index)}>
-                  X
-                </button>
-                <h3>Price: ${detail.price}</h3>
-                <h3>Quantity: {detail.quantity}</h3>
-                <h3>Color: {detail.color}</h3>
-                <h3>Size: {detail.size}</h3>
-              </div>
-            ))}
-          </div>
-        </div>
-      )
+      return <DetailCard details={details} onClick={this.removeDetail} />
     }
   }
 
-  handleChange = e => {
-    const values = { [e.target.name]: e.target.value }
-    this.setState({ itemData: Object.assign(this.state.itemData, values) })
+  handleChange = (value, name, dataValue) => {
+    dataValue
+      ? this.setState(state => {
+          const values = { [name]: value }
+          state[dataValue] = Object.assign(state[dataValue], values)
+          return state
+        })
+      : this.setState({ [name]: value })
   }
 
   addItemToArray = (listType, values) => {
@@ -157,7 +119,7 @@ export default class AdminForm extends Component {
       () => {
         for (const key in values) {
           this.setState(state => {
-            state.itemData[key] = ''
+            state.detailData[key] = ''
             return state
           })
         }
@@ -167,15 +129,22 @@ export default class AdminForm extends Component {
 
   render() {
     const {
-      itemData: { color, size, price, quantity }
+      detailData: { color, size, price, quantity }
     } = this.state
     return (
       <div className="wrapper form-container">
         <div className="form-wrapper">
           <form className="form-col" onSubmit={this.handleSubmit}>
-            <UploadForm formData={this.state.itemData} />
+            <UploadForm
+              formData={this.state.itemData}
+              onChange={this.handleChange}
+              dataValue="itemData"
+            />
             <label htmlFor="clearance">Clearance Item</label>
-            <select name="clearance" onChange={this.handleChange}>
+            <select
+              name="clearance"
+              onChange={e => this.handleChange('clearance', e.target.value)}
+            >
               <option value={false}>No</option>
               <option value={true}>Yes</option>
             </select>
@@ -184,13 +153,16 @@ export default class AdminForm extends Component {
             <div className=" item-details">
               <h3>Item Details</h3>
               <div className="input-wrapper row">
-                <UploadForm formData={this.state.detailData} />
+                <UploadForm
+                  formData={this.state.detailData}
+                  onChange={this.handleChange}
+                  dataValue="detailData"
+                />
                 <button
                   type="button"
                   onClick={() =>
                     this.addItemToArray('details', {
                       color,
-                      price,
                       quantity,
                       size
                     })

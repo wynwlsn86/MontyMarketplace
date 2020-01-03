@@ -1,7 +1,7 @@
 import React from 'react'
 import { keyParser } from './helpers'
 
-const UploadForm = ({ formData, children, onChange, onSubmit }) => {
+const UploadForm = ({ formData, children, onChange, dataValue, onSubmit }) => {
   const renderInputs = () => {
     const inputs = []
     for (const key in formData) {
@@ -9,11 +9,12 @@ const UploadForm = ({ formData, children, onChange, onSubmit }) => {
         <>
           <label htmlFor={key}>{keyParser(key)}</label>
           <input
+            key={key}
             type="text"
             name={key}
             value={formData[key]}
             placeholder={keyParser(key)}
-            onChange={onChange}
+            onChange={e => onChange(e.target.value, key, dataValue)}
           />
           {children}
         </>

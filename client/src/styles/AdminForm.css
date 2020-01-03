@@ -39,8 +39,8 @@
   justify-content: space-around;
 }
 
-.wrapper .form-wrapper .input-wrapper input {
-  margin-top: 0;
+.wrapper .form-wrapper .form-col label {
+  margin-top: 0.5em;
 }
 
 .input-wrapper button {
