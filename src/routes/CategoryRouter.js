@@ -5,7 +5,9 @@ const CategoryRouter = Router()
 const categoryController = new CategoryController()
 
 CategoryRouter.get('/', categoryController.getCategory)
-CategoryRouter.post('/', categoryController.createCategory)
+CategoryRouter.post('/', (req, res) =>
+  categoryController.createCategory(req, res)
+)
 CategoryRouter.get('/department/:subCategory_id', (req, res) =>
   categoryController.getItemsByCategory(req, res)
 )
@@ -15,6 +17,8 @@ CategoryRouter.post(
 )
 // CategoryRouter.put('/sub-category/:category_id')
 CategoryRouter.put('/:category_id', categoryController.updateCategory)
-CategoryRouter.delete('/:category_id', categoryController.deleteCategory)
+CategoryRouter.delete('/:category_id', (req, res) =>
+  categoryController.deleteCategory(req, res)
+)
 
 export default CategoryRouter

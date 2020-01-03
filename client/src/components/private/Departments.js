@@ -13,6 +13,7 @@ export default class Departments extends Component {
         name: '',
         gender: ''
       },
+      subCategories: [],
       categories: []
     }
   }
@@ -50,16 +51,18 @@ export default class Departments extends Component {
   handleSubmit = async e => {
     e.preventDefault()
     try {
-      const category = await this.AuthService.createCategory(
-        this.state.category
-      )
+      const { name, gender } = this.state.category
+      const category = await this.AuthService.createCategory({
+        category: { name: name.toLowerCase(), gender: gender.toLowerCase() },
+        subCategories: this.state.subCategories
+      })
       const redefinedCategory = {
         ...category.data,
         isChecked: false
       }
-      this.setState(state => ({
-        categories: [...state.categories, redefinedCategory]
-      }))
+      // this.setState(state => ({
+      //   categories: [...items, redefinedCategory]
+      // }))
     } catch (error) {
       throw error
     }

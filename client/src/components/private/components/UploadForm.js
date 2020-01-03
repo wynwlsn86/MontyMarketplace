@@ -1,7 +1,7 @@
 import React from 'react'
 import { keyParser } from './helpers'
 
-const UploadForm = ({ formData, children, onChange, dataValue }) => {
+const UploadForm = ({ formData, children, onChange, dataValue, keyPress }) => {
   const renderInputs = () => {
     const inputs = []
     for (const key in formData) {
@@ -9,6 +9,7 @@ const UploadForm = ({ formData, children, onChange, dataValue }) => {
         <React.Fragment key={key}>
           <label htmlFor={key}>{keyParser(key)}</label>
           <input
+            onKeyPress={keyPress ? e => keyPress(e, key) : null}
             key={key}
             type="text"
             name={key}

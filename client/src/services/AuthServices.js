@@ -13,7 +13,7 @@ export default class AuthService {
   }
   createCategory = async category => {
     try {
-      const resp = await Api.post('/categories', { category })
+      const resp = await Api.post('/categories', category)
       return resp
     } catch (error) {
       throw error

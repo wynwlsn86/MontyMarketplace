@@ -5,9 +5,6 @@ import {
 } from '../database/Schema'
 
 class CategoryController {
-  constructor() {
-    this.items = []
-  }
   async getCategory(req, res) {
     try {
       await CategoryModel.find()
@@ -54,11 +51,16 @@ class CategoryController {
     try {
       await CategoryModel.findOneAndUpdate(
         {
-          name: req.body.category.name,
-          gender: req.body.category.gender
+          name: req.body.category.name.toLowerCase(),
+          gender: req.body.category.gender.toLowerCase()
         },
-        { ...req.body.category },
-        { upsert: true },
+        {
+          ...req.body.category
+        },
+        {
+          upsert: true,
+          new: true
+        },
         (err, doc) => {
           if (err) throw err
           res.send(doc)
