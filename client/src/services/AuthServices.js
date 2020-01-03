@@ -24,7 +24,7 @@ export default class AuthService {
 
   addItemToInventory = async item => {
     try {
-      const resp = await Api.post('/apparel', { item: item })
+      const resp = await Api.post('/apparel', { item })
       return resp
     } catch (error) {
       throw error

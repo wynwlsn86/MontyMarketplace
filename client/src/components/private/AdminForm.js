@@ -94,6 +94,22 @@ export default class AdminForm extends Component {
 
   handleSubmit = async e => {
     e.preventDefault()
+    const { itemData, details, subCategory, category } = this.state
+
+    try {
+      const item = {
+        ...itemData,
+        details,
+        subCategory_id: subCategory,
+        category_id: category
+      }
+      const resp = await this.AuthService.addItemToInventory(item)
+      if (resp.status === 201 || resp.status === 200) {
+        this.props.history.push('/admin/dashboard')
+      }
+    } catch (error) {
+      throw error
+    }
   }
 
   renderDetails = () => {
@@ -129,7 +145,7 @@ export default class AdminForm extends Component {
 
   render() {
     const {
-      detailData: { color, size, price, quantity }
+      detailData: { color, size, quantity }
     } = this.state
     return (
       <div className="wrapper form-container">

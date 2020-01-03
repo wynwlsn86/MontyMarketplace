@@ -6,7 +6,7 @@ const UploadForm = ({ formData, children, onChange, dataValue, onSubmit }) => {
     const inputs = []
     for (const key in formData) {
       inputs.push(
-        <>
+        <React.Fragment key={key}>
           <label htmlFor={key}>{keyParser(key)}</label>
           <input
             key={key}
@@ -17,7 +17,7 @@ const UploadForm = ({ formData, children, onChange, dataValue, onSubmit }) => {
             onChange={e => onChange(e.target.value, key, dataValue)}
           />
           {children}
-        </>
+        </React.Fragment>
       )
     }
     return inputs

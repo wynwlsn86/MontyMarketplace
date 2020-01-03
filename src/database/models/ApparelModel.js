@@ -33,15 +33,10 @@ const ApparelSchema = new Schema(
     clearance: {
       type: Boolean
     },
-    price: {
-      type: String
-    },
     cost: {
       type: String
     },
-    quantity: {
-      type: Number
-    }
+    price: String
   },
   {
     timestamps: true
