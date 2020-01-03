@@ -111,7 +111,7 @@ li {
 
 @media (min-width: 375px) {
   .nav-column-two {
-    width: 24vw;
+    width: 20vw;
 }
 
 .nav-one {
@@ -192,7 +192,7 @@ li {
   }
   
   .header-logo {
-      width: 14vw;
+      width: 12vw;
 
 }
 
@@ -217,7 +217,7 @@ li {
 }
 
 .header-logo {
-    width: 12vw;
+    width: 10vw;
 
 }
 
@@ -242,7 +242,7 @@ li {
 }
 
 .header-logo {
-    width: 12vw;
+    width: 9vw;
 
 }
 
