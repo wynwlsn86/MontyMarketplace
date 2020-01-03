@@ -52,14 +52,18 @@ class CategoryController {
 
   async createCategory(req, res) {
     try {
-      const newCategory = await CategoryModel.findOneAndUpdate(
+      await CategoryModel.findOneAndUpdate(
         {
-          name: req.body.category.name
+          name: req.body.category.name,
+          gender: req.body.category.gender
         },
         { ...req.body.category },
-        { upsert: true }
+        { upsert: true, new: true },
+        (err, doc) => {
+          if (err) throw err
+          res.send(doc)
+        }
       )
-      res.send(newCategory)
     } catch (error) {
       throw error
     }

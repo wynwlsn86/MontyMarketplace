@@ -1,7 +1,7 @@
 import React from 'react'
 import { keyParser } from './helpers'
 
-const UploadForm = ({ formData, children, onChange, dataValue, onSubmit }) => {
+const UploadForm = ({ formData, children, onChange, dataValue }) => {
   const renderInputs = () => {
     const inputs = []
     for (const key in formData) {

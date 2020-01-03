@@ -20,6 +20,9 @@ const AdminSidebar = ({ setAuthenticated }) => (
       <li className="nav-one">
         <Link to="/admin/add-inventory">Add To Inventory</Link>
       </li>
+      <li className="nav-one">
+        <Link to="/admin/departments">Manage Departments</Link>
+      </li>
     </div>
     <div className="nav-column-two">
       <div className="col">

@@ -1,6 +1,6 @@
 import Api from '../config'
 
-export default class PublicServices {
+export default class PublicService {
   getProducts = async () => {
     try {
       const resp = await Api.get('/apparel')
@@ -16,6 +16,7 @@ export default class PublicServices {
       const categories = resp.data.map(category => {
         const data = {
           ...category,
+          isChecked: false,
           subCategories: category.subCategories.map(subCategory => {
             const data = {
               ...subCategory,
