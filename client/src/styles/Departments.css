@@ -15,8 +15,7 @@
   position: relative;
 }
 
-.departments .wrapper .card .primary,
-.primary {
+.departments .wrapper .primary {
   position: relative;
   border-radius: 4px;
   width: auto;
@@ -40,7 +39,7 @@
 
 .departments .wrapper .card .primary {
   width: 80%;
-  margin: 1em Auto;
+  margin: 1em auto;
 }
 
 .departments .wrapper .card.selected {

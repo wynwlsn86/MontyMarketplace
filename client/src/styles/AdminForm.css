@@ -1,6 +1,5 @@
 .wrapper.admin {
   height: 100vh;
-  overflow: hidden;
 }
 
 .wrapper .form-wrapper {
@@ -8,7 +7,8 @@
   margin: auto;
   height: 100%;
 }
-.form-wrapper .form-col input {
+.form-wrapper .form-col input,
+.input {
   padding: 0.4em 0.2em;
   border-radius: 4px;
   border: 1px solid #80deea;
@@ -17,6 +17,26 @@
 
 .wrapper .form-wrapper {
   text-align: left;
+}
+
+.wrapper .wrapper-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .wrapper-row .add-sub {
+  position: relative;
+  align-self: center;
+
+  background: #80deea;
+  margin: 0 0.2rem;
+  width: 30px;
+  height: 30px;
+}
+
+.wrapper .wrapper-row .input {
+  margin-bottom: 0.6em;
 }
 
 .wrapper .form-wrapper .form-col .snack-wrapper {

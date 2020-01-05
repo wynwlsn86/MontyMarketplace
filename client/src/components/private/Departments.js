@@ -11,8 +11,10 @@ export default class Departments extends Component {
     this.state = {
       category: {
         name: '',
-        gender: ''
+        gender: '',
+        department: ''
       },
+      subCategory: '',
       subCategories: [],
       categories: []
     }
@@ -48,21 +50,27 @@ export default class Departments extends Component {
     })
   }
 
+  toggleAdd = index =>
+    this.setState(state => {
+      state.categories[index].toAdd = !state.categories[index].toAdd
+      return state
+    })
+
   handleSubmit = async e => {
     e.preventDefault()
     try {
-      const { name, gender } = this.state.category
+      const { name, gender, department } = this.state.category
       const category = await this.AuthService.createCategory({
         category: { name: name.toLowerCase(), gender: gender.toLowerCase() },
-        subCategories: this.state.subCategories
+        subCategories: [{ name: department }]
       })
       const redefinedCategory = {
         ...category.data,
         isChecked: false
       }
-      // this.setState(state => ({
-      //   categories: [...items, redefinedCategory]
-      // }))
+      this.setState(state => ({
+        categories: [...state.categories, redefinedCategory]
+      }))
     } catch (error) {
       throw error
     }
@@ -109,16 +117,37 @@ export default class Departments extends Component {
             >
               {category.isChecked ? 'Hide Departments' : 'Show Departments'}
             </button>
+            {category.toAdd ? (
+              <div className="wrapper-row">
+                <input
+                  className="input"
+                  name="subCategory"
+                  value={this.state.subCategory}
+                  onChange={e =>
+                    this.handleChange(e.target.value, e.target.name)
+                  }
+                  placeholder="New Department"
+                />
+                <button className="add-sub">+</button>
+              </div>
+            ) : null}
             {category.isChecked ? (
-              <div className="sub-wrapper">
-                {category.subCategories.map((sub, index) => (
-                  <div className="card-sub" key={index}>
-                    <h3>
-                      {sub.name.charAt(0).toUpperCase() + sub.name.slice(1)}
-                    </h3>
-                  </div>
-                ))}
-                <button className="primary">Add Department</button>
+              <div className="lower-wrapper">
+                <div className="sub-wrapper">
+                  {category.subCategories.map((sub, i) => (
+                    <div className="card-sub" key={i}>
+                      <h3>
+                        {sub.name.charAt(0).toUpperCase() + sub.name.slice(1)}
+                      </h3>
+                    </div>
+                  ))}
+                </div>
+                <button
+                  className="primary"
+                  onClick={() => this.toggleAdd(index)}
+                >
+                  Add Department
+                </button>
               </div>
             ) : null}
           </div>

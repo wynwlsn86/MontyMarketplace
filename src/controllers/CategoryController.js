@@ -3,8 +3,34 @@ import {
   ApparelModel,
   SubCategoryModel
 } from '../database/Schema'
+import ErrorHandler from '../routes/middleware/ErrorHandler'
 
 class CategoryController {
+  constructor() {
+    this.Error = new ErrorHandler()
+    this.sub = []
+  }
+
+  async findExistingSubCategories(params) {
+    const exists = await SubCategoryModel.findOneAndUpdate(
+      { name: params.name },
+      { params },
+      { upsert: true, new: true },
+      (err, doc) => {
+        return doc
+      }
+    )
+    return exists._id
+  }
+
+  async parseIds(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      const element = arr[i]
+      this.sub.push(await this.findExistingSubCategories(element))
+    }
+    return this.sub
+  }
+
   async getCategory(req, res) {
     try {
       await CategoryModel.find()
@@ -49,23 +75,23 @@ class CategoryController {
 
   async createCategory(req, res) {
     try {
-      await CategoryModel.findOneAndUpdate(
+      await this.parseIds(req.body.subCategories)
+      const returningCategory = await CategoryModel.findOneAndUpdate(
         {
           name: req.body.category.name.toLowerCase(),
           gender: req.body.category.gender.toLowerCase()
         },
         {
-          ...req.body.category
+          ...req.body.category,
+          $set: { subCategories: this.sub }
         },
         {
           upsert: true,
           new: true
-        },
-        (err, doc) => {
-          if (err) throw err
-          res.send(doc)
         }
       )
+        .populate('subCategories')
+        .exec((err, data) => res.send(data))
     } catch (error) {
       throw error
     }

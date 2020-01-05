@@ -55,8 +55,10 @@ export default class AdminForm extends Component {
         this.setState(state => {
           state.categories = [...state.categories, category]
           state.category = categories[0]._id
-          state.subCategory = categories[0].subCategories[0]._id
-          state.subCategories = categories[0].subCategories
+          if (category.subCategories.length) {
+            state.subCategory = categories[0].subCategories[0]._id
+            state.subCategories = categories[0].subCategories
+          }
           return state
         })
       })
