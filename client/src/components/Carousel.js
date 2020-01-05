@@ -1,11 +1,10 @@
-import React, { Component } from "react";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
-import "../styles/Carousel.css";
-
-import shopPhoto from "../assets/shop-photo.png";
-import apparelPhoto from "../assets/apparel-photo.png";
-import phonePhoto from "../assets/phone-photo.png";
+import React, { Component } from 'react'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Carousel } from 'react-responsive-carousel'
+import '../styles/Carousel.css'
+import shopPhoto from '../assets/shop-photo.png'
+import apparelPhoto from '../assets/apparel-photo.png'
+import phonePhoto from '../assets/phone-photo.png'
 
 export default class DemoCarousel extends Component {
   render() {
@@ -44,6 +43,6 @@ export default class DemoCarousel extends Component {
           </Carousel>
         </div>
       </div>
-    );
+    )
   }
 }

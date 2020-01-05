@@ -1,7 +1,6 @@
 import React from 'react'
 import { Switch } from 'react-router-dom'
 import AuthenticatedRoute from './AuthenticatedRoute'
-
 import AdminDashboard from '../views/AdminDashboard'
 import AdminWrapper from './PrivateWrapper'
 import AdminForm from '../components/private/AdminForm'
