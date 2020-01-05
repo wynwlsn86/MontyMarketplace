@@ -1,18 +1,19 @@
-.filter-label {
-  color: black;
-  font-size: 0.8em;
-  margin-top: -0.4em;
-  padding-left: 1em;
-  
+@import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
+
+input[type="checkbox"] {
+  width: 1em;
 }
 
-.filter-category-header {
-    font-size: 1em;
-    padding: 0 0 0 5px;
+.filter-label {
+  color: black;
+  font-size: 1.1em;
+  margin-top: -0.3em;
+  padding: 0 12px 0px 1px;
+  font-weight: bold;
 }
 
 .filter-container {
-  margin: 5em 0em -4em 1em;
+  margin: 4em 0em -4em 1em;
 }
 
 .filter-checkbox-container {
@@ -21,8 +22,87 @@
   flex-direction: row;
 }
 
-.MuiExpansionPanelSummary-content {
-  background-color: rgba(50, 191, 195, 0.5);
+.filter-buttons-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2em;
+  margin-left: -1em;
 }
 
+.filter-apply-button {
+  outline: none;
+  border: none;
+  background-color: rgba(251, 204, 6, 0.5);
+  width: 4em;
+  height: 2em;
+  font-size: 1.2em;
+  font-family: "Questrial", sans-serif;
+  border-radius: 10px;
+}
 
+.filter-clear-button {
+  outline: none;
+  border: none;
+  background-color: rgba(251, 204, 6, 0.5);
+  width: 5.5em;
+  height: 2em;
+  font-size: 1.2em;
+  font-family: "Questrial", sans-serif;
+  border-radius: 10px;
+}
+
+.filter-apply-button:hover {
+  background-color: rgb(251, 204, 6);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.filter-clear-button:hover {
+  background-color: rgb(251, 204, 6);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.md-panel-column:hover {
+  cursor: pointer;
+}
+
+.md-panel-content {
+  color: black;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0.5em;
+}
+
+.md-paper .md-paper--1 .md-expansion-panel-list {
+  outline: none;
+}
+
+.md-text {
+  color: black;
+  font-family: "Questrial", sans-serif;
+  font-size: 2em;
+  display: flex;
+  justify-content: flex-start;
+  letter-spacing: 3px;
+padding-left: 5px;
+}
+
+.md-icon {
+  opacity: 0;
+}
+
+.md-panel-header {
+  outline: none;
+  margin-top: 1em;
+}
+
+.md-dialog-footer {
+  opacity: 0;
+}
+
+.md-panel-column {
+  background-color: rgba(50, 191, 195, 0.5);
+  height: 1.3em;
+  color: black;
+}

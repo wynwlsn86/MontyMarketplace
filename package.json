@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js",
-    "heroku-postbuild": "npm run build"
+    "dev": "nodemon --exec babel-node ./src",
+    "heroku-postbuild": "yarn install",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s ",
+    "build": "yarn clean && yarn build-babel",
+    "start": "yarn build && node ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -18,16 +21,13 @@
     "cors": "^2.8.5",
     "dotenv": "^8.0.0",
     "express": "^4.17.0",
+    "helmet": "^3.21.2",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.24.0",
-    "mongoose": "^5.6.9",
+    "mongoose": "^5.7.5",
     "mongoose-money": "^0.2.0",
     "morgan": "^1.9.1",
-    "nodemailer": "^6.2.1",
-    "nodemon": "^1.19.1",
-    "passport": "^0.4.0",
-    "passport-jwt": "^4.0.0",
-    "passport-local": "^1.0.0"
+    "nodemailer": "^6.2.1"
   },
   "author": "",
   "license": "ISC",
@@ -35,5 +35,12 @@
     "url": "https://github.com/wynwlsn86/MontyMarketplace/issues"
   },
   "homepage": "https://github.com/wynwlsn86/MontyMarketplace#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.1",
+    "nodemon": "^2.0.0"
+  }
 }

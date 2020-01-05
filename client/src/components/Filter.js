@@ -1,76 +1,51 @@
-import React, { Component } from "react";
-import { getCategories } from "../services/api";
+import React, { Component } from 'react'
 
-import ExpansionPanel from "@material-ui/core/ExpansionPanel";
-import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
-import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
-import Typography from "@material-ui/core/Typography";
-import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import { ExpansionPanel, ExpansionList } from 'react-md'
 
-import "../styles/Filter.css";
+import '../styles/Filter.css'
 
-export default class Filter extends Component {
-  constructor() {
-    super();
-    this.state = {
-      categories: null,
-      isLoading: true
-    };
-  }
-  fetchCategories = async () => {
-    try {
-      const categories = await getCategories();
-      console.log(categories);
-      this.setState({ categories, isLoading: false });
-    } catch (error) {
-      throw error;
-    }
-  };
-
-  renderCategories = () => {
-    const { categories } = this.state;
+const Filter = props => {
+  const renderCategories = () => {
+    const { categories, addToFilter } = props
     if (categories) {
-      return categories.map(category => {
-        console.log(category);
+      return categories.map((category, index) => {
         return (
-          <div className="filter-container">
-            <ExpansionPanel>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon />}
-                aria-controls="panel1a-content"
-                id="panel1a-header"
-              >
-                <Typography className="filter-category-header">
-                  {category.category.toUpperCase()}
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  {category.attire.map(attire => {
-                    console.log(attire);
-                    return (
-                      <div className="filter-checkbox-container">
-                        <input type="checkbox" id={attire} name={attire} />
-                        <label className="filter-label" for={attire}>
-                          {attire.toUpperCase()}
-                        </label>
-                      </div>
-                    );
-                  })}
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-          </div>
-        );
-      });
+          <ExpansionPanel label={category.name} key={category._id}>
+            {category.subCategories.map((subCategory, subIndex) => (
+              <div key={subCategory._id}>
+                <label>{subCategory.name}</label>
+                <input
+                  type="checkbox"
+                  value={subCategory.isChecked}
+                  checked={subCategory.isChecked}
+                  onChange={() =>
+                    addToFilter({ index, subIndex }, subCategory._id)
+                  }
+                />
+              </div>
+            ))}
+          </ExpansionPanel>
+        )
+      })
     }
-  };
-
-  componentDidMount = async () => {
-    this.fetchCategories();
-  };
-
-  render() {
-    return <div>{this.renderCategories()}</div>;
   }
+  return (
+    <div className="filter-container">
+      <ExpansionList>{renderCategories()}</ExpansionList>
+      <div className="filter-buttons-container">
+        <button
+          className="filter-apply-button"
+          onClick={props.applyFilter}
+          disabled={props.disableApply}
+        >
+          Apply
+        </button>
+        <button className="filter-clear-button" onClick={props.resetAll}>
+          Clear Filter
+        </button>
+      </div>
+    </div>
+  )
 }
+
+export default Filter

@@ -1,35 +1,34 @@
-const express = require('express')
-const emailRouter = express.Router()
-const nodemailer = require('nodemailer')
-const moment = require('moment')
-emailRouter.post('/', async (req, res) => {
-	try {
-		let adminTransporter = nodemailer.createTransport({
-			host: 'smtp.gmail.com',
-			auth: {
-				user: process.env.ADMIN_EMAIL,
-				pass: process.env.MAILER_PASS
-			}
-		})
+import { createTransport } from 'nodemailer'
+import moment from 'moment'
 
-		let adminEmail = await adminTransporter.sendMail({
-			from: req.body.userEmail,
-			to: '',
-			cc: '',
-			subject: `${req.body.name} purchased ${req.body.item}`,
-			text: `${req.body.name} purchased ${req.body.item} on ${moment().format(
-				'MMMM Do YYYY, h:mm:ss a'
-			)}. Their contact information is ${req.body.userEmail}, name is ${
-				req.body.name
-			}, phone number is ${req.body.phoneNumber}.`
-		})
+export const sendEmails = async (req, res) => {
+  try {
+    let adminTransporter = createTransport({
+      host: 'smtp.gmail.com',
+      auth: {
+        user: process.env.ADMIN_EMAIL,
+        pass: process.env.MAILER_PASS
+      }
+    })
 
-		let userEmail = await adminTransporter.sendMail({
-			from: req.body.userEmail,
-			to: '',
-			cc: '',
-			subject: `Your order from MontysMarket of ${req.body.item}`,
-			html: `<!doctype html>
+    let adminEmail = await adminTransporter.sendMail({
+      from: req.body.userEmail,
+      to: '',
+      cc: '',
+      subject: `${req.body.name} purchased ${req.body.item}`,
+      text: `${req.body.name} purchased ${req.body.item} on ${moment().format(
+        'MMMM Do YYYY, h:mm:ss a'
+      )}. Their contact information is ${req.body.userEmail}, name is ${
+        req.body.name
+      }, phone number is ${req.body.phoneNumber}.`
+    })
+
+    let userEmail = await adminTransporter.sendMail({
+      from: req.body.userEmail,
+      to: '',
+      cc: '',
+      subject: `Your order from MontysMarket of ${req.body.item}`,
+      html: `<!doctype html>
       <html 4email>
       <head>
       <meta charset="UTF-8" />
@@ -58,11 +57,9 @@ emailRouter.post('/', async (req, res) => {
           </footer>
         </body>
       </html>`
-		})
-		res.send([userEmail, adminEmail])
-	} catch (error) {
-		throw error
-	}
-})
-
-module.exports = emailRouter
+    })
+    res.send([userEmail, adminEmail])
+  } catch (error) {
+    throw error
+  }
+}

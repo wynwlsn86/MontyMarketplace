@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
 .about-container {
   width: 65%;
   margin-top: 7em;
@@ -251,9 +253,11 @@
     flex: 1;
   }
 
+
   .about-photo {
     width: 32em;
   }
+
 
   .about-header {
     display: flex;
@@ -263,6 +267,7 @@
     font-size: 2em;
     margin-top: 2em;
   }
+
 
   .about-para {
     display: flex;
@@ -313,3 +318,4 @@
         font-size: 2.5em;
       }
 }
+
