@@ -33,6 +33,11 @@ const AdminSidebar = ({ setAuthenticated }) => (
           Manage Departments
         </NavLink>
       </li>
+      <li className="nav-one">
+        <NavLink activeClassName="nav-active" to="/admin/update-inventory">
+          Update Inventory
+        </NavLink>
+      </li>
     </div>
     <div className="nav-column-two">
       <div className="col">
