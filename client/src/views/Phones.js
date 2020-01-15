@@ -1,42 +1,42 @@
-import React, { Component } from "react";
-import JwPagination from "jw-react-pagination";
-import { getPhones } from "../services/api";
-import { Image } from "./common";
-
-import "../styles/Phones.css";
+import React, { Component } from 'react'
+import JwPagination from 'jw-react-pagination'
+import PublicServices from '../services/PublicServices'
+import { Image } from '../components/common'
+import '../styles/Phones.css'
 
 export default class Phones extends Component {
   constructor() {
-    super();
+    super()
+    this.Service = new PublicServices()
     this.state = {
       phones: [],
       pageOfItems: [],
       pageSize: 10
-    };
+    }
   }
 
   async componentDidMount() {
-    await this.fetchPhones();
+    await this.fetchPhones()
   }
 
   fetchPhones = async () => {
     try {
-      const phones = await getPhones();
-      this.setState({ phones });
+      const phones = await this.Service.getPhones()
+      this.setState({ phones })
     } catch (error) {
-      throw error;
+      throw error
     }
-  };
+  }
 
   onChangePage = pageOfItems => {
-    this.setState({ pageOfItems: pageOfItems });
-  };
+    this.setState({ pageOfItems: pageOfItems })
+  }
 
   onChangePageSize = async e => {
-    const { value } = e.target;
-    this.setState({ pageSize: parseInt(value) });
-    await this.fetchPhones();
-  };
+    const { value } = e.target
+    this.setState({ pageSize: parseInt(value) })
+    await this.fetchPhones()
+  }
 
   renderPhones = () => {
     if (this.state.phones.length) {
@@ -61,10 +61,10 @@ export default class Phones extends Component {
               />
             </div>
           </div>
-        );
-      });
+        )
+      })
     }
-  };
+  }
 
   renderPagination = () => {
     return (
@@ -73,8 +73,8 @@ export default class Phones extends Component {
         items={this.state.phones}
         onChangePage={this.onChangePage}
       />
-    );
-  };
+    )
+  }
 
   render() {
     return (
@@ -97,10 +97,9 @@ export default class Phones extends Component {
             50
           </option>
         </select>
-		<div className="phones-container">{this.renderPhones()}</div>
-        
+        <div className="phones-container">{this.renderPhones()}</div>
         {this.renderPagination()}
       </div>
-    );
+    )
   }
 }

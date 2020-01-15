@@ -1,18 +1,14 @@
 import React, { Component } from 'react'
-import {
-  getProducts,
-  getCategories,
-  getProductsByCategory
-} from '../services/api'
-import { Image } from './common'
-import Filter from './Filter'
+import { Image } from '../components/common'
+import Filter from '../components/Filter'
 import JwPagination from 'jw-react-pagination'
-
 import '../styles/AllProducts.css'
+import PublicServices from '../services/PublicServices'
 
 export default class Products extends Component {
   constructor() {
     super()
+    this.Service = new PublicServices()
     this.state = {
       products: [],
       isLoading: false,
@@ -22,15 +18,15 @@ export default class Products extends Component {
       filterValues: []
     }
   }
-  async componentDidMount() {
+  componentDidMount() {
     this.setState({ isLoading: true })
-    await this.fetchProducts()
-    await this.fetchCategories()
+    this.fetchProducts()
+    this.fetchCategories()
   }
 
   fetchProducts = async () => {
     try {
-      const products = await getProducts()
+      const products = await this.Service.getProducts()
       this.setState({ products, isLoading: false })
     } catch (error) {
       throw error
@@ -39,7 +35,7 @@ export default class Products extends Component {
 
   fetchCategories = async () => {
     try {
-      const categories = await getCategories()
+      const categories = await this.Service.getCategories()
       this.setState({ categories, isLoading: false })
     } catch (error) {
       throw error
@@ -47,7 +43,9 @@ export default class Products extends Component {
   }
 
   renderFilteredProducts = async () => {
-    const data = await getProductsByCategory(this.state.filterValues)
+    const data = await this.Service.getProductsByCategory(
+      this.state.filterValues
+    )
     this.setState({ products: data })
   }
 
@@ -84,7 +82,9 @@ export default class Products extends Component {
 
   applyFilter = async () => {
     if (this.state.filterValues.length) {
-      const products = await getProductsByCategory(this.state.filterValues)
+      const products = await this.Service.getProductsByCategory(
+        this.state.filterValues
+      )
       this.setState({ products })
     }
   }

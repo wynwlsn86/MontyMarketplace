@@ -23,12 +23,10 @@ class AuthController {
 
   async registerUser(req, res) {
     try {
-      const { email, username, password, name } = req.body
+      const { email, password } = req.body
       const password_digest = await HashPassword(password, res)
       const newUser = new UserModel({
-        name,
         email,
-        username,
         password_digest
       })
       const payload = {

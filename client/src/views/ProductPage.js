@@ -1,38 +1,38 @@
-import React, { Component } from "react";
-import { getProduct, getPhone } from "../services/api";
-import { Image } from "./common";
-import { Link } from "react-router-dom";
-
-import "../styles/ProductPage.css";
+import React, { Component } from 'react'
+import { Image } from '../components/common'
+import { Link } from 'react-router-dom'
+import PublicServices from '../services/PublicServices'
+import '../styles/ProductPage.css'
 
 export default class Product extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+    this.Service = new PublicServices()
     this.state = {
       product: [],
       productId: props.location.state.productId,
       productType: props.match.params.product_type,
       isLoading: false
-    };
+    }
   }
   async componentDidMount() {
-    await this.fetchProduct();
+    await this.fetchProduct()
   }
 
   fetchProduct = async () => {
-    if (this.state.productType === "apparel") {
-      const product = await getProduct(this.state.productId);
+    if (this.state.productType === 'apparel') {
+      const product = await this.Service.getProduct(this.state.productId)
 
-      this.setState({ product });
+      this.setState({ product })
     } else {
-      const product = await getPhone(this.state.productId);
-      this.setState({ product });
+      const product = await this.Service.getPhone(this.state.productId)
+      this.setState({ product })
     }
-  };
+  }
 
   renderApparel = () => {
-    console.log(this.state.product);
-    const { product } = this.state;
+    console.log(this.state.product)
+    const { product } = this.state
     if (product) {
       return (
         <div>
@@ -73,13 +73,13 @@ export default class Product extends Component {
             </div>
           </div>
         </div>
-      );
+      )
     }
-  };
+  }
 
   renderPhone = () => {
-    console.log(this.state.product);
-    const { product } = this.state;
+    console.log(this.state.product)
+    const { product } = this.state
     if (product) {
       return (
         <div className="product-page-row">
@@ -88,17 +88,17 @@ export default class Product extends Component {
             <Image source={product.imageUrl} alt={product.modelNumber} />
           </div>
         </div>
-      );
+      )
     }
-  };
+  }
 
   render() {
     return (
       <div>
-        {this.state.productType === "apparel"
+        {this.state.productType === 'apparel'
           ? this.renderApparel()
           : this.renderPhone()}
       </div>
-    );
+    )
   }
 }

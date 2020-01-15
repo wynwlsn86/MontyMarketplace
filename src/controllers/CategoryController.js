@@ -3,11 +3,34 @@ import {
   ApparelModel,
   SubCategoryModel
 } from '../database/Schema'
+import ErrorHandler from '../routes/middleware/ErrorHandler'
 
 class CategoryController {
   constructor() {
-    this.items = []
+    this.Error = new ErrorHandler()
+    this.sub = []
   }
+
+  async findExistingSubCategories(params) {
+    const exists = await SubCategoryModel.findOneAndUpdate(
+      { name: params.name },
+      { params },
+      { upsert: true, new: true },
+      (err, doc) => {
+        return doc
+      }
+    )
+    return exists._id
+  }
+
+  async parseIds(arr) {
+    for (let i = 0; i < arr.length; i++) {
+      const element = arr[i]
+      this.sub.push(await this.findExistingSubCategories(element))
+    }
+    return this.sub
+  }
+
   async getCategory(req, res) {
     try {
       await CategoryModel.find()
@@ -52,14 +75,23 @@ class CategoryController {
 
   async createCategory(req, res) {
     try {
-      const newCategory = await CategoryModel.findOneAndUpdate(
+      await this.parseIds(req.body.subCategories)
+      const returningCategory = await CategoryModel.findOneAndUpdate(
         {
-          name: req.body.category.name
+          name: req.body.category.name.toLowerCase(),
+          gender: req.body.category.gender.toLowerCase()
         },
-        { ...req.body.category },
-        { upsert: true }
+        {
+          ...req.body.category,
+          $set: { subCategories: this.sub }
+        },
+        {
+          upsert: true,
+          new: true
+        }
       )
-      res.send(newCategory)
+        .populate('subCategories')
+        .exec((err, data) => res.send(data))
     } catch (error) {
       throw error
     }
@@ -92,6 +124,21 @@ class CategoryController {
         }
       )
       res.send(category)
+    } catch (error) {
+      throw error
+    }
+  }
+  async deleteCategory(req, res) {
+    try {
+      await CategoryModel.findById(req.params.category_id)
+        .populate('subCategories')
+        .exec(async (err, data) => {
+          if (err) throw error
+          await CategoryModel.deleteOne({ _id: data._id })
+          data.subCategories.forEach(
+            async sub => await SubCategoryModel.deleteOne({ _id: sub._id })
+          )
+        })
     } catch (error) {
       throw error
     }

@@ -1,0 +1,47 @@
+.departments.department-wrapper {
+  width: 90%;
+  margin: auto;
+  padding: 1em 0;
+}
+
+.departments .wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18em, 1fr));
+  grid-template-rows: auto;
+  width: 100%;
+  grid-gap: 1vw;
+  /* overflow-y: scroll; */
+  padding: 1em;
+  position: relative;
+}
+
+.departments .wrapper .primary {
+  position: relative;
+  border-radius: 4px;
+  width: auto;
+  background: #80deea;
+  padding: 0.4em 0.6em;
+}
+
+.departments .wrapper .card {
+  transition: all 0.3s ease;
+  width: 18em;
+  display: flex;
+  flex-direction: column;
+  height: 180px;
+}
+
+.departments .wrapper .card .sub-wrapper {
+  overflow-y: scroll;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+  background-color: #f8f8f8;
+}
+
+.departments .wrapper .card .primary {
+  width: 80%;
+  margin: 1em auto;
+}
+
+.departments .wrapper .card.selected {
+  height: 300px;
+}

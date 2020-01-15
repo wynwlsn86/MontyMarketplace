@@ -1,0 +1,121 @@
+.wrapper.admin {
+  height: 100vh;
+}
+
+.wrapper .form-wrapper {
+  width: 95%;
+  margin: auto;
+  height: 100%;
+}
+.form-wrapper .form-col input,
+.input {
+  padding: 0.4em 0.2em;
+  border-radius: 4px;
+  border: 1px solid #80deea;
+  outline: none;
+}
+
+.wrapper .form-wrapper {
+  text-align: left;
+}
+
+.wrapper .wrapper-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper .wrapper-row .add-sub {
+  position: relative;
+  align-self: center;
+
+  background: #80deea;
+  margin: 0 0.2rem;
+  width: 30px;
+  height: 30px;
+}
+
+.wrapper .wrapper-row .input {
+  margin-bottom: 0.6em;
+}
+
+.wrapper .form-wrapper .form-col .snack-wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.snack-wrapper .snack {
+  padding: 0.04rem 1.3rem;
+  height: 20px;
+  background: #80deea;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin: auto 0.5em;
+}
+
+.wrapper .form-wrapper .form-col button {
+  background: #80deea;
+  border: none;
+}
+
+.wrapper .form-wrapper .form-col button[type='submit'] {
+  width: 20%;
+  padding: 0.4em 0.6em;
+  border-radius: 4px;
+  margin: 2em auto;
+}
+
+.wrapper .form-col {
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.wrapper .form-wrapper .form-col label {
+  margin-top: 0.5em;
+}
+
+.input-wrapper button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.wrapper .detail-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 0.5em;
+  width: 90%;
+  margin: auto;
+}
+
+.wrapper .card {
+  position: relative;
+  background: #eee;
+  border-radius: 4px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.wrapper .card button {
+  position: absolute;
+  right: -0.5rem;
+  top: -0.5rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: #ef5350;
+  border: none;
+}
+
+@media (max-width: 1024px) {
+  /* Media Queries for the form should go here */
+}

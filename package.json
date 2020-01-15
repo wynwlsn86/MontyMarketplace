@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "nodemonConfig": {
+    "ignore": [
+      "./client"
+    ]
+  },
   "scripts": {
     "dev": "nodemon --exec babel-node ./src",
     "heroku-postbuild": "yarn install",
