@@ -71,8 +71,9 @@ li {
 }
 
 .header-logo {
+  align-self: center;
   height: 6vh;
-  width: 6vw;
+  width: 100px;
 }
 
 .header-container .header-logo-container {
@@ -94,11 +95,6 @@ li {
   .nav-two {
     font-size: 0.55em;
     padding: 0 0.5vw 1vw 1vw;
-  }
-
-  .header-logo {
-    height: 6vh;
-    width: 6vw;
   }
 
   .header-logo-container {
@@ -146,11 +142,6 @@ li {
     padding: 0 1vw 1vw 1vw;
   }
 
-  .header-logo {
-    height: 6vh;
-    width: 6vw;
-  }
-
   .header-logo-container {
     width: 98%;
   }
@@ -171,11 +162,6 @@ li {
     padding: 0 1vw 1vw 1vw;
   }
 
-  .header-logo {
-    height: 6vh;
-    width: 6vw;
-  }
-
   .header-logo-container {
     width: 99%;
   }
@@ -184,11 +170,6 @@ li {
 @media (max-width: 1024px) {
   .nav-column-two {
     width: 20vw;
-  }
-
-  .header-logo {
-    height: 6vh;
-    width: 6vw;
   }
 
   .header-logo-container {
@@ -212,9 +193,6 @@ li {
   }
 
   .header-logo {
-    align-self: center;
-    height: 6vh;
-    width: 6vw;
   }
 
   .header-logo-container {
