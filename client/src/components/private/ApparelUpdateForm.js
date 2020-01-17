@@ -5,6 +5,7 @@ import AuthService from '../../services/AuthServices'
 import UploadForm from './components/UploadForm'
 import DropDown from './components/Dropdowns'
 import DetailCard from './components/DetailCard'
+// import ApparelController from '../../../../src/controllers/ApparelController'
 export default class ApparelUpdateForm extends Component {
   constructor(props) {
     super(props)
@@ -36,8 +37,21 @@ export default class ApparelUpdateForm extends Component {
 
   componentDidMount() {
     this.getCategories()
+    // ApparelController.getItemById()
+    this.fetchProduct()
+    console.log(this.state)
   }
 
+fetchProduct = async () => {
+    console.log('testing')
+    // if (this.state.productType === 'apparel') {
+    //   const product = await this.Service.getProduct(this.props.productId)
+    //   this.setState({ product })
+    // } else {
+    // //   const product = await this.Service.getPhone(this.props.productId)
+    // //   this.setState({ product })
+    // }
+  }
   handlePrimaryDropDown = value => {
     let index = value
     this.setState(state => {
@@ -49,16 +63,6 @@ export default class ApparelUpdateForm extends Component {
   }
 
 
-// fetchProduct = async () => {
-//     if (this.state.productType === 'apparel') {
-//       const product = await this.Service.getProduct(this.props.productId)
-
-//       this.setState({ product })
-//     } else {
-//       const product = await this.Service.getPhone(this.props.productId)
-//       this.setState({ product })
-//     }
-//   }
 
   getCategories = async () => {
     try {
