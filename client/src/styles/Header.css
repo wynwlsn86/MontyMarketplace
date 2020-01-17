@@ -71,7 +71,8 @@ li {
 }
 
 .header-logo {
-  width: 7vw;
+  height: 6vh;
+  width: 6vw;
 }
 
 .header-container .header-logo-container {
@@ -96,7 +97,8 @@ li {
   }
 
   .header-logo {
-    width: 23vw;
+    height: 6vh;
+    width: 6vw;
   }
 
   .header-logo-container {
@@ -120,7 +122,8 @@ li {
   }
 
   .header-logo {
-    width: 22vw;
+    height: 6vh;
+    width: 6vw;
   }
 
   .header-logo-container {
@@ -144,7 +147,8 @@ li {
   }
 
   .header-logo {
-    width: 20vw;
+    height: 6vh;
+    width: 6vw;
   }
 
   .header-logo-container {
@@ -168,7 +172,8 @@ li {
   }
 
   .header-logo {
-    width: 16vw;
+    height: 6vh;
+    width: 6vw;
   }
 
   .header-logo-container {
@@ -182,7 +187,8 @@ li {
   }
 
   .header-logo {
-    width: 12vw;
+    height: 6vh;
+    width: 6vw;
   }
 
   .header-logo-container {
@@ -206,34 +212,12 @@ li {
   }
 
   .header-logo {
-    width: 10vw;
+    align-self: center;
+    height: 6vh;
+    width: 6vw;
   }
 
   .header-logo-container {
     width: 99%;
   }
 }
-
-/* @media (max-width: 2560px) {
-  .nav-column-two {
-    width: 18vw;
-  }
-
-  .nav-one {
-    font-size: 2.5em;
-    padding: 0 4vw 1vw 4vw;
-  }
-
-  .nav-two {
-    font-size: 2em;
-    padding: 0 2vw 1vw 2vw;
-  }
-
-  .header-logo {
-    width: 9vw;
-  }
-
-  .header-logo-container {
-    width: 99%;
-  }
-} */
