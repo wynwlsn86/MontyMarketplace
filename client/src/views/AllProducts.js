@@ -106,7 +106,7 @@ export default class Products extends Component {
             >
               <div className="products-image-container">
                 <Image
-                  source={product.imageUrl}
+                  source={product.imageUrl[0]}
                   alt={product.name}
                   className="product-images"
                 />
