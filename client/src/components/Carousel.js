@@ -1,10 +1,11 @@
-import React, { Component } from 'react'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { Carousel } from 'react-responsive-carousel'
-import '../styles/Carousel.css'
-import shopPhoto from '../assets/shop-photo.png'
-import apparelPhoto from '../assets/apparel-photo.png'
-import phonePhoto from '../assets/phone-photo.png'
+import React, { Component } from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from "react-responsive-carousel";
+import "../styles/Carousel.css";
+import dealBanner from "../assets/deal-banner.png";
+import newdropBanner from "../assets/newdrop-banner.png";
+import saleBanner from "../assets/sale-banner.png";
+import discountBanner from "../assets/discount-banner.png";
 
 export default class DemoCarousel extends Component {
   render() {
@@ -19,8 +20,8 @@ export default class DemoCarousel extends Component {
             interval={4000}
           >
             <div>
-              <img src={shopPhoto} alt="shop" />
-              <p className="legend">
+              <img src={dealBanner} alt="deals" />
+              {/* <p className="legend">
                 Legend 1
                 <br />
                 Content will go here.
@@ -30,19 +31,23 @@ export default class DemoCarousel extends Component {
                 Content will be wrapped in a single paragraph tag.
                 <br />
                 Legend has hover effect, flex wrap and line height.
-              </p>
+              </p> */}
             </div>
             <div>
-              <img src={apparelPhoto} alt="apparel" />
-              <p className="legend">Legend 2</p>
+              <img src={newdropBanner} alt="new drop" />
+              {/* <p className="legend">Legend 2</p> */}
             </div>
             <div>
-              <img src={phonePhoto} alt="phone" />
-              <p className="legend">Legend 3</p>
-            </div>
+              <img src={saleBanner} alt="sale" />
+              {/* <p className="legend">Legend 3</p> */}
+              </div>
+              <div>
+                <img src={discountBanner} alt="discount" />
+              </div>
+            
           </Carousel>
         </div>
       </div>
-    )
+    );
   }
 }
