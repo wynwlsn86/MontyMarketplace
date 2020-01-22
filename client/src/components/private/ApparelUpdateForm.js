@@ -152,7 +152,22 @@ export default class ApparelUpdateForm extends Component {
   renderDetails = () => {
     const { details } = this.state
     if (details.length) {
-      return <DetailCard details={details} onClick={this.removeDetail} />
+      return details.map((detail, index) => (
+        <div className="input-wrapper row">
+          <UploadForm
+            formData={{ ...detail }}
+            index={index}
+            onChange={this.handleAddedDetailChange}
+            dataValue="details"
+          />
+          <button
+            type="button"
+            onClick={() => this.removeDetailFromDetails(index)}
+          >
+            -
+          </button>
+        </div>
+      ))
     }
   }
 
