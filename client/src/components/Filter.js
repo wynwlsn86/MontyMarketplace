@@ -12,7 +12,7 @@ const Filter = props => {
         return (
           <ExpansionPanel label={category.name} key={category._id}>
             {category.subCategories.map((subCategory, subIndex) => (
-              <div key={subCategory._id}>
+              <div key={subCategory._id} className="sub-category">
                 <label>{subCategory.name}</label>
                 <input
                   type="checkbox"
