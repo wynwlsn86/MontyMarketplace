@@ -1,7 +1,8 @@
-import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
-import headerLogo from '../../assets/Monty-logo2.png'
-import '../../styles/Header.css'
+import React from "react";
+import { Link, withRouter } from "react-router-dom";
+import { Hamburger } from "./Hamburger";
+import headerLogo from "../../assets/Monty-logo2.png";
+import "../../styles/Header.css";
 
 const Header = () => {
   return (
@@ -29,8 +30,11 @@ const Header = () => {
           <Link to="/contact">Contact</Link>
         </li>
       </div>
+      <div className="hamburger-container">
+        <Hamburger />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default withRouter(Header)
+export default withRouter(Header);
