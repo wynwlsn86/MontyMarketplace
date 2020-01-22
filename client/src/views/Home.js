@@ -1,7 +1,7 @@
 import React from 'react'
 import Carousel from '../components/Carousel'
 
-import homeBanner from '../assets/BANNER2.PNG'
+import homeBanner from '../assets/home-banner.PNG'
 
 import '../styles/Home.css'
 

@@ -1,8 +1,11 @@
-/* .home-banner-container {
-
+.home-banner {
+    display: none;
 }
 
+@media (max-width: 768px) {
 .home-banner {
+    display: inline-block;
     width: 100%;
     
-} */
+}
+}

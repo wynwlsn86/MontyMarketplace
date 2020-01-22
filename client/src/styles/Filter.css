@@ -4,12 +4,22 @@ input[type="checkbox"] {
   width: 1em;
 }
 
-.filter-label {
+input[type="checkbox"]:hover {
+cursor: pointer;
+}
+
+label {
+  display: flex;
+  justify-content: flex-start;
   color: black;
-  font-size: 1.1em;
-  margin-top: -0.3em;
-  padding: 0 12px 0px 1px;
+  font-size: 1em;
   font-weight: bold;
+  padding-left: 0.2em;
+}
+
+.sub-category {
+  display: flex;
+  justify-content: space-between;
 }
 
 .filter-container {
@@ -18,8 +28,7 @@ input[type="checkbox"] {
 
 .filter-checkbox-container {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .filter-buttons-container {
@@ -71,7 +80,8 @@ input[type="checkbox"] {
   color: black;
   display: flex;
   justify-content: flex-start;
-  margin-left: 0.5em;
+  flex-direction: column;
+  /* margin-left: 0.5em; */
 }
 
 .md-paper .md-paper--1 .md-expansion-panel-list {
