@@ -114,10 +114,19 @@ export default class ApparelUpdateForm extends Component {
       />
     ) : null
 
-  removeDetail = index => {
+  removeDetailFromDetails = index => {
     const details = this.state.details
     details.splice(index, 1)
     this.setState({ details })
+  }
+
+  handleAddedDetailChange = (value, name, dataValue, index) => {
+    console.log(index)
+    this.setState(state => {
+      const values = { [name]: value }
+      state[dataValue][index] = Object.assign(state[dataValue][index], values)
+      return state
+    })
   }
 
   handleSubmit = async e => {
@@ -215,6 +224,7 @@ export default class ApparelUpdateForm extends Component {
                   +
                 </button>
               </div>
+              {this.renderDetails()}
             </div>
             <button type="submit">Add Item</button>
           </form>
