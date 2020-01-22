@@ -58,24 +58,20 @@ class ApparelController {
       //     }
       //   }
       // }
-      const apparel = await ApparelModel.findOneAndUpdate(
+      const details = req.body.item.details
+      delete req.body.item.details
+      await ApparelModel.findOneAndUpdate(
         { _id: req.params.apparel_id },
         {
-          $set: {
-            'details.$[el]': req.body.item.details
-          }
+          ...req.body.item,
+          details
         },
-        {
-          // upsert: true,
-          arrayFilters: [
-            {
-              'el.size': req.body.item.details.size,
-              'el.color': req.body.item.details.color //if we want to get specific we have to pass the color down as well, but Jesse will have to make sure he inputs a color to begin with
-            }
-          ]
+        { new: true },
+        (err, doc) => {
+          if (err) throw error
+          res.send(doc)
         }
       )
-      res.send(apparel)
     } catch (error) {
       throw error
     }
