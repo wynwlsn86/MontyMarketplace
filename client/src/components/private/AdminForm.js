@@ -20,9 +20,9 @@ export default class AdminForm extends Component {
         price: ''
       },
       detailData: {
+        color: '',
         quantity: '',
-        size: '',
-        color: ''
+        size: ''
       },
       clearance: false,
       category: '',
@@ -110,10 +110,40 @@ export default class AdminForm extends Component {
     }
   }
 
+  removeDetailFromDetails = index => {
+    const details = this.state.details
+    details.splice(index, 1)
+    this.setState({ details })
+  }
+
+  handleAddedDetailChange = (value, name, dataValue, index) => {
+    console.log(index)
+    this.setState(state => {
+      const values = { [name]: value }
+      state[dataValue][index] = Object.assign(state[dataValue][index], values)
+      return state
+    })
+  }
+
   renderDetails = () => {
     const { details } = this.state
     if (details.length) {
-      return <DetailCard details={details} onClick={this.removeDetail} />
+      return details.map((detail, index) => (
+        <div className="input-wrapper row">
+          <UploadForm
+            formData={{ ...detail }}
+            index={index}
+            onChange={this.handleAddedDetailChange}
+            dataValue="details"
+          />
+          <button
+            type="button"
+            onClick={() => this.removeDetailFromDetails(index)}
+          >
+            -
+          </button>
+        </div>
+      ))
     }
   }
 
@@ -185,12 +215,12 @@ export default class AdminForm extends Component {
                   +
                 </button>
               </div>
+              {this.renderDetails()}
             </div>
+
             <button type="submit">Add Item</button>
           </form>
         </div>
-
-        {this.renderDetails()}
       </div>
     )
   }

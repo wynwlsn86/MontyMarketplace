@@ -37,19 +37,26 @@ export default class ApparelUpdateForm extends Component {
 
   componentDidMount() {
     this.getCategories()
-    // ApparelController.getItemById()
     this.fetchProduct()
     console.log(this.props.history.location.state.productId)
   }
 
-fetchProduct = async () => {
+  fetchProduct = async () => {
+    const itemData = await this.PublicService.getProduct(
+      this.props.history.location.state.productId
+    )
+    this.setState(
+      {
+        details: [...itemData.details]
+      },
+      () => {
+        delete itemData.details
+        delete itemData._id
+        this.setState({ itemData })
+      }
+    )
 
-    const itemData = await this.PublicService.getProduct(this.props.history.location.state.productId)
-    this.setState({ itemData })
-    console.log(this.state)
-
-
-
+    // console.log(this.state)
 
     // if (this.state.productType === 'apparel') {
     //   const product = await this.Service.getProduct(this.props.history.location.state.productId)
@@ -60,6 +67,7 @@ fetchProduct = async () => {
     //   this.setState({ product })
     // }
   }
+
   handlePrimaryDropDown = value => {
     let index = value
     this.setState(state => {
@@ -69,8 +77,6 @@ fetchProduct = async () => {
       return state
     })
   }
-
-
 
   getCategories = async () => {
     try {
