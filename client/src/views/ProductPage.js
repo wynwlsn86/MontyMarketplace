@@ -31,14 +31,15 @@ export default class Product extends Component {
   }
 
   renderApparel = () => {
-    console.log(this.state.product)
     const { product } = this.state
     if (product) {
       return (
         <div>
           {/* BACK BUTTON IS STATIC FOR NOW */}
           <div className="back-container">
-            <button className="back-button">BACK</button>
+            <Link to="/marketplace/apparel">
+              <button className="back-button">BACK</button>
+            </Link>
           </div>
           <div className="product-page-center">
             <div className="product-page-container">

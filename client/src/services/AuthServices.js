@@ -31,6 +31,7 @@ export default class AuthService {
   }
 
   UpdateAItem = async (req, res) => {
+    //pass id and updated item
     try {
 
     } catch (error) {
