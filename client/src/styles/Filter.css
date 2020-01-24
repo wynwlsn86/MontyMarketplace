@@ -20,16 +20,13 @@ label {
 .sub-category {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 0.2em;
 }
 
 .filter-container {
   margin: 4em 0em -4em 1em;
 }
 
-.filter-checkbox-container {
-  display: flex;
-  justify-content: flex-end;
-}
 
 .filter-buttons-container {
   display: flex;

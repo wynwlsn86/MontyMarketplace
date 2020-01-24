@@ -1,7 +1,14 @@
 import React from 'react'
 import { keyParser } from './helpers'
 
-const UploadForm = ({ formData, children, onChange, dataValue, keyPress }) => {
+const UploadForm = ({
+  formData,
+  children,
+  onChange,
+  dataValue,
+  keyPress,
+  index
+}) => {
   const renderInputs = () => {
     const inputs = []
     for (const key in formData) {
@@ -15,7 +22,7 @@ const UploadForm = ({ formData, children, onChange, dataValue, keyPress }) => {
             name={key}
             value={formData[key]}
             placeholder={keyParser(key)}
-            onChange={e => onChange(e.target.value, key, dataValue)}
+            onChange={e => onChange(e.target.value, key, dataValue, index)}
           />
           {children}
         </React.Fragment>

@@ -5,7 +5,8 @@ import AuthService from '../../services/AuthServices'
 import UploadForm from './components/UploadForm'
 import DropDown from './components/Dropdowns'
 import DetailCard from './components/DetailCard'
-export default class AdminForm extends Component {
+// import ApparelController from '../../../../src/controllers/ApparelController'
+export default class ApparelUpdateForm extends Component {
   constructor(props) {
     super(props)
     this.PublicService = new PublicServices()
@@ -20,9 +21,9 @@ export default class AdminForm extends Component {
         price: ''
       },
       detailData: {
-        color: '',
         quantity: '',
-        size: ''
+        size: '',
+        color: ''
       },
       clearance: false,
       category: '',
@@ -36,6 +37,35 @@ export default class AdminForm extends Component {
 
   componentDidMount() {
     this.getCategories()
+    this.fetchProduct()
+    console.log(this.props.history.location.state.productId)
+  }
+
+  fetchProduct = async () => {
+    const itemData = await this.PublicService.getProduct(
+      this.props.history.location.state.productId
+    )
+    this.setState(
+      {
+        details: [...itemData.details]
+      },
+      () => {
+        delete itemData.details
+        delete itemData._id
+        this.setState({ itemData })
+      }
+    )
+
+    // console.log(this.state)
+
+    // if (this.state.productType === 'apparel') {
+    //   const product = await this.Service.getProduct(this.props.history.location.state.productId)
+    // //   this.setState({ product })
+    // console.log(product)
+    // } else {
+    //   const product = await this.Service.getPhone(this.props.history.location.state.productId)
+    //   this.setState({ product })
+    // }
   }
 
   handlePrimaryDropDown = value => {
@@ -84,10 +114,19 @@ export default class AdminForm extends Component {
       />
     ) : null
 
-  removeDetail = index => {
+  removeDetailFromDetails = index => {
     const details = this.state.details
     details.splice(index, 1)
     this.setState({ details })
+  }
+
+  handleAddedDetailChange = (value, name, dataValue, index) => {
+    console.log(index)
+    this.setState(state => {
+      const values = { [name]: value }
+      state[dataValue][index] = Object.assign(state[dataValue][index], values)
+      return state
+    })
   }
 
   handleSubmit = async e => {
@@ -108,21 +147,6 @@ export default class AdminForm extends Component {
     } catch (error) {
       throw error
     }
-  }
-
-  removeDetailFromDetails = index => {
-    const details = this.state.details
-    details.splice(index, 1)
-    this.setState({ details })
-  }
-
-  handleAddedDetailChange = (value, name, dataValue, index) => {
-    console.log(index)
-    this.setState(state => {
-      const values = { [name]: value }
-      state[dataValue][index] = Object.assign(state[dataValue][index], values)
-      return state
-    })
   }
 
   renderDetails = () => {
@@ -217,10 +241,11 @@ export default class AdminForm extends Component {
               </div>
               {this.renderDetails()}
             </div>
-
             <button type="submit">Add Item</button>
           </form>
         </div>
+
+        {this.renderDetails()}
       </div>
     )
   }

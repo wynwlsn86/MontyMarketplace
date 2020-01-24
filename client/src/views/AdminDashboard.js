@@ -10,6 +10,6 @@ export default class AdminDashboard extends Component {
   }
 
   render() {
-    return <div className="admin"></div>
+    return <div className="admin">Test</div>
   }
 }
