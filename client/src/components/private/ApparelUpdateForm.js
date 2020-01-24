@@ -38,8 +38,27 @@ export default class ApparelUpdateForm extends Component {
   componentDidMount() {
     this.getCategories()
     this.fetchProduct()
-    console.log(this.props.history.location.state.productId)
   }
+
+
+
+//   handleItemUpdate = (id) => {
+//      const { imageUrl, name, brand, description, clearance, cost, price} = this.state.itemData
+//      const { subCategory, category, details } = this.state
+//      const item = {
+//          name: name
+//          category_id: category
+//          subCategory_id: subCategory
+//          details: details
+//  }
+//       async () => await this.AuthService.updateAItem(id, item)
+//     )
+//   }
+//
+// 
+
+
+
 
   fetchProduct = async () => {
     const itemData = await this.PublicService.getProduct(
@@ -47,14 +66,21 @@ export default class ApparelUpdateForm extends Component {
     )
     this.setState(
       {
-        details: [...itemData.details]
+        details: [...itemData.details],
+        subCategory:  itemData.subCategory_id,
+        category: itemData.category_id
       },
       () => {
         delete itemData.details
+        delete itemData.subCategory_id
+        delete itemData.category_id
         delete itemData._id
         this.setState({ itemData })
       }
     )
+
+
+
 
     // console.log(this.state)
 
@@ -132,6 +158,7 @@ export default class ApparelUpdateForm extends Component {
   handleSubmit = async e => {
     e.preventDefault()
     const { itemData, details, subCategory, category } = this.state
+    const id = this.props.history.location.state.productId
 
     try {
       const item = {
@@ -140,10 +167,11 @@ export default class ApparelUpdateForm extends Component {
         subCategory_id: subCategory,
         category_id: category
       }
-      const resp = await this.AuthService.addItemToInventory(item)
-      if (resp.status === 201 || resp.status === 200) {
-        this.props.history.push('/admin/dashboard')
-      }
+      console.log(item, id)
+    //   const resp = await this.AuthService.UpdateAItem(id, item)
+    //   if (resp.status === 201 || resp.status === 200) {
+    //     this.props.history.push('/admin/dashboard')
+    //   }
     } catch (error) {
       throw error
     }
@@ -241,11 +269,9 @@ export default class ApparelUpdateForm extends Component {
               </div>
               {this.renderDetails()}
             </div>
-            <button type="submit">Add Item</button>
+            <button type="submit">Update Item</button>
           </form>
         </div>
-
-        {this.renderDetails()}
       </div>
     )
   }
