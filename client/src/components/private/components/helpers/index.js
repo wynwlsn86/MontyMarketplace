@@ -10,3 +10,27 @@ export const keyParser = key => {
   }
   return newKey
 }
+
+export const ObjSort = arryOfObjects => {
+  let keys = []
+
+  arryOfObjects.forEach(object => {
+    let unsortedKeys = Object.keys(object)
+    if (!keys.includes(...unsortedKeys)) keys.push(...unsortedKeys.sort())
+  })
+  return createNewObj(keys, arryOfObjects)
+}
+
+const createNewObj = (keys, objects) => {
+  let arr = []
+  objects.map(object => {
+    let obj = {}
+    keys.forEach(key => {
+      obj[key] = object[key]
+      if (Object.keys(obj).length === 3) {
+        arr.push(obj)
+      }
+    })
+  })
+  return arr
+}

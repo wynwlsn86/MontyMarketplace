@@ -24,6 +24,8 @@ export default class AdminForm extends Component {
         quantity: '',
         size: ''
       },
+      errMessage: '',
+      isDisabled: false,
       clearance: false,
       category: '',
       subCategory: '',
@@ -92,6 +94,7 @@ export default class AdminForm extends Component {
 
   handleSubmit = async e => {
     e.preventDefault()
+    this.handleCheckInputsEmpty()
     const { itemData, details, subCategory, category } = this.state
 
     try {
@@ -117,7 +120,6 @@ export default class AdminForm extends Component {
   }
 
   handleAddedDetailChange = (value, name, dataValue, index) => {
-    console.log(index)
     this.setState(state => {
       const values = { [name]: value }
       state[dataValue][index] = Object.assign(state[dataValue][index], values)
@@ -147,7 +149,20 @@ export default class AdminForm extends Component {
     }
   }
 
+  handleCheckInputsEmpty = () => {
+    const { itemData } = this.state
+    for (const key in itemData) {
+      if (!itemData[key].length)
+        this.setState({
+          errMessage: `${key.charAt(0).toUpperCase() +
+            key.slice(1)} cannot be empty`,
+          isDisabled: true
+        })
+    }
+  }
+
   handleChange = (value, name, dataValue) => {
+    this.setState({ errMessage: '', isDisabled: false })
     dataValue
       ? this.setState(state => {
           const values = { [name]: value }
@@ -173,6 +188,7 @@ export default class AdminForm extends Component {
 
   render() {
     const {
+      errMessage,
       detailData: { color, size, quantity }
     } = this.state
     return (
@@ -218,7 +234,9 @@ export default class AdminForm extends Component {
               {this.renderDetails()}
             </div>
 
-            <button type="submit">Add Item</button>
+            <button type="submit" disable={this.state.isDisabled.toString()}>
+              {errMessage ? errMessage : 'Add Item to Inventory'}
+            </button>
           </form>
         </div>
       </div>

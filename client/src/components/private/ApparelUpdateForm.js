@@ -5,6 +5,7 @@ import AuthService from '../../services/AuthServices'
 import UploadForm from './components/UploadForm'
 import DropDown from './components/Dropdowns'
 import DetailCard from './components/DetailCard'
+import { ObjSort } from './components/helpers'
 // import ApparelController from '../../../../src/controllers/ApparelController'
 export default class ApparelUpdateForm extends Component {
   constructor(props) {
@@ -21,10 +22,12 @@ export default class ApparelUpdateForm extends Component {
         price: ''
       },
       detailData: {
+        color: '',
         quantity: '',
-        size: '',
-        color: ''
+        size: ''
       },
+      errMessage: '',
+      isDisabled: false,
       clearance: false,
       category: '',
       subCategory: '',
@@ -40,58 +43,29 @@ export default class ApparelUpdateForm extends Component {
     this.fetchProduct()
   }
 
-
-
-//   handleItemUpdate = (id) => {
-//      const { imageUrl, name, brand, description, clearance, cost, price} = this.state.itemData
-//      const { subCategory, category, details } = this.state
-//      const item = {
-//          name: name
-//          category_id: category
-//          subCategory_id: subCategory
-//          details: details
-//  }
-//       async () => await this.AuthService.updateAItem(id, item)
-//     )
-//   }
-//
-// 
-
-
-
-
   fetchProduct = async () => {
     const itemData = await this.PublicService.getProduct(
       this.props.history.location.state.productId
     )
+    itemData.details.forEach(detail => delete detail._id)
+    const details = ObjSort(itemData.details)
+    console.log(details)
     this.setState(
       {
-        details: [...itemData.details],
-        subCategory:  itemData.subCategory_id,
+        details,
+        clearance: itemData.clearance,
+        subCategory: itemData.subCategory_id,
         category: itemData.category_id
       },
       () => {
         delete itemData.details
+        delete itemData.clearance
         delete itemData.subCategory_id
         delete itemData.category_id
         delete itemData._id
         this.setState({ itemData })
       }
     )
-
-
-
-
-    // console.log(this.state)
-
-    // if (this.state.productType === 'apparel') {
-    //   const product = await this.Service.getProduct(this.props.history.location.state.productId)
-    // //   this.setState({ product })
-    // console.log(product)
-    // } else {
-    //   const product = await this.Service.getPhone(this.props.history.location.state.productId)
-    //   this.setState({ product })
-    // }
   }
 
   handlePrimaryDropDown = value => {
@@ -147,7 +121,6 @@ export default class ApparelUpdateForm extends Component {
   }
 
   handleAddedDetailChange = (value, name, dataValue, index) => {
-    console.log(index)
     this.setState(state => {
       const values = { [name]: value }
       state[dataValue][index] = Object.assign(state[dataValue][index], values)
@@ -155,23 +128,35 @@ export default class ApparelUpdateForm extends Component {
     })
   }
 
+  handleCheckInputsEmpty = () => {
+    const { itemData } = this.state
+    for (const key in itemData) {
+      if (!itemData[key].length)
+        this.setState({
+          errMessage: `${key.charAt(0).toUpperCase() +
+            key.slice(1)} cannot be empty`,
+          isDisabled: true
+        })
+    }
+  }
+
   handleSubmit = async e => {
     e.preventDefault()
-    const { itemData, details, subCategory, category } = this.state
+    this.handleCheckInputsEmpty()
+    const { itemData, details, subCategory, category, clearance } = this.state
     const id = this.props.history.location.state.productId
-
     try {
       const item = {
         ...itemData,
         details,
+        clearance,
         subCategory_id: subCategory,
         category_id: category
       }
-      console.log(item, id)
-    //   const resp = await this.AuthService.UpdateAItem(id, item)
-    //   if (resp.status === 201 || resp.status === 200) {
-    //     this.props.history.push('/admin/dashboard')
-    //   }
+      const resp = await this.AuthService.UpdateAItem(id, item)
+      if (resp.status === 201 || resp.status === 200) {
+        this.props.history.push('/admin/dashboard')
+      }
     } catch (error) {
       throw error
     }
@@ -181,9 +166,11 @@ export default class ApparelUpdateForm extends Component {
     const { details } = this.state
     if (details.length) {
       return details.map((detail, index) => (
-        <div className="input-wrapper row">
+        <div className="input-wrapper row" key={index}>
           <UploadForm
-            formData={{ ...detail }}
+            formData={{
+              ...detail
+            }}
             index={index}
             onChange={this.handleAddedDetailChange}
             dataValue="details"
@@ -200,6 +187,7 @@ export default class ApparelUpdateForm extends Component {
   }
 
   handleChange = (value, name, dataValue) => {
+    this.setState({ errMessage: '', isDisabled: false })
     dataValue
       ? this.setState(state => {
           const values = { [name]: value }
@@ -225,6 +213,7 @@ export default class ApparelUpdateForm extends Component {
 
   render() {
     const {
+      errMessage,
       detailData: { color, size, quantity }
     } = this.state
     return (
@@ -269,7 +258,9 @@ export default class ApparelUpdateForm extends Component {
               </div>
               {this.renderDetails()}
             </div>
-            <button type="submit">Update Item</button>
+            <button type="submit" disable={this.state.isDisabled.toString()}>
+              {errMessage ? errMessage : 'Update'}
+            </button>
           </form>
         </div>
       </div>

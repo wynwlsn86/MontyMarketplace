@@ -30,10 +30,12 @@ export default class AuthService {
     }
   }
 
-  UpdateAItem = async (req, res) => {
+  UpdateAItem = async (id, item) => {
     //pass id and updated item
     try {
-
+      const resp = await Api.put(`/apparel/${id}`, { item })
+      console.log(resp)
+      return resp
     } catch (error) {
       throw error
     }
