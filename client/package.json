@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@animated-burgers/burger-slip": "^1.1.2",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "classnames": "^2.2.6",
     "jw-react-pagination": "^1.1.0",
     "muicss": "^0.9.43",
